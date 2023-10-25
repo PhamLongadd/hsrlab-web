@@ -30,12 +30,7 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
       justifyContent="center"
       boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
     >
-      <Flex
-        width="1200px"
-        alignItems="center"
-        justifyContent="space-between"
-        padding="10px"
-      >
+      <Flex width="1200px" alignItems="center" justifyContent="space-between">
         <Image src="/image/logohsr.png" w="60px" h="80px" />
 
         <Button
@@ -53,12 +48,12 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
           </Flex>
         </Button>
 
-        <Text fontWeight="700" mb={4}>
+        <Text fontWeight="700" fontSize="20px" mb={4}>
           Trang chủ
         </Text>
         <Menu>
           <MenuButton fontWeight="700" mb={4}>
-            <Flex alignItems="center">
+            <Flex alignItems="center" fontSize="20px">
               Giới thiệu
               <ChevronDownIcon fontSize="25px" />
             </Flex>
@@ -72,13 +67,13 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
             <MenuItem fontWeight="700">Học viên</MenuItem>
           </MenuList>
         </Menu>
-        <Text fontWeight="700" mb={4}>
+        <Text fontWeight="700" fontSize="20px" mb={4}>
           Khóa học
         </Text>
-        <Text fontWeight="700" mb={4}>
+        <Text fontWeight="700" fontSize="20px" mb={4}>
           Ưu đãi
         </Text>
-        <Text fontWeight="700" mb={4}>
+        <Text fontWeight="700" fontSize="20px" mb={4}>
           Liên hệ
         </Text>
       </Flex>

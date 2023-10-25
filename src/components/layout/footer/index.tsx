@@ -19,6 +19,7 @@ const Footer: React.FC<FooterProps> = () => {
       backgroundColor="white"
       width="100%"
       justifyContent="center"
+      borderTop="1px solid #000"
     >
       <Flex
         width={["90%", "1200px"]}
@@ -26,6 +27,7 @@ const Footer: React.FC<FooterProps> = () => {
         justifyContent={justifyContent}
         alignItems={alignItems}
         padding="10px"
+        marginTop="30px"
         gap="20px"
       >
         <Image
