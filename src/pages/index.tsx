@@ -581,7 +581,7 @@ export default function Home() {
                     Nhận tư vấn
                   </Button>
                   <Text fontWeight="500">
-                    Nhân sự Lab sẽ liên hệ lại ít nhất là 24h sang khi điền đơn
+                    Nhân sự Lab sẽ liên hệ lại ít nhất là 24h sau khi điền đơn
                   </Text>
                 </Flex>
               </Flex>
