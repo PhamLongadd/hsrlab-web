@@ -9,8 +9,12 @@ import {
   Input,
   Select,
   Textarea,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Heading,
 } from "@chakra-ui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
   BG_COLOR,
@@ -578,6 +582,49 @@ export default function Home() {
                   </Button>
                 </Flex>
               </Flex>
+            </Box>
+          </Box>
+          <Box backgroundImage="url('/image/blog1.jpg')" bgSize="cover">
+            <Box maxW="1200px" margin="auto" pt="200px" pb="200px">
+              <Card
+                maxW="400px"
+                alignItems="center"
+                margin="10px"
+                borderRadius="50px"
+                textAlign="center"
+                border="5px solid rgb(136, 14, 50)"
+              >
+                <CardHeader>
+                  <Heading size="md">
+                    KHÁM PHÁ THẾ GIỚI MARKETING TỪ CÁC BÀI VIẾT CỦA TOMORROW
+                    MARKETERS{" "}
+                  </Heading>
+                </CardHeader>
+
+                <CardBody>
+                  <Box>
+                    <Text pt="2" fontSize="sm">
+                      Bạn muốn tìm hiểu về Brand, Content, Digital hay Trade
+                      Marketing? Bạn chưa hiểu rõ thế giới Client và Agency khác
+                      nhau như thế nào? Bạn muốn cập nhật những case study và xu
+                      hướng marketing mới nhất?
+                    </Text>
+                  </Box>
+                </CardBody>
+                <CardBody>
+                  <Button
+                    padding="30px"
+                    fontSize="25px"
+                    boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+                    transition="transform 0.3s"
+                    _hover={{
+                      transform: "scale(1.1)",
+                    }}
+                  >
+                    Khám phá Blog
+                  </Button>
+                </CardBody>
+              </Card>
             </Box>
           </Box>
         </Box>
