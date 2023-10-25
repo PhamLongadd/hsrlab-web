@@ -562,8 +562,8 @@ export default function Home() {
                     </GridItem>
                     <GridItem>
                       <Select variant="flushed" placeholder="Loại dịch vụ">
-                        <option value="option1">Dành cho học viên</option>
-                        <option value="option2">Dành cho doanh nghiệp</option>
+                        <option value="option1">Đăng kí khóa học</option>
+                        <option value="option2">Tư vấn doanh nghiệp</option>
                       </Select>
                     </GridItem>
                   </Grid>
@@ -580,6 +580,9 @@ export default function Home() {
                   >
                     Nhận tư vấn
                   </Button>
+                  <Text fontWeight="500">
+                    Nhân sự Lab sẽ liên hệ lại ít nhất là 24h sang khi điền đơn
+                  </Text>
                 </Flex>
               </Flex>
             </Box>
