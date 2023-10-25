@@ -29,12 +29,12 @@ const Footer: React.FC<FooterProps> = () => {
         gap="20px"
       >
         <Image
-          src="gibbresh.png"
-          fallbackSrc="https://via.placeholder.com/100"
-          width="100px"
-          height="100px"
+          src="/image/logohsr.png"
+          w="80px"
+          h="100px"
           mb={flexDirection === "column" ? "20px" : "0"}
         />
+
         <Flex
           direction="column"
           maxW="400px"

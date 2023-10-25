@@ -36,10 +36,7 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
         justifyContent="space-between"
         padding="10px"
       >
-        <Image
-          src="gibbresh.png"
-          fallbackSrc="https://via.placeholder.com/100"
-        />
+        <Image src="/image/logohsr.png" w="60px" h="80px" />
 
         <Button
           display={{ base: "block", md: "none" }}

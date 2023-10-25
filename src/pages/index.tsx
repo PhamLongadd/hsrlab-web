@@ -7,6 +7,7 @@ import {
   Grid,
   GridItem,
 } from "@chakra-ui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
   BG_COLOR,
@@ -450,7 +451,52 @@ export default function Home() {
               </Button>
             </Flex>
           </Box>
-          <Box></Box>
+          <Box background="linear-gradient(rgb(0, 4, 40), rgb(136, 14, 79))">
+            <Flex
+              direction="column"
+              padding="70px"
+              maxWidth="1200px"
+              width="100%"
+              margin="auto"
+              alignItems="center"
+            >
+              <Text
+                color="white"
+                textAlign="center"
+                fontWeight="700"
+                fontSize="30px"
+                marginBottom="30px"
+              >
+                Sự kiện sắp tới
+              </Text>
+              <Image
+                src="/image/sale.png"
+                boxShadow="rgb(224, 224, 224) 3px 3px 5px 0px"
+                border="2px solid rgb(224, 224, 224)"
+                borderRadius="20px"
+                objectFit="cover"
+                w="100%"
+                h={["200px", "400px", "550px"]}
+              />
+              <Button
+                padding="30px"
+                fontSize="25px"
+                marginTop="30px"
+                boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+                transition="transform 0.3s"
+                _hover={{
+                  transform: "scale(1.1)",
+                }}
+              >
+                Tìm hiểu thêm
+              </Button>
+            </Flex>
+          </Box>
+          <Box>
+            <Flex>
+              <Flex></Flex>
+            </Flex>
+          </Box>
         </Box>
       </Box>
     </>
