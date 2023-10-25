@@ -9,13 +9,15 @@ import {
   useDisclosure,
   Button,
   Flex,
+  Slide,
+  Portal,
 } from "@chakra-ui/react";
-import { ChevronDownIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 interface HeaderBarProps {}
 
 const HeaderBar: React.FC<HeaderBarProps> = () => {
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onToggle } = useDisclosure({ defaultIsOpen: false });
 
   return (
     <Box
@@ -28,8 +30,7 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
       justifyContent="center"
       boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
     >
-      <Box
-        display="flex"
+      <Flex
         width="1200px"
         alignItems="center"
         justifyContent="space-between"
@@ -39,22 +40,27 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
           src="gibbresh.png"
           fallbackSrc="https://via.placeholder.com/100"
         />
+
         <Button
           display={{ base: "block", md: "none" }}
           onClick={onToggle}
           variant="unstyled"
-          ml={2}
         >
-          aa
+          <Flex alignItems="center" gap="20px">
+            Menu
+            {isOpen ? (
+              <CloseIcon fontSize="30px" />
+            ) : (
+              <HamburgerIcon fontSize="30px" />
+            )}
+          </Flex>
         </Button>
-        {/* <Box
-          display={{ base: isOpen ? "block" : "none", md: "flex" }}
-          alignItems="center"
-          justifyContent="space-between"
-        > */}
-        <Text fontWeight="700">Trang chủ</Text>
+
+        <Text fontWeight="700" mb={4}>
+          Trang chủ
+        </Text>
         <Menu>
-          <MenuButton fontWeight="700">
+          <MenuButton fontWeight="700" mb={4}>
             <Flex alignItems="center">
               Giới thiệu
               <ChevronDownIcon fontSize="25px" />
@@ -69,12 +75,18 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
             <MenuItem fontWeight="700">Học viên</MenuItem>
           </MenuList>
         </Menu>
-        <Text fontWeight="700">Khóa học</Text>
-        <Text fontWeight="700">Ưu đãi</Text>
-        <Text fontWeight="700">Liên hệ</Text>
-        {/* </Box> */}
-      </Box>
+        <Text fontWeight="700" mb={4}>
+          Khóa học
+        </Text>
+        <Text fontWeight="700" mb={4}>
+          Ưu đãi
+        </Text>
+        <Text fontWeight="700" mb={4}>
+          Liên hệ
+        </Text>
+      </Flex>
     </Box>
   );
 };
+
 export default HeaderBar;
