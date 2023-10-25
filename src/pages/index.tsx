@@ -613,8 +613,8 @@ export default function Home() {
                 </CardBody>
                 <CardBody>
                   <Button
-                    padding="30px"
-                    fontSize="25px"
+                    padding="25px"
+                    fontSize="20px"
                     boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
                     transition="transform 0.3s"
                     _hover={{
