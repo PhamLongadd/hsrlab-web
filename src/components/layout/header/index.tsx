@@ -78,7 +78,9 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                       <Link href="/introduction/hsrLab">
                         <MenuItem fontWeight="700">Về HSR LAB</MenuItem>
                       </Link>
-                      <MenuItem fontWeight="700">Các khóa học</MenuItem>
+                      <Link href="/course">
+                        <MenuItem fontWeight="700">Các khóa học</MenuItem>
+                      </Link>
                       <MenuItem fontWeight="700">Bộ công cụ</MenuItem>
                       <MenuItem fontWeight="700">
                         Dành cho doanh nghiệp
@@ -87,9 +89,11 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                     </MenuList>
                   </Menu>
                 </Box>
-                <Text fontWeight="700" fontSize="20px" mb={4}>
-                  Khóa học
-                </Text>
+                <Link href="/course">
+                  <Text fontWeight="700" fontSize="20px" mb={4}>
+                    Khóa học
+                  </Text>
+                </Link>
                 <Text fontWeight="700" fontSize="20px" mb={4}>
                   Ưu đãi
                 </Text>
@@ -123,15 +127,19 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
               <Link href="/introduction/hsrLab">
                 <MenuItem fontWeight="700">Về HSR LAB</MenuItem>
               </Link>
-              <MenuItem fontWeight="700">Các khóa học</MenuItem>
+              <Link href="/course">
+                <MenuItem fontWeight="700">Các khóa học</MenuItem>
+              </Link>
               <MenuItem fontWeight="700">Bộ công cụ</MenuItem>
               <MenuItem fontWeight="700">Dành cho doanh nghiệp</MenuItem>
               <MenuItem fontWeight="700">Học viên</MenuItem>
             </MenuList>
           </Menu>
-          <Text fontWeight="700" fontSize="20px" mb={4}>
-            Khóa học
-          </Text>
+          <Link href="/course">
+            <Text fontWeight="700" fontSize="20px" mb={4}>
+              Khóa học
+            </Text>
+          </Link>
           <Text fontWeight="700" fontSize="20px" mb={4}>
             Ưu đãi
           </Text>
