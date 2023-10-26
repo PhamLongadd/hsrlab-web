@@ -16,7 +16,8 @@ import {
   MenuList,
   MenuItem,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, ChevronDownIcon } from "@chakra-ui/icons";
+import Link from "next/link";
 
 interface HeaderBarProps {}
 
@@ -60,9 +61,11 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
               <DrawerCloseButton fontSize="20px" />
               <DrawerHeader>Menu</DrawerHeader>
               <DrawerBody>
-                <Text fontWeight="700" fontSize="20px" mb={4}>
-                  Trang chủ
-                </Text>
+                <Link href="/">
+                  <Text fontWeight="700" fontSize="20px" mb={4}>
+                    Trang chủ
+                  </Text>
+                </Link>
                 <Box marginBottom={4}>
                   <Menu>
                     <MenuButton fontWeight="700">
@@ -72,8 +75,9 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                       </Flex>
                     </MenuButton>
                     <MenuList>
-                      <MenuItem fontWeight="700">Về STEM</MenuItem>
-                      <MenuItem fontWeight="700">Về HSR LAB</MenuItem>
+                      <Link href="/introduction/hsrLab">
+                        <MenuItem fontWeight="700">Về HSR LAB</MenuItem>
+                      </Link>
                       <MenuItem fontWeight="700">Các khóa học</MenuItem>
                       <MenuItem fontWeight="700">Bộ công cụ</MenuItem>
                       <MenuItem fontWeight="700">
@@ -99,13 +103,15 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
 
         <Flex
           display={{ base: "none", md: "flex" }}
-          width="1000px"
+          w="1000px"
           alignItems="center"
           justifyContent="space-between"
         >
-          <Text fontWeight="700" fontSize="20px" mb={4}>
-            Trang chủ
-          </Text>
+          <Link href="/">
+            <Text fontWeight="700" fontSize="20px" mb={4}>
+              Trang chủ
+            </Text>
+          </Link>
           <Menu>
             <MenuButton fontWeight="700" mb={4}>
               <Flex alignItems="center" fontSize="20px">
@@ -114,8 +120,9 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
               </Flex>
             </MenuButton>
             <MenuList>
-              <MenuItem fontWeight="700">Về STEM</MenuItem>
-              <MenuItem fontWeight="700">Về HSR LAB</MenuItem>
+              <Link href="/introduction/hsrLab">
+                <MenuItem fontWeight="700">Về HSR LAB</MenuItem>
+              </Link>
               <MenuItem fontWeight="700">Các khóa học</MenuItem>
               <MenuItem fontWeight="700">Bộ công cụ</MenuItem>
               <MenuItem fontWeight="700">Dành cho doanh nghiệp</MenuItem>
