@@ -29,6 +29,7 @@ import {
 import { StarIcon } from "@chakra-ui/icons";
 
 import CustomFormInput from "@/components/formInput/customFormInput";
+import Link from "next/link";
 
 interface CourseProps {}
 
@@ -81,17 +82,19 @@ const Course: React.FC<CourseProps> = () => {
                 bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng lộ
                 trình phát triển nghề nghiệp.
               </Text>
-              <Button
-                w="200px"
-                padding="20px"
-                marginBottom="20px"
-                transition="transform 0.3s"
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              >
-                Tìm hiểu thêm
-              </Button>
+              <Link href="course/[slug].tsx">
+                <Button
+                  w="200px"
+                  padding="20px"
+                  marginBottom="20px"
+                  transition="transform 0.3s"
+                  _hover={{
+                    transform: "scale(1.1)",
+                  }}
+                >
+                  Tìm hiểu thêm
+                </Button>
+              </Link>
               <Tag variant="subtle" colorScheme="red" padding="10px" w="250px">
                 <TagLeftIcon boxSize="12px" as={StarIcon} color="yellow" />
                 <TagLabel color="#ff0000" fontSize="20px" fontWeight="600">

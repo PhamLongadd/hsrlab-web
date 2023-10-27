@@ -6,13 +6,9 @@ import {
   Button,
   Grid,
   GridItem,
-  Input,
-  Select,
-  Textarea,
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Heading,
 } from "@chakra-ui/react";
 
