@@ -21,11 +21,11 @@ import FormInput from "@/components/formInput";
 
 export default function Home() {
   return (
-    <Box>
+    <Box mt="80px">
       <Image
         src="/image/thumnail.jpg"
         w="100%"
-        h={["400px", "600px", "800px"]}
+        h={["400px", "600px", "700px"]}
         objectFit="cover"
       />
       <Box backgroundImage="url('/image/banner1.jpg')">

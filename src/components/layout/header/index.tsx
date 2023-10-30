@@ -81,10 +81,14 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                       <Link href="/course">
                         <MenuItem fontWeight="700">Các khóa học</MenuItem>
                       </Link>
-                      <MenuItem fontWeight="700">Bộ công cụ</MenuItem>
-                      <MenuItem fontWeight="700">
-                        Dành cho doanh nghiệp
-                      </MenuItem>
+                      <Link href="/introduction/tools">
+                        <MenuItem fontWeight="700">Bộ công cụ</MenuItem>
+                      </Link>
+                      <Link href="/introduction/enterpise">
+                        <MenuItem fontWeight="700">
+                          Dành cho doanh nghiệp
+                        </MenuItem>
+                      </Link>
                       <MenuItem fontWeight="700">Học viên</MenuItem>
                     </MenuList>
                   </Menu>
@@ -94,11 +98,24 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                     Khóa học
                   </Text>
                 </Link>
-                <Text fontWeight="700" fontSize="20px" mb={4}>
-                  Ưu đãi
-                </Text>
+                <Box marginBottom={4}>
+                  <Menu>
+                    <MenuButton fontWeight="700">
+                      <Flex alignItems="center" fontSize="20px">
+                        Tài liệu chuyên môn
+                        <ChevronDownIcon fontSize="25px" />
+                      </Flex>
+                    </MenuButton>
+                    <MenuList>
+                      <MenuItem fontWeight="700">Blog</MenuItem>
+                    </MenuList>
+                  </Menu>
+                </Box>
                 <Text fontWeight="700" fontSize="20px" mb={4}>
                   Liên hệ
+                </Text>
+                <Text fontWeight="700" fontSize="20px" mb={4}>
+                  Tuyển dụng
                 </Text>
               </DrawerBody>
             </DrawerContent>
@@ -112,13 +129,13 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
           justifyContent="space-between"
         >
           <Link href="/">
-            <Text fontWeight="700" fontSize="20px" mb={4}>
+            <Text fontWeight="700" fontSize="18px" mb={4}>
               Trang chủ
             </Text>
           </Link>
           <Menu>
             <MenuButton fontWeight="700" mb={4}>
-              <Flex alignItems="center" fontSize="20px">
+              <Flex alignItems="center" fontSize="18px">
                 Giới thiệu
                 <ChevronDownIcon fontSize="25px" />
               </Flex>
@@ -130,21 +147,38 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
               <Link href="/course">
                 <MenuItem fontWeight="700">Các khóa học</MenuItem>
               </Link>
-              <MenuItem fontWeight="700">Bộ công cụ</MenuItem>
-              <MenuItem fontWeight="700">Dành cho doanh nghiệp</MenuItem>
+              <Link href="/introduction/tools">
+                <MenuItem fontWeight="700">Bộ công cụ</MenuItem>
+              </Link>
+              <Link href="/introduction/enterpise">
+                <MenuItem fontWeight="700">Dành cho doanh nghiệp</MenuItem>
+              </Link>
               <MenuItem fontWeight="700">Học viên</MenuItem>
             </MenuList>
           </Menu>
           <Link href="/course">
-            <Text fontWeight="700" fontSize="20px" mb={4}>
+            <Text fontWeight="700" fontSize="18px" mb={4}>
               Khóa học
             </Text>
           </Link>
-          <Text fontWeight="700" fontSize="20px" mb={4}>
-            Ưu đãi
-          </Text>
-          <Text fontWeight="700" fontSize="20px" mb={4}>
+          <Box marginBottom={4}>
+            <Menu>
+              <MenuButton fontWeight="700">
+                <Flex alignItems="center" fontSize="18px">
+                  Tài liệu chuyên môn
+                  <ChevronDownIcon fontSize="25px" />
+                </Flex>
+              </MenuButton>
+              <MenuList>
+                <MenuItem fontWeight="700">Blog</MenuItem>
+              </MenuList>
+            </Menu>
+          </Box>
+          <Text fontWeight="700" fontSize="18px" mb={4}>
             Liên hệ
+          </Text>
+          <Text fontWeight="700" fontSize="18px" mb={4}>
+            Tuyển dụng
           </Text>
         </Flex>
       </Flex>

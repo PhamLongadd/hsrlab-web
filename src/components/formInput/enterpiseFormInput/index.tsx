@@ -1,8 +1,8 @@
 import { Flex, Text, Button, Input, Select, Textarea } from "@chakra-ui/react";
 
-interface CourseFormInputProps {}
+interface EnterpiseFormInputProps {}
 
-const CourseFormInput: React.FC<CourseFormInputProps> = () => {
+const EnterpiseFormInput: React.FC<EnterpiseFormInputProps> = () => {
   return (
     <Flex
       direction="column"
@@ -10,7 +10,9 @@ const CourseFormInput: React.FC<CourseFormInputProps> = () => {
       backgroundColor="#FAFAD2"
       padding="20px"
     >
-      <Text>Đăng ký khoá học tại Tomorrow Marketers</Text>
+      <Text fontSize="20px" fontWeight="700">
+        Tư vấn đào tạo cho doanh nghiệp
+      </Text>
       <Text>
         Vui lòng điền đầy đủ các thông tin dưới đây. Chúng tôi sẽ liên lạc lại
         trong 24h làm việc.
@@ -18,9 +20,17 @@ const CourseFormInput: React.FC<CourseFormInputProps> = () => {
       <Input placeholder="Họ và tên của bạn" backgroundColor="white" />
       <Input placeholder="Email" backgroundColor="white" />
       <Input placeholder="Số điện thoại" backgroundColor="white" />
-      <Input placeholder="Năm sinh" backgroundColor="white" />
+      <Input placeholder="Tên doanh nghiệp của bạn" backgroundColor="white" />
       <Flex direction="column" gap="10px">
-        <Text>Bạn đang học tập, làm việc tại:*</Text>
+        <Text>Vị trí công việc của bạn*</Text>
+        <Select placeholder="Chọn vị trí công việc" backgroundColor="white">
+          <option value="option1">CEO/Founder/Chủ tịch</option>
+          <option value="option2">Giám đốc (CMO, COO, VP...)</option>
+          <option value="option2">Quản lý</option>
+        </Select>
+      </Flex>
+      <Flex direction="column" gap="10px">
+        <Text>Địa chỉ công ty*</Text>
         <Select placeholder="Chọn địa điểm" backgroundColor="white">
           <option value="option1">Hà Nội</option>
           <option value="option2">Khác</option>
@@ -34,9 +44,9 @@ const CourseFormInput: React.FC<CourseFormInputProps> = () => {
         </Select>
       </Flex>
       <Flex direction="column" gap="10px">
-        <Text>Bạn mong muốn gì khi tham gia khoá học?</Text>
+        <Text>Mục tiêu đào tạo</Text>
         <Textarea
-          placeholder="Lời nhắn"
+          placeholder="Chia sẻ với HSR LAB mục tiêu đào tạo của quý doanh nghiệp"
           resize="none"
           h="90px"
           backgroundColor="white"
@@ -50,27 +60,15 @@ const CourseFormInput: React.FC<CourseFormInputProps> = () => {
           <option value="option1">17:00 - 18:00</option>
         </Select>
       </Flex>
-      <Flex direction="column" gap="10px">
-        <Text>
-          Nếu đăng ký nhóm/ hoặc được cựu học viên giới thiệu, bạn hãy điền
-          thông tin bạn của mình dưới đây
-        </Text>
-        <Textarea
-          placeholder="Họ tên - SĐT - Email của nhóm bạn"
-          resize="none"
-          h="90px"
-          backgroundColor="white"
-        />
-      </Flex>
       <Button
         padding="30px"
         fontSize={["16px", "20px", "25px"]}
         w="60%"
         boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
       >
-        Đăng kí khóa học
+        Đăng kí tư vấn
       </Button>
     </Flex>
   );
 };
-export default CourseFormInput;
+export default EnterpiseFormInput;

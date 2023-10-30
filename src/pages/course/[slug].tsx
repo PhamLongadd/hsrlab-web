@@ -4,9 +4,6 @@ import {
   Text,
   Flex,
   Button,
-  Input,
-  Select,
-  Textarea,
   Grid,
   GridItem,
 } from "@chakra-ui/react";

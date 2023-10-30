@@ -6,26 +6,12 @@ import {
   Button,
   Grid,
   GridItem,
-  Input,
-  Select,
-  Textarea,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Heading,
   Tag,
   TagLabel,
   TagLeftIcon,
-  TagRightIcon,
-  TagCloseButton,
 } from "@chakra-ui/react";
 
-import {
-  BG_COLOR,
-  BG_TEXT_COLOR,
-  BD_BOTTOM_CARD,
-} from "@/components/styles/color";
+import { BD_BOTTOM_CARD } from "@/components/styles/color";
 import { StarIcon } from "@chakra-ui/icons";
 
 import CustomFormInput from "@/components/formInput/customFormInput";
