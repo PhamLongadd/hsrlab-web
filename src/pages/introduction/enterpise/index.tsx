@@ -1,23 +1,11 @@
-import {
-  Box,
-  Image,
-  Text,
-  Flex,
-  Button,
-  Grid,
-  GridItem,
-} from "@chakra-ui/react";
+import { Box, Image, Text, Flex } from "@chakra-ui/react";
 
-import {
-  BG_COLOR,
-  BG_TEXT_COLOR,
-  BD_BOTTOM_CARD,
-} from "@/components/styles/color";
+import { BG_COLOR } from "@/components/styles/color";
 import EnterpiseFormInput from "@/components/formInput/enterpiseFormInput";
 
-interface EnterpiseProps {}
+interface StudentsProps {}
 
-const Enterpise: React.FC<EnterpiseProps> = () => {
+const Students: React.FC<StudentsProps> = () => {
   return (
     <Box mt="80px">
       <Image
@@ -158,4 +146,4 @@ const Enterpise: React.FC<EnterpiseProps> = () => {
     </Box>
   );
 };
-export default Enterpise;
+export default Students;

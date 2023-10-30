@@ -10,12 +10,11 @@ import {
   TagLabel,
   TagLeftIcon,
 } from "@chakra-ui/react";
+import { StarIcon } from "@chakra-ui/icons";
+import Link from "next/link";
 
 import { BD_BOTTOM_CARD } from "@/components/styles/color";
-import { StarIcon } from "@chakra-ui/icons";
-
 import CustomFormInput from "@/components/formInput/customFormInput";
-import Link from "next/link";
 
 interface CourseProps {}
 

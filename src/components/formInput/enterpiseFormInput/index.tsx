@@ -63,7 +63,6 @@ const EnterpiseFormInput: React.FC<EnterpiseFormInputProps> = () => {
       <Button
         padding="30px"
         fontSize={["16px", "20px", "25px"]}
-        w="60%"
         boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
       >
         Đăng kí tư vấn

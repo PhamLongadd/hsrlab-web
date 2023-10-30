@@ -89,7 +89,9 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                           Dành cho doanh nghiệp
                         </MenuItem>
                       </Link>
-                      <MenuItem fontWeight="700">Học viên</MenuItem>
+                      <Link href="/introduction/students">
+                        <MenuItem fontWeight="700">Học viên</MenuItem>
+                      </Link>
                     </MenuList>
                   </Menu>
                 </Box>
@@ -107,7 +109,10 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                       </Flex>
                     </MenuButton>
                     <MenuList>
-                      <MenuItem fontWeight="700">Blog</MenuItem>
+                      <Link href="/blog">
+                        <MenuItem fontWeight="700">Blog</MenuItem>
+                      </Link>
+                      <MenuItem fontWeight="700">Video</MenuItem>
                     </MenuList>
                   </Menu>
                 </Box>
@@ -150,7 +155,9 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
               <Link href="/introduction/enterpise">
                 <MenuItem fontWeight="700">Dành cho doanh nghiệp</MenuItem>
               </Link>
-              <MenuItem fontWeight="700">Học viên</MenuItem>
+              <Link href="/introduction/students">
+                <MenuItem fontWeight="700">Học viên</MenuItem>
+              </Link>
             </MenuList>
           </Menu>
           <Link href="/course">
@@ -167,7 +174,9 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                 </Flex>
               </MenuButton>
               <MenuList>
-                <MenuItem fontWeight="700">Blog</MenuItem>
+                <Link href="/blog">
+                  <MenuItem fontWeight="700">Blog</MenuItem>
+                </Link>
                 <MenuItem fontWeight="700">Video</MenuItem>
               </MenuList>
             </Menu>

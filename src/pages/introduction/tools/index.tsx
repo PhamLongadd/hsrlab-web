@@ -1,12 +1,4 @@
-import {
-  Box,
-  Image,
-  Text,
-  Flex,
-  Button,
-  Grid,
-  GridItem,
-} from "@chakra-ui/react";
+import { Box, Image, Text, Flex, Button } from "@chakra-ui/react";
 
 interface ToolsProps {}
 

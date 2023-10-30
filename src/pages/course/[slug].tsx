@@ -33,7 +33,7 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
           />
         </Box>
       </Box>
-      <Box backgroundImage="url('/image/banner1.jpg')">
+      <Box backgroundImage="url('/image/banner1.jpg')" backgroundSize="cover">
         <Box display="flex" justifyContent="center" padding="70px">
           <Flex
             flexDirection={["column", "column", "row"]}
