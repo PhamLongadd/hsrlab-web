@@ -112,9 +112,6 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                   </Menu>
                 </Box>
                 <Text fontWeight="700" fontSize="20px" mb={4}>
-                  Liên hệ
-                </Text>
-                <Text fontWeight="700" fontSize="20px" mb={4}>
                   Tuyển dụng
                 </Text>
               </DrawerBody>
@@ -171,12 +168,11 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
               </MenuButton>
               <MenuList>
                 <MenuItem fontWeight="700">Blog</MenuItem>
+                <MenuItem fontWeight="700">Video</MenuItem>
               </MenuList>
             </Menu>
           </Box>
-          <Text fontWeight="700" fontSize="18px" mb={4}>
-            Liên hệ
-          </Text>
+
           <Text fontWeight="700" fontSize="18px" mb={4}>
             Tuyển dụng
           </Text>
