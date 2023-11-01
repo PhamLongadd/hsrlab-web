@@ -16,6 +16,10 @@ import {
   BG_COLOR,
   BG_TEXT_COLOR,
   BD_BOTTOM_CARD,
+  BG_BUTTON_COLOR,
+  TEXT_COLOR,
+  BD_COLOR,
+  TEXT_BOLD_COLOR,
 } from "@/components/styles/color";
 import FormInput from "@/components/formInput";
 
@@ -97,8 +101,19 @@ export default function Home() {
                   </Text>
                 </Flex>
               </Flex>
-              <Button padding={["10px", "20px", "30px"]}>
-                <Text fontSize={["16px", "20px", "25px"]}>
+              <Button
+                padding={["10px", "20px", "30px"]}
+                borderRadius="20px"
+                border="4px solid"
+                borderColor={BD_COLOR}
+                backgroundColor={BG_BUTTON_COLOR}
+                _hover={{ color: BG_BUTTON_COLOR }}
+              >
+                <Text
+                  fontSize={["16px", "20px", "20px"]}
+                  fontWeight="600"
+                  color={TEXT_COLOR}
+                >
                   Giới thiệu về HSR LAB
                 </Text>
               </Button>
@@ -134,10 +149,10 @@ export default function Home() {
             maxW="555px"
             display="flex"
             flexDirection="column"
-            gap="30px"
+            gap="20px"
             alignItems="center"
           >
-            <Text fontSize="30px" fontWeight="700">
+            <Text fontSize="30px" fontWeight="700" color={TEXT_BOLD_COLOR}>
               STEM là gì?
             </Text>
             <Text padding="20px">
@@ -149,17 +164,23 @@ export default function Home() {
               rộng trên thế giới. Tại Việt Nam, một số trường học đã áp dụng mô
               hình học này và nhận về nhiều kết quả ngoài mong đợi.
             </Text>
-            <Button padding={["10px", "20px", "30px"]}>
-              <Text fontSize={["16px", "20px", "25px"]}>
-                Tìm hiểu thêm về STEM
-              </Text>
-            </Button>
+            <Text padding="20px">
+              Giáo dục STEM là mô hình giáo dục đã và đang được áp dụng tại
+              nhiều quốc gia phát triển trên thế giới. STEM đặc trưng bởi hệ
+              thống kiến thức đa lĩnh vực kết hợp với những bài học kỹ năng mềm
+              và ứng dụng thực tế.
+            </Text>
           </Box>
         </Flex>
       </Box>
       <Box backgroundColor={BG_COLOR} padding="70px">
         <Flex direction="column">
-          <Text fontSize="30px" fontWeight="700" textAlign="center">
+          <Text
+            fontSize="30px"
+            fontWeight="700"
+            textAlign="center"
+            color={TEXT_BOLD_COLOR}
+          >
             Các đối tác đồng hành cùng HSR LAB
           </Text>
           <Flex flexDirection={["column", "column", "row"]}>

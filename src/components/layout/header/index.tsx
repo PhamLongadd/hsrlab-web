@@ -16,8 +16,10 @@ import {
   MenuList,
   MenuItem,
 } from "@chakra-ui/react";
-import { HamburgerIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import Link from "next/link";
+import { HamburgerIcon, ChevronDownIcon } from "@chakra-ui/icons";
+
+import { HOVER_TEXT_COLOR } from "@/components/styles/color";
 
 interface HeaderBarProps {}
 
@@ -133,12 +135,21 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
           justifyContent="space-between"
         >
           <Link href="/">
-            <Text fontWeight="700" fontSize="18px">
+            <Text
+              fontWeight="700"
+              fontSize="18px"
+              transition="transform 0.3s"
+              _hover={{ color: HOVER_TEXT_COLOR, transform: "scale(1.1)" }}
+            >
               Trang chủ
             </Text>
           </Link>
           <Menu>
-            <MenuButton fontWeight="700">
+            <MenuButton
+              fontWeight="700"
+              transition="transform 0.3s"
+              _hover={{ color: HOVER_TEXT_COLOR, transform: "scale(1.1)" }}
+            >
               <Flex alignItems="center" fontSize="18px">
                 Giới thiệu
                 <ChevronDownIcon fontSize="25px" />
@@ -163,13 +174,22 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
             </MenuList>
           </Menu>
           <Link href="/course">
-            <Text fontWeight="700" fontSize="18px">
+            <Text
+              fontWeight="700"
+              fontSize="18px"
+              transition="transform 0.3s"
+              _hover={{ color: HOVER_TEXT_COLOR, transform: "scale(1.1)" }}
+            >
               Khóa học
             </Text>
           </Link>
           <Box>
             <Menu>
-              <MenuButton fontWeight="700">
+              <MenuButton
+                fontWeight="700"
+                transition="transform 0.3s"
+                _hover={{ color: HOVER_TEXT_COLOR, transform: "scale(1.1)" }}
+              >
                 <Flex alignItems="center" fontSize="18px">
                   Tài liệu chuyên môn
                   <ChevronDownIcon fontSize="25px" />
@@ -184,7 +204,12 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
             </Menu>
           </Box>
           <Link href="/recruitment">
-            <Text fontWeight="700" fontSize="18px">
+            <Text
+              fontWeight="700"
+              fontSize="18px"
+              transition="transform 0.3s"
+              _hover={{ color: HOVER_TEXT_COLOR, transform: "scale(1.1)" }}
+            >
               Tuyển dụng
             </Text>
           </Link>
