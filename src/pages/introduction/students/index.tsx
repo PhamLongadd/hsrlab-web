@@ -1,21 +1,4 @@
-import {
-  Box,
-  Image,
-  Text,
-  Flex,
-  Grid,
-  GridItem,
-  Button,
-  Tag,
-  TagLabel,
-  TagLeftIcon,
-} from "@chakra-ui/react";
-import Link from "next/link";
-import { StarIcon } from "@chakra-ui/icons";
-
-import { BG_COLOR } from "@/components/styles/color";
-import EnterpiseFormInput from "@/components/formInput/enterpiseFormInput";
-import { BD_BOTTOM_CARD } from "@/components/styles/color";
+import { Box, Image, Text, Flex, Grid, GridItem } from "@chakra-ui/react";
 
 interface EnterpiseProps {}
 

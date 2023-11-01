@@ -116,9 +116,11 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                     </MenuList>
                   </Menu>
                 </Box>
-                <Text fontWeight="700" fontSize="20px" mb={4}>
-                  Tuyển dụng
-                </Text>
+                <Link href="/recruitment">
+                  <Text fontWeight="700" fontSize="20px" mb={4}>
+                    Tuyển dụng
+                  </Text>
+                </Link>
               </DrawerBody>
             </DrawerContent>
           </DrawerOverlay>
@@ -131,12 +133,12 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
           justifyContent="space-between"
         >
           <Link href="/">
-            <Text fontWeight="700" fontSize="18px" mb={4}>
+            <Text fontWeight="700" fontSize="18px">
               Trang chủ
             </Text>
           </Link>
           <Menu>
-            <MenuButton fontWeight="700" mb={4}>
+            <MenuButton fontWeight="700">
               <Flex alignItems="center" fontSize="18px">
                 Giới thiệu
                 <ChevronDownIcon fontSize="25px" />
@@ -161,11 +163,11 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
             </MenuList>
           </Menu>
           <Link href="/course">
-            <Text fontWeight="700" fontSize="18px" mb={4}>
+            <Text fontWeight="700" fontSize="18px">
               Khóa học
             </Text>
           </Link>
-          <Box marginBottom={4}>
+          <Box>
             <Menu>
               <MenuButton fontWeight="700">
                 <Flex alignItems="center" fontSize="18px">
@@ -181,10 +183,11 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
               </MenuList>
             </Menu>
           </Box>
-
-          <Text fontWeight="700" fontSize="18px" mb={4}>
-            Tuyển dụng
-          </Text>
+          <Link href="/recruitment">
+            <Text fontWeight="700" fontSize="18px">
+              Tuyển dụng
+            </Text>
+          </Link>
         </Flex>
       </Flex>
     </Box>
