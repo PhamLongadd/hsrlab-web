@@ -10,6 +10,13 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 
+import {
+  BG_BUTTON_COLOR,
+  TEXT_COLOR,
+  BD_COLOR,
+  TEXT_BOLD_COLOR,
+} from "@/components/styles/color";
+
 interface FormInputProps {}
 
 const FormInput: React.FC<FormInputProps> = () => {
@@ -20,6 +27,7 @@ const FormInput: React.FC<FormInputProps> = () => {
         fontSize="30px"
         fontWeight="700"
         marginBottom="50px"
+        color={TEXT_BOLD_COLOR}
       >
         Liên hệ với chúng tôi
       </Text>
@@ -77,9 +85,14 @@ const FormInput: React.FC<FormInputProps> = () => {
           </Grid>
           <Textarea placeholder="Lời nhắn" resize="none" h="190px" />
           <Button
-            padding="30px"
+            padding="25px"
             fontSize="25px"
             marginTop="30px"
+            borderRadius="20px"
+            border="4px solid"
+            borderColor={BD_COLOR}
+            backgroundColor={BG_BUTTON_COLOR}
+            color={TEXT_COLOR}
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
             transition="transform 0.3s"
             _hover={{

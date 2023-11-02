@@ -20,6 +20,7 @@ import {
   TEXT_COLOR,
   BD_COLOR,
   TEXT_BOLD_COLOR,
+  BD_CARD_COLOR,
 } from "@/components/styles/color";
 import FormInput from "@/components/formInput";
 
@@ -198,6 +199,7 @@ export default function Home() {
             fontWeight="700"
             textAlign="center"
             marginBottom="30px"
+            color={TEXT_BOLD_COLOR}
           >
             Các khóa học
           </Text>
@@ -243,6 +245,8 @@ export default function Home() {
                   padding="20px"
                   marginBottom="20px"
                   transition="transform 0.3s"
+                  backgroundColor={BG_BUTTON_COLOR}
+                  color={TEXT_COLOR}
                   _hover={{
                     transform: "scale(1.1)",
                   }}
@@ -284,48 +288,8 @@ export default function Home() {
                   w="200px"
                   padding="20px"
                   marginBottom="20px"
-                  transition="transform 0.3s"
-                  _hover={{
-                    transform: "scale(1.1)",
-                  }}
-                >
-                  Tìm hiểu thêm
-                </Button>
-              </Flex>
-            </GridItem>
-            <GridItem
-              boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-              borderRadius="20px"
-              overflow="hidden"
-            >
-              <Box overflow="hidden">
-                <Image
-                  src="/image/card.png"
-                  borderTopRightRadius="20px"
-                  borderTopLeftRadius="20px"
-                  transition="transform 0.3s"
-                  _hover={{
-                    transform: "scale(1.1)",
-                  }}
-                />
-              </Box>
-              <Flex direction="column" gap="10px" padding="20px">
-                <Text fontSize="20px" fontWeight="700">
-                  Marketing Foundation
-                </Text>
-                <Text
-                  borderBottom="1px solid "
-                  borderBottomColor={BD_BOTTOM_CARD}
-                  paddingBottom="20px"
-                >
-                  Khoá học cung cấp tư duy marketing nền tảng dành cho người mới
-                  bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng
-                  lộ trình phát triển nghề nghiệp.
-                </Text>
-                <Button
-                  w="200px"
-                  padding="20px"
-                  marginBottom="20px"
+                  backgroundColor={BG_BUTTON_COLOR}
+                  color={TEXT_COLOR}
                   transition="transform 0.3s"
                   _hover={{
                     transform: "scale(1.1)",
@@ -368,6 +332,54 @@ export default function Home() {
                   w="200px"
                   padding="20px"
                   marginBottom="20px"
+                  backgroundColor={BG_BUTTON_COLOR}
+                  color={TEXT_COLOR}
+                  transition="transform 0.3s"
+                  _hover={{
+                    transform: "scale(1.1)",
+                  }}
+                >
+                  Tìm hiểu thêm
+                </Button>
+              </Flex>
+            </GridItem>
+            <GridItem
+              boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+              borderRadius="20px"
+              overflow="hidden"
+            >
+              <Box overflow="hidden">
+                <Image
+                  src="/image/card.png"
+                  borderTopRightRadius="20px"
+                  borderTopLeftRadius="20px"
+                  backgroundColor={BG_BUTTON_COLOR}
+                  color={TEXT_COLOR}
+                  transition="transform 0.3s"
+                  _hover={{
+                    transform: "scale(1.1)",
+                  }}
+                />
+              </Box>
+              <Flex direction="column" gap="10px" padding="20px">
+                <Text fontSize="20px" fontWeight="700">
+                  Marketing Foundation
+                </Text>
+                <Text
+                  borderBottom="1px solid "
+                  borderBottomColor={BD_BOTTOM_CARD}
+                  paddingBottom="20px"
+                >
+                  Khoá học cung cấp tư duy marketing nền tảng dành cho người mới
+                  bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng
+                  lộ trình phát triển nghề nghiệp.
+                </Text>
+                <Button
+                  w="200px"
+                  padding="20px"
+                  marginBottom="20px"
+                  backgroundColor={BG_BUTTON_COLOR}
+                  color={TEXT_COLOR}
                   transition="transform 0.3s"
                   _hover={{
                     transform: "scale(1.1)",
@@ -410,6 +422,8 @@ export default function Home() {
                   w="200px"
                   padding="20px"
                   marginBottom="20px"
+                  backgroundColor={BG_BUTTON_COLOR}
+                  color={TEXT_COLOR}
                   transition="transform 0.3s"
                   _hover={{
                     transform: "scale(1.1)",
@@ -436,6 +450,7 @@ export default function Home() {
             fontWeight="700"
             fontSize="30px"
             marginBottom="30px"
+            color={TEXT_BOLD_COLOR}
           >
             Ưu đãi khóa học mới
           </Text>
@@ -448,10 +463,15 @@ export default function Home() {
             h={["200px", "400px", "550px"]}
           />
           <Button
-            padding="30px"
+            padding="25px"
             fontSize="25px"
             marginTop="30px"
+            borderRadius="20px"
+            border="4px solid"
+            borderColor={BD_COLOR}
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+            backgroundColor={BG_BUTTON_COLOR}
+            color={TEXT_COLOR}
             transition="transform 0.3s"
             _hover={{
               transform: "scale(1.1)",
@@ -489,10 +509,15 @@ export default function Home() {
             h={["200px", "400px", "550px"]}
           />
           <Button
-            padding="30px"
+            padding="25px"
             fontSize="25px"
             marginTop="30px"
+            borderRadius="20px"
+            border="4px solid"
+            borderColor={BD_COLOR}
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+            backgroundColor={BG_BUTTON_COLOR}
+            color={TEXT_COLOR}
             transition="transform 0.3s"
             _hover={{
               transform: "scale(1.1)",
@@ -513,7 +538,8 @@ export default function Home() {
             margin="10px"
             borderRadius="50px"
             textAlign="center"
-            border="5px solid rgb(136, 14, 50)"
+            border="5px solid"
+            borderColor={BD_CARD_COLOR}
           >
             <CardHeader>
               <Heading size="md">
@@ -536,6 +562,11 @@ export default function Home() {
               <Button
                 padding="25px"
                 fontSize="20px"
+                borderRadius="20px"
+                border="4px solid"
+                borderColor={BD_COLOR}
+                backgroundColor={BG_BUTTON_COLOR}
+                color={TEXT_COLOR}
                 boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
                 transition="transform 0.3s"
                 _hover={{
