@@ -103,8 +103,8 @@ export default function Home() {
                 </Flex>
               </Flex>
               <Button
-                padding={["10px", "20px", "30px"]}
-                borderRadius="20px"
+                padding={["10px", "20px", "25px"]}
+                borderRadius="10px"
                 border="4px solid"
                 borderColor={BD_COLOR}
                 backgroundColor={BG_BUTTON_COLOR}
@@ -463,21 +463,23 @@ export default function Home() {
             h={["200px", "400px", "550px"]}
           />
           <Button
-            padding="25px"
-            fontSize="25px"
-            marginTop="30px"
-            borderRadius="20px"
-            border="4px solid"
-            borderColor={BD_COLOR}
+            mt="30px"
+            padding={["10px", "20px", "25px"]}
+            borderRadius="10px"
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
             backgroundColor={BG_BUTTON_COLOR}
-            color={TEXT_COLOR}
             transition="transform 0.3s"
             _hover={{
               transform: "scale(1.1)",
             }}
           >
-            Tìm hiểu thêm
+            <Text
+              fontSize={["16px", "20px", "25px"]}
+              fontWeight="600"
+              color={TEXT_COLOR}
+            >
+              Tìm hiểu thêm
+            </Text>
           </Button>
         </Flex>
       </Box>
@@ -509,21 +511,25 @@ export default function Home() {
             h={["200px", "400px", "550px"]}
           />
           <Button
-            padding="25px"
-            fontSize="25px"
-            marginTop="30px"
-            borderRadius="20px"
+            mt="30px"
+            padding={["10px", "20px", "25px"]}
+            borderRadius="10px"
             border="4px solid"
             borderColor={BD_COLOR}
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
             backgroundColor={BG_BUTTON_COLOR}
-            color={TEXT_COLOR}
             transition="transform 0.3s"
             _hover={{
               transform: "scale(1.1)",
             }}
           >
-            Tìm hiểu thêm
+            <Text
+              fontSize={["16px", "20px", "25px"]}
+              fontWeight="600"
+              color={TEXT_COLOR}
+            >
+              Tìm hiểu thêm
+            </Text>
           </Button>
         </Flex>
       </Box>
@@ -560,20 +566,24 @@ export default function Home() {
             </CardBody>
             <CardBody>
               <Button
-                padding="25px"
-                fontSize="20px"
-                borderRadius="20px"
+                padding={["10px", "20px", "25px"]}
+                borderRadius="10px"
                 border="4px solid"
                 borderColor={BD_COLOR}
-                backgroundColor={BG_BUTTON_COLOR}
-                color={TEXT_COLOR}
                 boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+                backgroundColor={BG_BUTTON_COLOR}
                 transition="transform 0.3s"
                 _hover={{
                   transform: "scale(1.1)",
                 }}
               >
-                Khám phá Blog
+                <Text
+                  fontSize={["16px", "20px", "20px"]}
+                  fontWeight="600"
+                  color={TEXT_COLOR}
+                >
+                  Khám phá Blog
+                </Text>
               </Button>
             </CardBody>
           </Card>

@@ -85,21 +85,25 @@ const FormInput: React.FC<FormInputProps> = () => {
           </Grid>
           <Textarea placeholder="Lời nhắn" resize="none" h="190px" />
           <Button
-            padding="25px"
-            fontSize="25px"
-            marginTop="30px"
-            borderRadius="20px"
+            mt="30px"
+            padding={["10px", "20px", "25px"]}
+            borderRadius="10px"
             border="4px solid"
             borderColor={BD_COLOR}
-            backgroundColor={BG_BUTTON_COLOR}
-            color={TEXT_COLOR}
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+            backgroundColor={BG_BUTTON_COLOR}
             transition="transform 0.3s"
             _hover={{
               transform: "scale(1.1)",
             }}
           >
-            Nhận tư vấn
+            <Text
+              fontSize={["16px", "20px", "25px"]}
+              fontWeight="600"
+              color={TEXT_COLOR}
+            >
+              Nhận tư vấn
+            </Text>
           </Button>
           <Text fontWeight="500">
             Nhân sự Lab sẽ liên hệ lại ít nhất là 24h sau khi điền đơn
