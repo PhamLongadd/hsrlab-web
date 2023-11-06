@@ -24,7 +24,7 @@ import { HOVER_TEXT_COLOR } from "@/components/styles/color";
 interface HeaderBarProps {}
 
 const HeaderBar: React.FC<HeaderBarProps> = () => {
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onToggle, onClose } = useDisclosure();
 
   return (
     <Box
@@ -64,7 +64,13 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
               <DrawerHeader>Menu</DrawerHeader>
               <DrawerBody>
                 <Link href="/">
-                  <Text fontWeight="700" fontSize="20px" mb={4}>
+                  <Text
+                    fontWeight="700"
+                    fontSize="20px"
+                    mb={4}
+                    onClick={onClose}
+                    cursor="pointer"
+                  >
                     Trang chủ
                   </Text>
                 </Link>
@@ -78,27 +84,61 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                     </MenuButton>
                     <MenuList>
                       <Link href="/introduction/hsrLab">
-                        <MenuItem fontWeight="700">Về HSR LAB</MenuItem>
+                        <MenuItem
+                          fontWeight="700"
+                          onClick={onClose}
+                          cursor="pointer"
+                        >
+                          Về HSR LAB
+                        </MenuItem>
                       </Link>
                       <Link href="/course">
-                        <MenuItem fontWeight="700">Các khóa học</MenuItem>
+                        <MenuItem
+                          fontWeight="700"
+                          onClick={onClose}
+                          cursor="pointer"
+                        >
+                          Các khóa học
+                        </MenuItem>
                       </Link>
                       <Link href="/introduction/tools">
-                        <MenuItem fontWeight="700">Bộ công cụ</MenuItem>
+                        <MenuItem
+                          fontWeight="700"
+                          onClick={onClose}
+                          cursor="pointer"
+                        >
+                          Bộ công cụ
+                        </MenuItem>
                       </Link>
                       <Link href="/introduction/enterpise">
-                        <MenuItem fontWeight="700">
+                        <MenuItem
+                          fontWeight="700"
+                          onClick={onClose}
+                          cursor="pointer"
+                        >
                           Dành cho doanh nghiệp
                         </MenuItem>
                       </Link>
                       <Link href="/introduction/students">
-                        <MenuItem fontWeight="700">Học viên</MenuItem>
+                        <MenuItem
+                          fontWeight="700"
+                          onClick={onClose}
+                          cursor="pointer"
+                        >
+                          Học viên
+                        </MenuItem>
                       </Link>
                     </MenuList>
                   </Menu>
                 </Box>
                 <Link href="/course">
-                  <Text fontWeight="700" fontSize="20px" mb={4}>
+                  <Text
+                    fontWeight="700"
+                    fontSize="20px"
+                    mb={4}
+                    onClick={onClose}
+                    cursor="pointer"
+                  >
                     Khóa học
                   </Text>
                 </Link>
@@ -112,14 +152,32 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                     </MenuButton>
                     <MenuList>
                       <Link href="/blog">
-                        <MenuItem fontWeight="700">Blog</MenuItem>
+                        <MenuItem
+                          fontWeight="700"
+                          onClick={onClose}
+                          cursor="pointer"
+                        >
+                          Blog
+                        </MenuItem>
                       </Link>
-                      <MenuItem fontWeight="700">Video</MenuItem>
+                      <MenuItem
+                        fontWeight="700"
+                        onClick={onClose}
+                        cursor="pointer"
+                      >
+                        Video
+                      </MenuItem>
                     </MenuList>
                   </Menu>
                 </Box>
                 <Link href="/recruitment">
-                  <Text fontWeight="700" fontSize="20px" mb={4}>
+                  <Text
+                    fontWeight="700"
+                    fontSize="20px"
+                    mb={4}
+                    onClick={onClose}
+                    cursor="pointer"
+                  >
                     Tuyển dụng
                   </Text>
                 </Link>

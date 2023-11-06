@@ -3,24 +3,23 @@ import {
   Flex,
   Image,
   Text,
-  Button,
   Grid,
   GridItem,
-  Input,
-  Select,
-  Textarea,
   Card,
-  CardHeader,
   CardBody,
-  CardFooter,
-  Heading,
 } from "@chakra-ui/react";
+
 import {
   BG_COLOR,
   BG_TEXT_COLOR,
   BD_BOTTOM_CARD,
+  BG_BUTTON_COLOR,
+  TEXT_COLOR,
+  BD_COLOR,
+  TEXT_BOLD_COLOR,
+  BD_CARD_COLOR,
+  BG_CARD_COLOR,
 } from "@/components/styles/color";
-
 interface HsrLabProps {}
 
 const HsrLab: React.FC<HsrLabProps> = () => {
@@ -33,7 +32,8 @@ const HsrLab: React.FC<HsrLabProps> = () => {
             maxW="1200px"
             margin="10px"
             borderRadius="50px"
-            border="5px solid rgb(136, 14, 50)"
+            border="5px solid"
+            borderColor={BD_CARD_COLOR}
           >
             <CardBody>
               <Box>
@@ -113,6 +113,7 @@ const HsrLab: React.FC<HsrLabProps> = () => {
           fontSize="40px"
           fontWeight="700"
           alignItems="center"
+          color={TEXT_BOLD_COLOR}
         >
           MANG STEM - ROBOTICS ĐẾN VỚI MỌI HỌC SINH VIỆT NAM
         </Text>
@@ -121,48 +122,76 @@ const HsrLab: React.FC<HsrLabProps> = () => {
           những giờ thực hành thực tế
         </Text>
         <Flex
-          gap={["10px", "20px", "30px"]}
+          gap={["10px", "30px", "50px"]}
           mt="30px"
           alignItems="center"
           textAlign="center"
+          backgroundColor={BG_CARD_COLOR}
+          padding="30px"
+          borderRadius="10px"
+          flexDirection={["column", "column", "row"]}
         >
-          <Flex direction="column" gap="20px" alignItems="center">
-            <Text fontSize={["20px", "20px", "30px"]} fontWeight="700">
+          <Flex
+            direction="column"
+            gap={["10px", "10px", "20px"]}
+            alignItems="center"
+          >
+            <Text
+              fontSize={["40px", "40px", "50px"]}
+              fontWeight="700"
+              color={TEXT_COLOR}
+            >
               08
             </Text>
-            <Text fontSize="16px" fontWeight="600">
+            <Text fontSize="16px" fontWeight="600" color={TEXT_COLOR}>
               Năm
             </Text>
           </Flex>
           <Flex direction="column" gap="20px" alignItems="center">
-            <Text fontSize={["20px", "20px", "30px"]} fontWeight="700">
+            <Text
+              fontSize={["40px", "40px", "50px"]}
+              fontWeight="700"
+              color={TEXT_COLOR}
+            >
               1000+
             </Text>
-            <Text fontSize="16px" fontWeight="600">
+            <Text fontSize="16px" fontWeight="600" color={TEXT_COLOR}>
               Học viên
             </Text>
           </Flex>
           <Flex direction="column" gap="20px" alignItems="center">
-            <Text fontSize={["20px", "20px", "30px"]} fontWeight="700">
+            <Text
+              fontSize={["40px", "40px", "50px"]}
+              fontWeight="700"
+              color={TEXT_COLOR}
+            >
               350+
             </Text>
-            <Text fontSize="16px" fontWeight="600">
+            <Text fontSize="16px" fontWeight="600" color={TEXT_COLOR}>
               Lớp học
             </Text>
           </Flex>
           <Flex direction="column" gap="20px" alignItems="center">
-            <Text fontSize={["20px", "20px", "30px"]} fontWeight="700">
+            <Text
+              fontSize={["40px", "40px", "50px"]}
+              fontWeight="700"
+              color={TEXT_COLOR}
+            >
               40+
             </Text>
-            <Text fontSize="16px" fontWeight="600">
+            <Text fontSize="16px" fontWeight="600" color={TEXT_COLOR}>
               Giảng viên
             </Text>
           </Flex>
           <Flex direction="column" gap="20px" alignItems="center">
-            <Text fontSize={["20px", "20px", "30px"]} fontWeight="700">
+            <Text
+              fontSize={["40px", "40px", "50px"]}
+              fontWeight="700"
+              color={TEXT_COLOR}
+            >
               150+
             </Text>
-            <Text fontSize="16px" fontWeight="600">
+            <Text fontSize="16px" fontWeight="600" color={TEXT_COLOR}>
               Sự kiện
             </Text>
           </Flex>
@@ -170,7 +199,12 @@ const HsrLab: React.FC<HsrLabProps> = () => {
       </Box>
       <Box backgroundColor={BG_COLOR} padding="70px">
         <Flex direction="column">
-          <Text fontSize="30px" fontWeight="700" textAlign="center">
+          <Text
+            fontSize="30px"
+            fontWeight="700"
+            textAlign="center"
+            color={TEXT_BOLD_COLOR}
+          >
             Các đối tác đồng hành cùng HSR LAB
           </Text>
           <Flex flexDirection={["column", "column", "row"]}>
@@ -181,7 +215,7 @@ const HsrLab: React.FC<HsrLabProps> = () => {
           </Flex>
         </Flex>
       </Box>
-      <Box backgroundColor="rgb(79, 16, 145)">
+      <Box backgroundColor={BG_CARD_COLOR}>
         <Text
           color="white"
           fontSize="30px"
@@ -203,7 +237,8 @@ const HsrLab: React.FC<HsrLabProps> = () => {
         >
           <Box
             maxW="555px"
-            border="10px solid rgb(79, 16, 145)"
+            border="10px solid"
+            borderColor={BD_CARD_COLOR}
             borderRadius="20px"
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.8)"
           >
@@ -218,7 +253,9 @@ const HsrLab: React.FC<HsrLabProps> = () => {
             <Text
               fontSize="30px"
               fontWeight="700"
-              borderBottom="2px solid #000"
+              borderBottom="2px solid"
+              borderColor={BD_CARD_COLOR}
+              color={TEXT_BOLD_COLOR}
             >
               Phương Mai - Product Team
             </Text>
@@ -311,7 +348,8 @@ const HsrLab: React.FC<HsrLabProps> = () => {
         >
           <Box
             maxW="555px"
-            border="10px solid rgb(79, 16, 145)"
+            border="10px solid"
+            borderColor={BD_CARD_COLOR}
             borderRadius="20px"
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.8)"
           >
@@ -326,7 +364,9 @@ const HsrLab: React.FC<HsrLabProps> = () => {
             <Text
               fontSize="30px"
               fontWeight="700"
-              borderBottom="2px solid #000"
+              borderBottom="2px solid"
+              borderColor={BD_CARD_COLOR}
+              color={TEXT_BOLD_COLOR}
             >
               Phương Mai - Product Team
             </Text>
