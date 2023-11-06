@@ -1,14 +1,9 @@
 import { Flex, Text, Button, Input, Select, Textarea } from "@chakra-ui/react";
 
 import {
-  BG_COLOR,
-  BG_TEXT_COLOR,
-  BD_BOTTOM_CARD,
   BG_BUTTON_COLOR,
   TEXT_COLOR,
-  BD_COLOR,
   TEXT_BOLD_COLOR,
-  BD_CARD_COLOR,
 } from "@/components/styles/color";
 
 interface EnterpiseFormInputProps {}

@@ -1,5 +1,11 @@
 import { Flex, Text, Button, Input, Select, Textarea } from "@chakra-ui/react";
 
+import {
+  BG_BUTTON_COLOR,
+  TEXT_COLOR,
+  TEXT_BOLD_COLOR,
+} from "@/components/styles/color";
+
 interface CourseFormInputProps {}
 
 const CourseFormInput: React.FC<CourseFormInputProps> = () => {
@@ -10,7 +16,9 @@ const CourseFormInput: React.FC<CourseFormInputProps> = () => {
       backgroundColor="#FAFAD2"
       padding="20px"
     >
-      <Text>Đăng ký khoá học tại Tomorrow Marketers</Text>
+      <Text fontSize="20px" fontWeight="700" color={TEXT_BOLD_COLOR}>
+        Đăng ký khoá học tại Tomorrow Marketers
+      </Text>
       <Text>
         Vui lòng điền đầy đủ các thông tin dưới đây. Chúng tôi sẽ liên lạc lại
         trong 24h làm việc.
@@ -63,11 +71,18 @@ const CourseFormInput: React.FC<CourseFormInputProps> = () => {
         />
       </Flex>
       <Button
-        padding="30px"
-        fontSize={["16px", "20px", "25px"]}
-        boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+        padding={["20px", "20px", "25px"]}
+        borderRadius="10px"
+        backgroundColor={BG_BUTTON_COLOR}
+        _hover={{ color: BG_BUTTON_COLOR }}
       >
-        Đăng kí khóa học
+        <Text
+          fontSize={["20px", "20px", "20px"]}
+          fontWeight="600"
+          color={TEXT_COLOR}
+        >
+          Nhận tư vấn
+        </Text>
       </Button>
     </Flex>
   );

@@ -1,5 +1,11 @@
 import { Box, Image, Text, Flex, Grid, GridItem } from "@chakra-ui/react";
 
+import {
+  TEXT_BOLD_COLOR,
+  BD_CARD_COLOR,
+  BG_CARD_COLOR,
+} from "@/components/styles/color";
+
 interface EnterpiseProps {}
 
 const Enterpise: React.FC<EnterpiseProps> = () => {
@@ -17,6 +23,7 @@ const Enterpise: React.FC<EnterpiseProps> = () => {
           fontWeight="700"
           textAlign="center"
           marginBottom="30px"
+          color={TEXT_BOLD_COLOR}
         >
           Chia sẻ của học viên
         </Text>
@@ -327,7 +334,7 @@ const Enterpise: React.FC<EnterpiseProps> = () => {
           </GridItem>
         </Grid>
       </Box>
-      <Box backgroundColor="rgb(79, 16, 145)">
+      <Box backgroundColor={BG_CARD_COLOR}>
         <Text
           color="white"
           fontSize="30px"
@@ -349,7 +356,8 @@ const Enterpise: React.FC<EnterpiseProps> = () => {
         >
           <Box
             maxW="555px"
-            border="10px solid rgb(79, 16, 145)"
+            border="10px solid "
+            borderColor={BD_CARD_COLOR}
             borderRadius="20px"
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.8)"
           >
@@ -364,7 +372,9 @@ const Enterpise: React.FC<EnterpiseProps> = () => {
             <Text
               fontSize="30px"
               fontWeight="700"
-              borderBottom="2px solid #000"
+              borderBottom="2px solid"
+              borderColor={BD_CARD_COLOR}
+              color={TEXT_BOLD_COLOR}
             >
               Phương Mai - Product Team
             </Text>
@@ -457,7 +467,8 @@ const Enterpise: React.FC<EnterpiseProps> = () => {
         >
           <Box
             maxW="555px"
-            border="10px solid rgb(79, 16, 145)"
+            border="10px solid "
+            borderColor={BD_CARD_COLOR}
             borderRadius="20px"
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.8)"
           >
@@ -472,7 +483,9 @@ const Enterpise: React.FC<EnterpiseProps> = () => {
             <Text
               fontSize="30px"
               fontWeight="700"
-              borderBottom="2px solid #000"
+              borderColor={BD_CARD_COLOR}
+              color={TEXT_BOLD_COLOR}
+              borderBottom="2px solid"
             >
               Phương Mai - Product Team
             </Text>

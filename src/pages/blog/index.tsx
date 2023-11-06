@@ -1,7 +1,11 @@
 import { Box, Image, Text, Flex, Grid, GridItem } from "@chakra-ui/react";
 import Link from "next/link";
 
-import { BG_COLOR, HOVER_TEXT_COLOR } from "@/components/styles/color";
+import {
+  BG_COLOR,
+  TEXT_BOLD_COLOR,
+  HOVER_TEXT_COLOR,
+} from "@/components/styles/color";
 
 interface BlogProps {}
 
@@ -36,7 +40,12 @@ const Blog: React.FC<BlogProps> = () => {
         </Flex>
       </Box>
       <Box padding="30px" maxWidth="1200px" width="100%" margin="auto">
-        <Text fontSize="30px" fontWeight="700" marginBottom="30px">
+        <Text
+          fontSize="30px"
+          fontWeight="700"
+          marginBottom="30px"
+          color={TEXT_BOLD_COLOR}
+        >
           _ Chia sẻ kiến thức
         </Text>
         <Grid
@@ -348,7 +357,12 @@ const Blog: React.FC<BlogProps> = () => {
       </Box>
       <Box backgroundColor={BG_COLOR}>
         <Box padding="30px" maxWidth="1200px" width="100%" margin="auto">
-          <Text fontSize="30px" fontWeight="700" marginBottom="30px">
+          <Text
+            fontSize="30px"
+            fontWeight="700"
+            marginBottom="30px"
+            color={TEXT_BOLD_COLOR}
+          >
             _ Chia sẻ kiến thức
           </Text>
           <Grid

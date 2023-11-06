@@ -12,6 +12,11 @@ import {
   BG_COLOR,
   BG_TEXT_COLOR,
   BD_BOTTOM_CARD,
+  BG_BUTTON_COLOR,
+  TEXT_COLOR,
+  TEXT_BOLD_COLOR,
+  BD_CARD_COLOR,
+  BG_CARD_COLOR,
 } from "@/components/styles/color";
 import CourseFormInput from "@/components/formInput/courseFormInput";
 
@@ -114,7 +119,9 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
             <Text
               fontSize="30px"
               fontWeight="700"
-              borderBottom="2px solid #000"
+              borderBottom="2px solid"
+              borderColor={BD_CARD_COLOR}
+              color={TEXT_BOLD_COLOR}
             >
               Hiểu toàn diện các Digital Platforms để lập kế hoạch Digital
               Marketing hoàn chỉnh
@@ -144,7 +151,13 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
       </Box>
       <Box backgroundColor="rgba(234, 242, 254, 0.5)">
         <Box maxW="1200px" margin="auto" pt="50px" pb="50px">
-          <Text textAlign="center" fontSize="30px" fontWeight="700" mb="30px">
+          <Text
+            textAlign="center"
+            fontSize="30px"
+            fontWeight="700"
+            mb="30px"
+            color={TEXT_BOLD_COLOR}
+          >
             Sau khóa học bạn nhận được gì
           </Text>
           <Grid
@@ -164,10 +177,18 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
                   borderBottom="1px solid"
                   gap="20px"
                 >
-                  <Text fontSize="50px" fontWeight="700">
+                  <Text
+                    fontSize="50px"
+                    fontWeight="700"
+                    color={TEXT_BOLD_COLOR}
+                  >
                     01.
                   </Text>
-                  <Text fontSize="20px" fontWeight="700">
+                  <Text
+                    fontSize="20px"
+                    fontWeight="700"
+                    color={TEXT_BOLD_COLOR}
+                  >
                     Tư duy Marketing trên môi trường số
                   </Text>
                 </Flex>
@@ -183,10 +204,18 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
                   borderBottom="1px solid"
                   gap="20px"
                 >
-                  <Text fontSize="50px" fontWeight="700">
+                  <Text
+                    fontSize="50px"
+                    fontWeight="700"
+                    color={TEXT_BOLD_COLOR}
+                  >
                     02.
                   </Text>
-                  <Text fontSize="20px" fontWeight="700">
+                  <Text
+                    fontSize="20px"
+                    fontWeight="700"
+                    color={TEXT_BOLD_COLOR}
+                  >
                     Hiểu đặc thù các kênh truyền thông Digital
                   </Text>
                 </Flex>
@@ -222,10 +251,18 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
                   borderBottom="1px solid"
                   gap="20px"
                 >
-                  <Text fontSize="50px" fontWeight="700">
+                  <Text
+                    fontSize="50px"
+                    fontWeight="700"
+                    color={TEXT_BOLD_COLOR}
+                  >
                     03.
                   </Text>
-                  <Text fontSize="20px" fontWeight="700">
+                  <Text
+                    fontSize="20px"
+                    fontWeight="700"
+                    color={TEXT_BOLD_COLOR}
+                  >
                     Tư duy Marketing trên môi trường số
                   </Text>
                 </Flex>
@@ -241,10 +278,18 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
                   borderBottom="1px solid"
                   gap="20px"
                 >
-                  <Text fontSize="50px" fontWeight="700">
+                  <Text
+                    fontSize="50px"
+                    fontWeight="700"
+                    color={TEXT_BOLD_COLOR}
+                  >
                     04.
                   </Text>
-                  <Text fontSize="20px" fontWeight="700">
+                  <Text
+                    fontSize="20px"
+                    fontWeight="700"
+                    color={TEXT_BOLD_COLOR}
+                  >
                     Hiểu đặc thù các kênh truyền thông Digital
                   </Text>
                 </Flex>
@@ -266,6 +311,7 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
             fontWeight="700"
             textAlign="center"
             marginBottom="30px"
+            color={TEXT_BOLD_COLOR}
           >
             Khóa học dành cho ai
           </Text>
@@ -332,6 +378,7 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
             fontWeight="700"
             textAlign="center"
             marginBottom="30px"
+            color={TEXT_BOLD_COLOR}
           >
             Nội dung khóa học
           </Text>
@@ -351,10 +398,11 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
               <Flex
                 alignItems="center"
                 gap="10px"
-                borderBottom="1px solid rgb(136, 14, 79)"
+                borderBottom="1px solid"
+                borderColor={BD_CARD_COLOR}
               >
                 <Text
-                  backgroundColor="rgb(136, 14, 79)"
+                  backgroundColor={BG_CARD_COLOR}
                   fontSize="30px"
                   fontWeight="700"
                   padding="20px"
@@ -366,12 +414,7 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
                   Marketing Overview
                 </Text>
               </Flex>
-              <Flex
-                direction="column"
-                gap="10px"
-                padding="20px"
-                borderBottom="1px solid rgb(136, 14, 79)"
-              >
+              <Flex direction="column" gap="10px" padding="20px">
                 <Text>
                   • Nhiệm vụ và vai trò của Marketing trong quy trình kinh
                   doanh.
@@ -394,10 +437,11 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
               <Flex
                 alignItems="center"
                 gap="10px"
-                borderBottom="1px solid rgb(136, 14, 79)"
+                borderBottom="1px solid"
+                borderColor={BD_CARD_COLOR}
               >
                 <Text
-                  backgroundColor="rgb(136, 14, 79)"
+                  backgroundColor={BG_CARD_COLOR}
                   fontSize="30px"
                   fontWeight="700"
                   padding="20px"
@@ -432,10 +476,11 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
               <Flex
                 alignItems="center"
                 gap="10px"
-                borderBottom="1px solid rgb(136, 14, 79)"
+                borderBottom="1px solid"
+                borderColor={BD_CARD_COLOR}
               >
                 <Text
-                  backgroundColor="rgb(136, 14, 79)"
+                  backgroundColor={BG_CARD_COLOR}
                   fontSize="30px"
                   fontWeight="700"
                   padding="20px"
@@ -470,10 +515,11 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
               <Flex
                 alignItems="center"
                 gap="10px"
-                borderBottom="1px solid rgb(136, 14, 79)"
+                borderBottom="1px solid"
+                borderColor={BD_CARD_COLOR}
               >
                 <Text
-                  backgroundColor="rgb(136, 14, 79)"
+                  backgroundColor={BG_CARD_COLOR}
                   fontSize="30px"
                   fontWeight="700"
                   padding="20px"
@@ -508,10 +554,11 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
               <Flex
                 alignItems="center"
                 gap="10px"
-                borderBottom="1px solid rgb(136, 14, 79)"
+                borderBottom="1px solid"
+                borderColor={BD_CARD_COLOR}
               >
                 <Text
-                  backgroundColor="rgb(136, 14, 79)"
+                  backgroundColor={BG_CARD_COLOR}
                   fontSize="30px"
                   fontWeight="700"
                   padding="20px"
@@ -548,6 +595,7 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
             fontWeight="700"
             textAlign="center"
             marginBottom="30px"
+            color={TEXT_BOLD_COLOR}
           >
             Học phí
           </Text>
@@ -564,7 +612,7 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
               borderRadius="20px"
               overflow="hidden"
             >
-              <Box backgroundColor="rgb(136, 14, 79)">
+              <Box backgroundColor={BG_CARD_COLOR}>
                 <Text
                   fontSize="30px"
                   fontWeight="700"
@@ -582,9 +630,10 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
                 alignItems="center"
               >
                 <Text
-                  fontSize={["30px", "50px", "50px"]}
+                  fontSize={["30px", "40px", "40px"]}
                   fontWeight="700"
                   textAlign="center"
+                  color={TEXT_BOLD_COLOR}
                 >
                   6.000.000đ
                 </Text>
@@ -597,6 +646,8 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
                   padding="20px"
                   marginBottom="20px"
                   transition="transform 0.3s"
+                  backgroundColor={BG_BUTTON_COLOR}
+                  color={TEXT_COLOR}
                   _hover={{
                     transform: "scale(1.1)",
                   }}
@@ -610,7 +661,7 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
               borderRadius="20px"
               overflow="hidden"
             >
-              <Box backgroundColor="rgb(136, 14, 79)">
+              <Box backgroundColor={BG_CARD_COLOR}>
                 <Text
                   fontSize="30px"
                   fontWeight="700"
@@ -628,9 +679,10 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
                 alignItems="center"
               >
                 <Text
-                  fontSize={["30px", "50px", "50px"]}
+                  fontSize={["30px", "40px", "40px"]}
                   fontWeight="700"
                   textAlign="center"
+                  color={TEXT_BOLD_COLOR}
                 >
                   6.000.000đ
                 </Text>
@@ -643,6 +695,8 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
                   padding="20px"
                   marginBottom="20px"
                   transition="transform 0.3s"
+                  backgroundColor={BG_BUTTON_COLOR}
+                  color={TEXT_COLOR}
                   _hover={{
                     transform: "scale(1.1)",
                   }}
@@ -656,7 +710,7 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
               borderRadius="20px"
               overflow="hidden"
             >
-              <Box backgroundColor="rgb(136, 14, 79)">
+              <Box backgroundColor={BG_CARD_COLOR}>
                 <Text
                   fontSize="30px"
                   fontWeight="700"
@@ -674,9 +728,10 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
                 alignItems="center"
               >
                 <Text
-                  fontSize={["30px", "50px", "50px"]}
+                  fontSize={["30px", "40px", "40px"]}
                   fontWeight="700"
                   textAlign="center"
+                  color={TEXT_BOLD_COLOR}
                 >
                   6.000.000đ
                 </Text>
@@ -689,6 +744,8 @@ const CourseSlug: React.FC<CourseSlugProps> = () => {
                   padding="20px"
                   marginBottom="20px"
                   transition="transform 0.3s"
+                  backgroundColor={BG_BUTTON_COLOR}
+                  color={TEXT_COLOR}
                   _hover={{
                     transform: "scale(1.1)",
                   }}
