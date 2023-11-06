@@ -10,6 +10,13 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 
+import {
+  TEXT_BOLD_COLOR,
+  BG_BUTTON_COLOR,
+  TEXT_COLOR,
+  BD_COLOR,
+} from "@/components/styles/color";
+
 interface CustomFormInputProps {}
 
 const CustomFormInput: React.FC<CustomFormInputProps> = () => {
@@ -20,6 +27,7 @@ const CustomFormInput: React.FC<CustomFormInputProps> = () => {
         fontSize="30px"
         fontWeight="700"
         marginBottom="50px"
+        color={TEXT_BOLD_COLOR}
       >
         Bạn chưa biết liệu khoá học có phù hợp với mình hay không?
       </Text>
@@ -51,16 +59,25 @@ const CustomFormInput: React.FC<CustomFormInputProps> = () => {
         </Grid>
         <Textarea placeholder="Lời nhắn" resize="none" h="190px" maxW="450px" />
         <Button
-          padding="30px"
-          fontSize="25px"
-          marginTop="30px"
+          mt="30px"
+          padding={["10px", "20px", "25px"]}
+          borderRadius="10px"
+          border="4px solid"
+          borderColor={BD_COLOR}
           boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+          backgroundColor={BG_BUTTON_COLOR}
           transition="transform 0.3s"
           _hover={{
             transform: "scale(1.1)",
           }}
         >
-          Nhận tư vấn
+          <Text
+            fontSize={["16px", "20px", "25px"]}
+            fontWeight="600"
+            color={TEXT_COLOR}
+          >
+            Nhận tư vấn
+          </Text>
         </Button>
         <Text fontWeight="500">
           Nhân sự Lab sẽ liên hệ lại ít nhất là 24h sau khi điền đơn

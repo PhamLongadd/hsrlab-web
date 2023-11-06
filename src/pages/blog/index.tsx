@@ -1,7 +1,7 @@
 import { Box, Image, Text, Flex, Grid, GridItem } from "@chakra-ui/react";
 import Link from "next/link";
 
-import { BG_COLOR } from "@/components/styles/color";
+import { BG_COLOR, HOVER_TEXT_COLOR } from "@/components/styles/color";
 
 interface BlogProps {}
 
@@ -16,12 +16,20 @@ const Blog: React.FC<BlogProps> = () => {
       >
         <Flex padding="30px" gap="5px">
           <Link href="/">
-            <Text fontSize="18px" fontWeight="700">
+            <Text
+              fontSize="18px"
+              fontWeight="700"
+              _hover={{ color: HOVER_TEXT_COLOR }}
+            >
               Trang chủ
             </Text>
           </Link>
           <Link href="/blog">
-            <Text fontSize="18px" fontWeight="700">
+            <Text
+              fontSize="18px"
+              fontWeight="700"
+              _hover={{ color: HOVER_TEXT_COLOR }}
+            >
               / Blog
             </Text>
           </Link>

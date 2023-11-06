@@ -13,7 +13,15 @@ import {
 import { StarIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 
-import { BD_BOTTOM_CARD } from "@/components/styles/color";
+import {
+  BD_BOTTOM_CARD,
+  BG_COLOR,
+  HOVER_TEXT_COLOR,
+  BG_BUTTON_COLOR,
+  TEXT_COLOR,
+  BD_COLOR,
+  TEXT_BOLD_COLOR,
+} from "@/components/styles/color";
 import CustomFormInput from "@/components/formInput/customFormInput";
 
 interface CourseProps {}
@@ -21,12 +29,40 @@ interface CourseProps {}
 const Course: React.FC<CourseProps> = () => {
   return (
     <Box mt="80px">
+      <Box
+        backgroundColor={BG_COLOR}
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Flex padding="30px" gap="5px">
+          <Link href="/">
+            <Text
+              fontSize="18px"
+              fontWeight="700"
+              _hover={{ color: HOVER_TEXT_COLOR }}
+            >
+              Trang chủ
+            </Text>
+          </Link>
+          <Link href="/course">
+            <Text
+              fontSize="18px"
+              fontWeight="700"
+              _hover={{ color: HOVER_TEXT_COLOR }}
+            >
+              / Khóa học
+            </Text>
+          </Link>
+        </Flex>
+      </Box>
       <Box padding="30px" maxWidth="1200px" width="100%" margin="auto">
         <Text
           fontSize="30px"
           fontWeight="700"
           textAlign="center"
           marginBottom="30px"
+          color={TEXT_BOLD_COLOR}
         >
           Các khóa học
         </Text>
@@ -73,6 +109,8 @@ const Course: React.FC<CourseProps> = () => {
                   padding="20px"
                   marginBottom="20px"
                   transition="transform 0.3s"
+                  backgroundColor={BG_BUTTON_COLOR}
+                  color={TEXT_COLOR}
                   _hover={{
                     transform: "scale(1.1)",
                   }}
@@ -122,6 +160,54 @@ const Course: React.FC<CourseProps> = () => {
                 padding="20px"
                 marginBottom="20px"
                 transition="transform 0.3s"
+                backgroundColor={BG_BUTTON_COLOR}
+                color={TEXT_COLOR}
+                _hover={{
+                  transform: "scale(1.1)",
+                }}
+              >
+                Tìm hiểu thêm
+              </Button>
+            </Flex>
+          </GridItem>
+          <GridItem
+            boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+            borderRadius="20px"
+            overflow="hidden"
+          >
+            <Box overflow="hidden">
+              <Image
+                src="/image/card.png"
+                borderTopRightRadius="20px"
+                borderTopLeftRadius="20px"
+                transition="transform 0.3s"
+                backgroundColor={BG_BUTTON_COLOR}
+                color={TEXT_COLOR}
+                _hover={{
+                  transform: "scale(1.1)",
+                }}
+              />
+            </Box>
+            <Flex direction="column" gap="10px" padding="20px">
+              <Text fontSize="20px" fontWeight="700">
+                Marketing Foundation
+              </Text>
+              <Text
+                borderBottom="1px solid "
+                borderBottomColor={BD_BOTTOM_CARD}
+                paddingBottom="20px"
+              >
+                Khoá học cung cấp tư duy marketing nền tảng dành cho người mới
+                bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng lộ
+                trình phát triển nghề nghiệp.
+              </Text>
+              <Button
+                w="200px"
+                padding="20px"
+                marginBottom="20px"
+                transition="transform 0.3s"
+                backgroundColor={BG_BUTTON_COLOR}
+                color={TEXT_COLOR}
                 _hover={{
                   transform: "scale(1.1)",
                 }}
@@ -164,6 +250,8 @@ const Course: React.FC<CourseProps> = () => {
                 padding="20px"
                 marginBottom="20px"
                 transition="transform 0.3s"
+                backgroundColor={BG_BUTTON_COLOR}
+                color={TEXT_COLOR}
                 _hover={{
                   transform: "scale(1.1)",
                 }}
@@ -206,48 +294,8 @@ const Course: React.FC<CourseProps> = () => {
                 padding="20px"
                 marginBottom="20px"
                 transition="transform 0.3s"
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              >
-                Tìm hiểu thêm
-              </Button>
-            </Flex>
-          </GridItem>
-          <GridItem
-            boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-            borderRadius="20px"
-            overflow="hidden"
-          >
-            <Box overflow="hidden">
-              <Image
-                src="/image/card.png"
-                borderTopRightRadius="20px"
-                borderTopLeftRadius="20px"
-                transition="transform 0.3s"
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              />
-            </Box>
-            <Flex direction="column" gap="10px" padding="20px">
-              <Text fontSize="20px" fontWeight="700">
-                Marketing Foundation
-              </Text>
-              <Text
-                borderBottom="1px solid "
-                borderBottomColor={BD_BOTTOM_CARD}
-                paddingBottom="20px"
-              >
-                Khoá học cung cấp tư duy marketing nền tảng dành cho người mới
-                bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng lộ
-                trình phát triển nghề nghiệp.
-              </Text>
-              <Button
-                w="200px"
-                padding="20px"
-                marginBottom="20px"
-                transition="transform 0.3s"
+                backgroundColor={BG_BUTTON_COLOR}
+                color={TEXT_COLOR}
                 _hover={{
                   transform: "scale(1.1)",
                 }}
@@ -286,16 +334,25 @@ const Course: React.FC<CourseProps> = () => {
             h={["200px", "400px", "550px"]}
           />
           <Button
-            padding="30px"
-            fontSize="25px"
-            marginTop="30px"
+            mt="30px"
+            padding={["10px", "20px", "25px"]}
+            borderRadius="10px"
+            border="4px solid"
+            borderColor={BD_COLOR}
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+            backgroundColor={BG_BUTTON_COLOR}
             transition="transform 0.3s"
             _hover={{
               transform: "scale(1.1)",
             }}
           >
-            Tìm hiểu thêm
+            <Text
+              fontSize={["16px", "20px", "25px"]}
+              fontWeight="600"
+              color={TEXT_COLOR}
+            >
+              Tìm hiểu thêm
+            </Text>
           </Button>
         </Flex>
       </Box>

@@ -1,10 +1,50 @@
 import { Box, Image, Text, Flex, Button } from "@chakra-ui/react";
+import Link from "next/link";
+
+import {
+  BD_BOTTOM_CARD,
+  BG_COLOR,
+  HOVER_TEXT_COLOR,
+  BG_TEXT_COLOR,
+  BG_BUTTON_COLOR,
+  TEXT_COLOR,
+  BD_COLOR,
+  TEXT_BOLD_COLOR,
+  BD_CARD_COLOR,
+} from "@/components/styles/color";
 
 interface ToolsProps {}
 
 const Tools: React.FC<ToolsProps> = () => {
   return (
     <Box mt="80px">
+      <Box
+        backgroundColor={BG_COLOR}
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Flex padding="30px" gap="5px">
+          <Link href="/">
+            <Text
+              fontSize="18px"
+              fontWeight="700"
+              _hover={{ color: HOVER_TEXT_COLOR }}
+            >
+              Trang chủ
+            </Text>
+          </Link>
+          <Link href="/course">
+            <Text
+              fontSize="18px"
+              fontWeight="700"
+              _hover={{ color: HOVER_TEXT_COLOR }}
+            >
+              / Bộ công cụ
+            </Text>
+          </Link>
+        </Flex>
+      </Box>
       <Box
         padding="30px"
         maxWidth="1200px"
@@ -19,6 +59,7 @@ const Tools: React.FC<ToolsProps> = () => {
           fontWeight="700"
           textAlign="center"
           marginBottom="30px"
+          color={TEXT_BOLD_COLOR}
         >
           Bộ công cụ
         </Text>
@@ -42,7 +83,7 @@ const Tools: React.FC<ToolsProps> = () => {
                 Bộ học cụ Wisechild
               </Text>
               <Text>SKU: JMC-NY-2101A</Text>
-              <Text fontSize="30px" fontWeight="700">
+              <Text fontSize="30px" fontWeight="700" color={TEXT_BOLD_COLOR}>
                 7.500.000 VNĐ
               </Text>
               <Text>
@@ -59,8 +100,25 @@ const Tools: React.FC<ToolsProps> = () => {
                 đề trong cuộc sống thông qua những mô hình mà các e sáng tạo
                 được.
               </Text>
-              <Button padding={["10px", "20px", "30px"]}>
-                <Text fontSize={["16px", "20px", "25px"]}>Đặt hàng ngay</Text>
+              <Button
+                padding={["20px", "20px", "25px"]}
+                borderRadius="10px"
+                border="4px solid"
+                borderColor={BD_COLOR}
+                boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+                backgroundColor={BG_BUTTON_COLOR}
+                transition="transform 0.3s"
+                _hover={{
+                  transform: "scale(1.1)",
+                }}
+              >
+                <Text
+                  fontSize={["20px", "20px", "25px"]}
+                  fontWeight="600"
+                  color={TEXT_COLOR}
+                >
+                  Đặt hàng ngay
+                </Text>
               </Button>
             </Box>
           </Flex>
@@ -83,7 +141,7 @@ const Tools: React.FC<ToolsProps> = () => {
                 Bộ học cụ Wisechild
               </Text>
               <Text>SKU: JMC-NY-2101A</Text>
-              <Text fontSize="30px" fontWeight="700">
+              <Text fontSize="30px" fontWeight="700" color={TEXT_BOLD_COLOR}>
                 7.500.000 VNĐ
               </Text>
               <Text>
@@ -100,8 +158,25 @@ const Tools: React.FC<ToolsProps> = () => {
                 đề trong cuộc sống thông qua những mô hình mà các e sáng tạo
                 được.
               </Text>
-              <Button padding={["10px", "20px", "30px"]}>
-                <Text fontSize={["16px", "20px", "25px"]}>Đặt hàng ngay</Text>
+              <Button
+                padding={["20px", "20px", "25px"]}
+                borderRadius="10px"
+                border="4px solid"
+                borderColor={BD_COLOR}
+                boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+                backgroundColor={BG_BUTTON_COLOR}
+                transition="transform 0.3s"
+                _hover={{
+                  transform: "scale(1.1)",
+                }}
+              >
+                <Text
+                  fontSize={["20px", "20px", "25px"]}
+                  fontWeight="600"
+                  color={TEXT_COLOR}
+                >
+                  Đặt hàng ngay
+                </Text>
               </Button>
             </Box>
           </Flex>
@@ -124,7 +199,7 @@ const Tools: React.FC<ToolsProps> = () => {
                 Bộ học cụ Wisechild
               </Text>
               <Text>SKU: JMC-NY-2101A</Text>
-              <Text fontSize="30px" fontWeight="700">
+              <Text fontSize="30px" fontWeight="700" color={TEXT_BOLD_COLOR}>
                 7.500.000 VNĐ
               </Text>
               <Text>
@@ -141,8 +216,25 @@ const Tools: React.FC<ToolsProps> = () => {
                 đề trong cuộc sống thông qua những mô hình mà các e sáng tạo
                 được.
               </Text>
-              <Button padding={["10px", "20px", "30px"]}>
-                <Text fontSize={["16px", "20px", "25px"]}>Đặt hàng ngay</Text>
+              <Button
+                padding={["20px", "20px", "25px"]}
+                borderRadius="10px"
+                border="4px solid"
+                borderColor={BD_COLOR}
+                boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+                backgroundColor={BG_BUTTON_COLOR}
+                transition="transform 0.3s"
+                _hover={{
+                  transform: "scale(1.1)",
+                }}
+              >
+                <Text
+                  fontSize={["20px", "20px", "25px"]}
+                  fontWeight="600"
+                  color={TEXT_COLOR}
+                >
+                  Đặt hàng ngay
+                </Text>
               </Button>
             </Box>
           </Flex>
