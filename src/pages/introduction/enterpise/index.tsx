@@ -1,6 +1,6 @@
 import { Box, Image, Text, Flex } from "@chakra-ui/react";
 
-import { BG_COLOR } from "@/components/styles/color";
+import { BG_COLOR, TEXT_BOLD_COLOR } from "@/components/styles/color";
 import EnterpiseFormInput from "@/components/formInput/enterpiseFormInput";
 
 interface StudentsProps {}
@@ -29,7 +29,7 @@ const Students: React.FC<StudentsProps> = () => {
             />
           </Box>
           <Box maxW="555px" display="flex" flexDirection="column" gap="30px">
-            <Text fontSize="30px" fontWeight="700">
+            <Text fontSize="30px" fontWeight="700" color={TEXT_BOLD_COLOR}>
               ABOUT US
             </Text>
             <Text>
@@ -42,7 +42,12 @@ const Students: React.FC<StudentsProps> = () => {
       </Box>
       <Box backgroundColor={BG_COLOR} padding="70px">
         <Flex direction="column">
-          <Text fontSize="30px" fontWeight="700" textAlign="center">
+          <Text
+            fontSize="30px"
+            fontWeight="700"
+            textAlign="center"
+            color={TEXT_BOLD_COLOR}
+          >
             Các đối tác đồng hành cùng HSR LAB
           </Text>
           <Flex flexDirection={["column", "column", "row"]}>
@@ -63,7 +68,7 @@ const Students: React.FC<StudentsProps> = () => {
           gap="20px"
         >
           <Flex direction="column" maxW="555px" gap="30px">
-            <Text fontSize="30px" fontWeight="700">
+            <Text fontSize="30px" fontWeight="700" color={TEXT_BOLD_COLOR}>
               Lĩnh vực tư vấn
             </Text>
             <Text borderBottom="1px solid #000" pb="20px">
@@ -72,7 +77,7 @@ const Students: React.FC<StudentsProps> = () => {
               chương trình training phù hợp với vấn đề của các doanh nghiệp.
             </Text>
             <Flex gap="20px">
-              <Text fontSize="40px" fontWeight="700">
+              <Text fontSize="40px" fontWeight="700" color={TEXT_BOLD_COLOR}>
                 [1]
               </Text>
               <Flex direction="column">
@@ -85,7 +90,7 @@ const Students: React.FC<StudentsProps> = () => {
               </Flex>
             </Flex>
             <Flex gap="20px">
-              <Text fontSize="40px" fontWeight="700">
+              <Text fontSize="40px" fontWeight="700" color={TEXT_BOLD_COLOR}>
                 [2]
               </Text>
               <Flex direction="column">

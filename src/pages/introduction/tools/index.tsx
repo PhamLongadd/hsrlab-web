@@ -2,15 +2,12 @@ import { Box, Image, Text, Flex, Button } from "@chakra-ui/react";
 import Link from "next/link";
 
 import {
-  BD_BOTTOM_CARD,
   BG_COLOR,
   HOVER_TEXT_COLOR,
-  BG_TEXT_COLOR,
   BG_BUTTON_COLOR,
   TEXT_COLOR,
   BD_COLOR,
   TEXT_BOLD_COLOR,
-  BD_CARD_COLOR,
 } from "@/components/styles/color";
 
 interface ToolsProps {}

@@ -1,5 +1,16 @@
 import { Flex, Text, Button, Input, Select, Textarea } from "@chakra-ui/react";
 
+import {
+  BG_COLOR,
+  BG_TEXT_COLOR,
+  BD_BOTTOM_CARD,
+  BG_BUTTON_COLOR,
+  TEXT_COLOR,
+  BD_COLOR,
+  TEXT_BOLD_COLOR,
+  BD_CARD_COLOR,
+} from "@/components/styles/color";
+
 interface EnterpiseFormInputProps {}
 
 const EnterpiseFormInput: React.FC<EnterpiseFormInputProps> = () => {
@@ -10,7 +21,7 @@ const EnterpiseFormInput: React.FC<EnterpiseFormInputProps> = () => {
       backgroundColor="#FAFAD2"
       padding="20px"
     >
-      <Text fontSize="20px" fontWeight="700">
+      <Text fontSize="20px" fontWeight="700" color={TEXT_BOLD_COLOR}>
         Tư vấn đào tạo cho doanh nghiệp
       </Text>
       <Text>
@@ -61,11 +72,18 @@ const EnterpiseFormInput: React.FC<EnterpiseFormInputProps> = () => {
         </Select>
       </Flex>
       <Button
-        padding="30px"
-        fontSize={["16px", "20px", "25px"]}
-        boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+        padding={["20px", "20px", "25px"]}
+        borderRadius="10px"
+        backgroundColor={BG_BUTTON_COLOR}
+        _hover={{ color: BG_BUTTON_COLOR }}
       >
-        Đăng kí tư vấn
+        <Text
+          fontSize={["20px", "20px", "20px"]}
+          fontWeight="600"
+          color={TEXT_COLOR}
+        >
+          Nhận tư vấn
+        </Text>
       </Button>
     </Flex>
   );
