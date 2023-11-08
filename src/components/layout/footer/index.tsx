@@ -45,10 +45,10 @@ const Footer: React.FC<FooterProps> = () => {
         >
           <Text fontWeight="700">VỀ CHÚNG TÔI</Text>
           <Text>
-            Tomorrow Marketers là học viện Marketing định hướng Đa quốc gia,
-            được ra đời với sứ mệnh đào tạo kiến thức, định hướng nghề nghiệp và
-            truyền cảm hứng cho cộng đồng Marketers trẻ, bằng chương trình đào
-            tạo thực tế, với giảng viên tại các tập đoàn Đa quốc gia hàng đầu.
+            Hung STEM Robotics Lab được thành lập với sứ mệnh nghiên cứu, phát
+            triển, mở rộng, vận hành bộ môn STEM Robotics với các nội dung chính
+            về: thiết kế, lắp ráp, lập trình các chú robot từ đơn giản tới phức
+            tạp, bằng các chương trình học với hoạt động thực tế và phù hợp.
           </Text>
         </Flex>
         <Flex
@@ -57,10 +57,13 @@ const Footer: React.FC<FooterProps> = () => {
           textAlign={flexDirection === "column" ? "center" : "left"}
         >
           <Text fontWeight="700">LIÊN HỆ</Text>
-          <Flex direction="column">
-            <Text>Địa chỉ: Tầng 4, 15/41 Thái Hà, Quận Đống Đa, HN</Text>
-            <Text>Email: info@tomorrowmarketers.org</Text>
-            <Text>Phone: 090.586.2499 (Ms. Yến)</Text>
+          <Flex direction="column" gap="10px">
+            <Text>Địa chỉ: 76 Duy Tân, Cầu Giấy, Hà Nội</Text>
+            <Text>12 Vũ Trọng Khánh, Hà Đông, Hà Nội</Text>
+            <Text>Email: hsrlab@gmail.com</Text>
+            <Text>Phone: (+84) 983 166 226 (Mr.Hiệp)</Text>
+            <Text>(+84) 848 873 799 (Ms.Linh)</Text>
+            <Text>(+84) 856 050 765 (Ms.Huyền)</Text>
           </Flex>
         </Flex>
       </Flex>

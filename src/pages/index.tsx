@@ -55,10 +55,10 @@ export default function Home() {
                 backgroundColor={BG_TEXT_COLOR}
                 padding="20px"
               >
-                Khởi nguồn từ khát khao ươm mầm một thế hệ Marketers tiên phong,
-                Tomorrow Marketers ra đời với sứ mệnh đào tạo kiến thức, định
-                hướng nghề nghiệp, truyền cảm hứng và chuẩn bị hành trang sự
-                nghiệp cho các Marketers tương lai.
+                Mang sứ mệnh ươm mầm một thế hệ trẻ được phát triển toàn diện,
+                Hung STEM Robotics Lab ra đời với sứ mệnh đào tạo kiến thức,
+                truyền cảm hứng và chuẩn bị hành trang cho các công dân tương
+                lai của thời đại 4.0.
               </Text>
               <Flex gap={["10px", "20px", "30px"]}>
                 <Flex direction="column" gap="20px" alignItems="center">
@@ -549,18 +549,17 @@ export default function Home() {
           >
             <CardHeader>
               <Heading size="md">
-                KHÁM PHÁ THẾ GIỚI MARKETING TỪ CÁC BÀI VIẾT CỦA TOMORROW
-                MARKETERS{" "}
+                Khám phá vũ trụ STEM với các bài viết của HSRL
               </Heading>
             </CardHeader>
 
             <CardBody>
               <Box>
                 <Text pt="2" fontSize="sm">
-                  Bạn muốn tìm hiểu về Brand, Content, Digital hay Trade
-                  Marketing? Bạn chưa hiểu rõ thế giới Client và Agency khác
-                  nhau như thế nào? Bạn muốn cập nhật những case study và xu
-                  hướng marketing mới nhất?
+                  Bạn muốn tìm hiểu về lắp ráp, lập trình hay thiết kế 3D? Bạn
+                  chưa hiểu rõ thế giới STEM phát triển như thế nào? Bạn muốn
+                  cập nhật những mẫu mô hình, các cuộc thi và xu hướng lập trình
+                  mới nhất?
                 </Text>
               </Box>
             </CardBody>

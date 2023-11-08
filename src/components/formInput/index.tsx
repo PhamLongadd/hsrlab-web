@@ -44,7 +44,10 @@ const FormInput: React.FC<FormInputProps> = () => {
           <Text fontSize="30px" fontWeight="700">
             Thông Tin Liên Hệ
           </Text>
-          <Text>Hotline: 0912-345-678</Text>
+          <Text>Hotline:</Text>
+          <Text>(+84) 983 166 226 (Mr.Hiệp)</Text>
+          <Text>(+84) 848 873 799 (Ms.Linh)</Text>
+          <Text>(+84) 856 050 765 (Ms.Huyền)</Text>
           <Text>Email: hsrlab@gmail.com</Text>
           <Text fontSize="30px" fontWeight="700">
             Giờ Làm Việc
@@ -53,7 +56,8 @@ const FormInput: React.FC<FormInputProps> = () => {
           <Text fontSize="30px" fontWeight="700">
             Địa Chỉ
           </Text>
-          <Text>Số 76 - P. Duy Tân - Q. Cầu Giấy - Hà Nội</Text>
+          <Text>76 Duy Tân, Cầu Giấy, Hà Nội</Text>
+          <Text>12 Vũ Trọng Khánh, Hà Đông, Hà Nội</Text>
         </Flex>
         <Flex direction="column" gap="30px" alignItems="center">
           <Text fontSize="20px" fontWeight="700">

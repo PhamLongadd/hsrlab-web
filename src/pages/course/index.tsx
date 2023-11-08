@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Flex,
@@ -23,10 +24,41 @@ import {
   TEXT_BOLD_COLOR,
 } from "@/components/styles/color";
 import CustomFormInput from "@/components/formInput/customFormInput";
+import fetchCourses from "../api/getCourses";
 
+interface Course {
+  id: number;
+  attributes: {
+    title: string;
+    slug: string;
+    description: string;
+    sale: string;
+  };
+  thumbnail: Thumbnail;
+}
+
+interface Thumbnail {
+  data: {
+    attributes: {
+      url: string;
+    };
+  };
+}
 interface CourseProps {}
 
 const Course: React.FC<CourseProps> = () => {
+  const [courses, setCourses] = useState<Course[]>([]);
+
+  useEffect(() => {
+    async function fetch() {
+      const res = await fetchCourses();
+
+      setCourses(res);
+    }
+
+    fetch();
+  }, []);
+
   return (
     <Box mt="80px">
       <Box
@@ -74,6 +106,75 @@ const Course: React.FC<CourseProps> = () => {
           }}
           gap={6}
         >
+          {courses.map((course) => (
+            <GridItem
+              key={course.id}
+              boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+              borderRadius="20px"
+              overflow="hidden"
+            >
+              <Box overflow="hidden">
+                <Image
+                  src={course.thumbnail?.data?.attributes.url}
+                  borderTopRightRadius="20px"
+                  borderTopLeftRadius="20px"
+                  transition="transform 0.3s"
+                  _hover={{
+                    transform: "scale(1.1)",
+                  }}
+                />
+              </Box>
+              <Flex direction="column" gap="10px" padding="20px">
+                <Text fontSize="20px" fontWeight="700">
+                  {course.attributes.title}
+                </Text>
+                <Text
+                  borderBottom="1px solid "
+                  borderBottomColor={BD_BOTTOM_CARD}
+                  paddingBottom="20px"
+                >
+                  {course.attributes.description}
+                </Text>
+                <Link href={`/course/${course.attributes.slug}`}>
+                  <Button
+                    w="200px"
+                    padding="20px"
+                    marginBottom="20px"
+                    transition="transform 0.3s"
+                    backgroundColor={BG_BUTTON_COLOR}
+                    color={TEXT_COLOR}
+                    _hover={{
+                      transform: "scale(1.1)",
+                    }}
+                  >
+                    Tìm hiểu thêm
+                  </Button>
+                </Link>
+                {course.attributes.sale && (
+                  <Tag
+                    variant="subtle"
+                    colorScheme="red"
+                    padding="10px"
+                    w="250px"
+                  >
+                    <TagLeftIcon boxSize="12px" as={StarIcon} color="yellow" />
+                    <TagLabel color="#ff0000" fontSize="20px" fontWeight="600">
+                      {course.attributes.sale}
+                    </TagLabel>
+                  </Tag>
+                )}
+              </Flex>
+            </GridItem>
+          ))}
+        </Grid>
+        {/* <Grid
+          templateColumns={{
+            base: "1fr",
+            md: "repeat(2, 1fr)",
+            lg: "repeat(3, 1fr)",
+          }}
+          gap={6}
+        >
           <GridItem
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
             borderRadius="20px"
@@ -103,7 +204,7 @@ const Course: React.FC<CourseProps> = () => {
                 bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng lộ
                 trình phát triển nghề nghiệp.
               </Text>
-              <Link href="course/[slug].tsx">
+              <Link href="/course/[slug].tsx">
                 <Button
                   w="200px"
                   padding="20px"
@@ -304,7 +405,7 @@ const Course: React.FC<CourseProps> = () => {
               </Button>
             </Flex>
           </GridItem>
-        </Grid>
+        </Grid> */}
       </Box>
       <Box background="linear-gradient(rgb(0, 4, 40), rgb(136, 14, 79))">
         <Flex
