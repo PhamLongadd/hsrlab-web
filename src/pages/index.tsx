@@ -48,7 +48,7 @@ export default function Home() {
               alignItems="center"
             >
               <Text color="white" fontSize="30px" fontWeight="700">
-                HSR LAB Test
+                HSR LAB
               </Text>
               <Text
                 color="white"
