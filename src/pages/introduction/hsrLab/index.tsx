@@ -38,62 +38,64 @@ const HsrLab: React.FC<HsrLabProps> = () => {
             <CardBody>
               <Box>
                 <Text fontSize="16px" fontWeight="500">
-                  Mỗi người đều có sự lựa chọn cho riêng mình trên hành trình
-                  tuổi trẻ. Và Tomorrow Marketers chính là nơi chúng tôi chọn để
-                  gửi gắm nhiệt huyết, hoài bão, đam mê của mình trong những năm
-                  tháng đẹp nhất của cuộc đời.
+                  HSR Lab - HUNG STEM ROBOTICS LAB, đối tác chính thức của LEGO
+                  Education Việt Nam. Được thành lập từ năm 2019,HSR Lab - HUNG
+                  STEM ROBOTICS LAB luôn tự hào là một trong những đơn vị đi đầu
+                  trong lĩnh vực nghiên cứu và phát triển bộ môn STEM Robotics
+                  gồm 3 phần là Building - Lắp ráp, Programming - Lập trình,
+                  Design - thiết kế 3D.
                 </Text>
               </Box>
             </CardBody>
             <CardBody>
               <Box>
                 <Text fontSize="16px" fontWeight="500">
-                  Cách đây 8 năm, ngày 09/09/2015, lớp học đầu tiên của Tomorrow
-                  Marketers được ra đời, với sứ mệnh truyền cảm hứng và chuẩn bị
-                  hành trang sự nghiệp cho thế hệ Marketers tiên phong. Chặng
-                  đường 8 năm hiện thực hóa sứ mệnh ấy thực sự không dễ dàng.
-                  Nhưng nguồn động lực mạnh mẽ nhất giúp TM team vượt qua thử
-                  thách và không ngừng nỗ lực - đó chính là tình cảm, sự tin
-                  tưởng từ học viên, từ độc giả yêu mến Marketing trên khắp mọi
-                  miền Tổ Quốc. Chúng tôi lấy đó làm cảm hứng làm việc mỗi ngày,
-                  với niềm tin rằng tâm huyết của mình sẽ truyền lửa đam mê, để
-                  các bạn ngày càng tin tưởng và vững bước hơn trên con đường sự
-                  nghiệp Marketing đã chọn.
+                  Với sứ mệnh nghiên cứu, phát triển, mở rộng, vận hành bộ môn
+                  STEM Robotics với các nội dung chính về: thiết kế, lắp ráp,
+                  lập trình các chú robot từ đơn giản tới phức tạp, HSRL luôn
+                  hướng đến những hoạt động thực tế và phù hợp. Một số hoạt động
+                  tiêu biểu của HSR Lab - HUNG STEM ROBOTICS LAB có thể kể đến
+                  như: là đối tác chính thức của LEGO Education Việt Nam, đơn vị
+                  đăng ký chính thức sân chơi khoa học WRO, FLL.
                 </Text>
               </Box>
             </CardBody>
             <CardBody>
               <Box>
                 <Text fontSize="16px" fontWeight="500">
-                  Ở TM, chúng tôi chọn cùng nhau lớn lên, cùng nhau trưởng
-                  thành, cùng trải nghiệm những cung bậc cảm xúc của tuổi trẻ,
-                  trải qua những lần vấp ngã để nhận lại là những bài học, kinh
-                  nghiệm và niềm tin để bước tiếp. Những ngày tháng này, dù có
-                  bao nhiêu nỗi buồn hay niềm vui, đều rất tươi đẹp và đáng nhớ.
+                  Và gần đây nhất là giải đấu Robotacon WRO 2023, HSRL với gần
+                  hai mươi thành viên đã xuất sắc đạt được:
                 </Text>
               </Box>
             </CardBody>
             <CardBody>
               <Box>
                 <Text fontSize="16px" fontWeight="500">
-                  8 năm vừa qua, với 350 lớp học, hơn 40 trainer nhiều năm kinh
-                  nghiệm từ nhiều ngành hàng khác nhau, cùng hàng ngàn bài viết
-                  tâm huyết trên các kênh truyền thông, TM dần trở thành cái tên
-                  quen thuộc với cộng đồng yêu thích Marketing mọi miền Tổ quốc.
-                  Trong hơn 15.000 học viên của TM, không ít bạn đã đạt được
-                  những thành tựu đáng tự hào. Đó là sự động viên, khích lệ lớn
-                  lao nhất để TM team tiếp tục nỗ lực, tiếp tục cố gắng bền bỉ
-                  qua từng ngày tháng.
+                  - Tại vòng loại Hải Phòng: Giải vô địch bảng B1, Giải nhì bảng
+                  B2, Giải ba bảng B0. Bên cạnh đó là 1 giải khuyến khích bảng
+                  B0, 4 giải khuyến khích bảng B1, 2 giải khuyến khích bảng B2.
                 </Text>
               </Box>
             </CardBody>
             <CardBody>
               <Box>
                 <Text fontSize="16px" fontWeight="500">
-                  Một hành trình dài vẫn đang chờ đợi ở phía trước, cám ơn bạn
-                  vì đã có mặt trong hành trình của chúng tôi. Tomorrow
-                  Marketers bước sang tuổi thứ 8 hy vọng vẫn luôn có sự ủng hộ
-                  của bạn trong từng bước trưởng thành của mình!
+                  - Tại vòng chung kết Quốc gia tại Hà Nội: Giải vô địch bảng
+                  B3, Giải nhì bảng B1 và giành được vé đi tham dự vòng CK Quốc
+                  Tế tại Panama 07/11 - 09/11. Hơn nữa HSRL cũng có được 06 giải
+                  khuyến khích bảng B3, toàn bộ các đội B3 của HSRL đều nằm
+                  trong top 10 của vòng CK Quốc Gia tại Hà Nội, 01 giải khuyến
+                  khích bảng B4 - 02.
+                </Text>
+              </Box>
+            </CardBody>
+            <CardBody>
+              <Box>
+                <Text fontSize="16px" fontWeight="500">
+                  HSRL luôn chào đón các cá nhân có mong muốn tìm cho mình một
+                  môi trường chuyên nghiệp, uy tín để phát triển bản thân. HRSL
+                  sẽ là mái nhà chung, là nơi các bạn có thể phát triển các kỹ
+                  năng cần thiết cho tương lai.
                 </Text>
               </Box>
             </CardBody>

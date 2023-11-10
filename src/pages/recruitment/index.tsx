@@ -9,6 +9,7 @@ import {
   BD_CARD_COLOR,
   BG_CARD_COLOR,
 } from "@/components/styles/color";
+import Link from "next/link";
 
 interface RecruitmentProps {}
 
@@ -326,13 +327,15 @@ const Recruitment: React.FC<RecruitmentProps> = () => {
               <Text>Full time (toàn thời gian)</Text>
               <Text>TM Hà Nội - 15/41 Thái Hà, Quận Đống Đa, HN. </Text>
             </Flex>
-            <Button
-              backgroundColor={BG_BUTTON_COLOR}
-              color={TEXT_COLOR}
-              _hover={{ backgroundColor: BG_BUTTON_COLOR }}
-            >
-              Apply Now
-            </Button>
+            <Link href="/recruitment/[id].tsx">
+              <Button
+                backgroundColor={BG_BUTTON_COLOR}
+                color={TEXT_COLOR}
+                _hover={{ backgroundColor: BG_BUTTON_COLOR }}
+              >
+                Apply Now
+              </Button>
+            </Link>
           </Flex>
         </Flex>
       </Box>

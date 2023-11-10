@@ -115,7 +115,7 @@ const Course: React.FC<CourseProps> = () => {
             >
               <Box overflow="hidden">
                 <Image
-                  src={course.thumbnail?.data?.attributes.url}
+                  src={course.thumbnail?.data.attributes.url}
                   borderTopRightRadius="20px"
                   borderTopLeftRadius="20px"
                   transition="transform 0.3s"
