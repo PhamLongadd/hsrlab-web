@@ -61,48 +61,34 @@ const Course: React.FC<CourseProps> = () => {
 
   return (
     <Box mt="80px">
-      <Box
-        backgroundColor={BG_COLOR}
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Flex padding="30px" gap="5px">
-          <Link href="/">
-            <Text
-              fontSize="18px"
-              fontWeight="700"
-              _hover={{ color: HOVER_TEXT_COLOR }}
-            >
-              Trang chủ
-            </Text>
-          </Link>
-          <Link href="/course">
-            <Text
-              fontSize="18px"
-              fontWeight="700"
-              _hover={{ color: HOVER_TEXT_COLOR }}
-            >
-              / Khóa học
-            </Text>
-          </Link>
-        </Flex>
-      </Box>
-      <Box padding="30px" maxWidth="1200px" width="100%" margin="auto">
+      <Image
+        src="/image/course.png"
+        w="100%"
+        h={["400px", "600px", "700px"]}
+        objectFit="cover"
+      />
+      <Box padding="30px" maxWidth="1200px" margin="auto" paddingBottom="100px">
         <Text
-          fontSize="30px"
+          fontSize="40px"
           fontWeight="700"
-          textAlign="center"
           marginBottom="30px"
+          borderLeft="3px solid"
+          paddingLeft="15px"
           color={TEXT_BOLD_COLOR}
         >
-          Các khóa học
+          Giai Đoạn Nền Tảng
+        </Text>
+        <Text textAlign="center" marginBottom="30px">
+          Gồm 2 khóa nhỏ là nhập môn, cơ bản. Giai đoạn nền tảng cung cấp những
+          kiến thức cơ bản, quan trọng nhất về STEM Robotics, các bộ công cụ
+          LEGO Education, LEGO Technic (khái niệm, tính chất, cách sử dụng, cách
+          xử lý lỗi về phần cứng & phần mềm)
         </Text>
         <Grid
           templateColumns={{
             base: "1fr",
             md: "repeat(2, 1fr)",
-            lg: "repeat(3, 1fr)",
+            lg: "repeat(2, 1fr)",
           }}
           gap={6}
         >
@@ -115,7 +101,7 @@ const Course: React.FC<CourseProps> = () => {
             >
               <Box overflow="hidden">
                 <Image
-                  src={course.thumbnail?.data.attributes.url}
+                  src="/image/card.png"
                   borderTopRightRadius="20px"
                   borderTopLeftRadius="20px"
                   transition="transform 0.3s"
@@ -125,7 +111,7 @@ const Course: React.FC<CourseProps> = () => {
                 />
               </Box>
               <Flex direction="column" gap="10px" padding="20px">
-                <Text fontSize="20px" fontWeight="700">
+                <Text fontSize="30px" fontWeight="700">
                   {course.attributes.title}
                 </Text>
                 <Text
@@ -150,262 +136,88 @@ const Course: React.FC<CourseProps> = () => {
                     Tìm hiểu thêm
                   </Button>
                 </Link>
-                {course.attributes.sale && (
-                  <Tag
-                    variant="subtle"
-                    colorScheme="red"
-                    padding="10px"
-                    w="250px"
-                  >
-                    <TagLeftIcon boxSize="12px" as={StarIcon} color="yellow" />
-                    <TagLabel color="#ff0000" fontSize="20px" fontWeight="600">
-                      {course.attributes.sale}
-                    </TagLabel>
-                  </Tag>
-                )}
               </Flex>
             </GridItem>
           ))}
         </Grid>
-        {/* <Grid
-          templateColumns={{
-            base: "1fr",
-            md: "repeat(2, 1fr)",
-            lg: "repeat(3, 1fr)",
-          }}
-          gap={6}
-        >
-          <GridItem
-            boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-            borderRadius="20px"
-            overflow="hidden"
+      </Box>
+      <Box backgroundColor={BG_COLOR} paddingBottom="100px" paddingTop="30px">
+        <Box padding="30px" maxWidth="1200px" margin="auto">
+          <Text
+            fontSize="40px"
+            fontWeight="700"
+            marginBottom="50px"
+            borderLeft="3px solid"
+            paddingLeft="15px"
+            color={TEXT_BOLD_COLOR}
           >
-            <Box overflow="hidden">
-              <Image
-                src="/image/card.png"
-                borderTopRightRadius="20px"
-                borderTopLeftRadius="20px"
-                transition="transform 0.3s"
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              />
-            </Box>
-            <Flex direction="column" gap="10px" padding="20px">
-              <Text fontSize="20px" fontWeight="700">
-                Marketing Foundation
-              </Text>
-              <Text
-                borderBottom="1px solid "
-                borderBottomColor={BD_BOTTOM_CARD}
-                paddingBottom="20px"
-              >
-                Khoá học cung cấp tư duy marketing nền tảng dành cho người mới
-                bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng lộ
-                trình phát triển nghề nghiệp.
-              </Text>
-              <Link href="/course/[slug].tsx">
-                <Button
-                  w="200px"
-                  padding="20px"
-                  marginBottom="20px"
-                  transition="transform 0.3s"
-                  backgroundColor={BG_BUTTON_COLOR}
-                  color={TEXT_COLOR}
-                  _hover={{
-                    transform: "scale(1.1)",
-                  }}
+            Chương Trình Trải Nghiệm
+          </Text>
+          <Box
+            w="100%"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Grid
+              templateColumns={{
+                base: "1fr",
+                md: "repeat(2, 1fr)",
+                lg: "repeat(2, 1fr)",
+              }}
+              gap={6}
+            >
+              {courses.map((course) => (
+                <GridItem
+                  key={course.id}
+                  boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+                  borderRadius="20px"
+                  overflow="hidden"
+                  backgroundColor="white"
                 >
-                  Tìm hiểu thêm
-                </Button>
-              </Link>
-              <Tag variant="subtle" colorScheme="red" padding="10px" w="250px">
-                <TagLeftIcon boxSize="12px" as={StarIcon} color="yellow" />
-                <TagLabel color="#ff0000" fontSize="20px" fontWeight="600">
-                  Giảm giá 50%
-                </TagLabel>
-              </Tag>
-            </Flex>
-          </GridItem>
-          <GridItem
-            boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-            borderRadius="20px"
-            overflow="hidden"
-          >
-            <Box overflow="hidden">
-              <Image
-                src="/image/card.png"
-                borderTopRightRadius="20px"
-                borderTopLeftRadius="20px"
-                transition="transform 0.3s"
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              />
-            </Box>
-            <Flex direction="column" gap="10px" padding="20px">
-              <Text fontSize="20px" fontWeight="700">
-                Marketing Foundation
-              </Text>
-              <Text
-                borderBottom="1px solid "
-                borderBottomColor={BD_BOTTOM_CARD}
-                paddingBottom="20px"
-              >
-                Khoá học cung cấp tư duy marketing nền tảng dành cho người mới
-                bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng lộ
-                trình phát triển nghề nghiệp.
-              </Text>
-              <Button
-                w="200px"
-                padding="20px"
-                marginBottom="20px"
-                transition="transform 0.3s"
-                backgroundColor={BG_BUTTON_COLOR}
-                color={TEXT_COLOR}
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              >
-                Tìm hiểu thêm
-              </Button>
-            </Flex>
-          </GridItem>
-          <GridItem
-            boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-            borderRadius="20px"
-            overflow="hidden"
-          >
-            <Box overflow="hidden">
-              <Image
-                src="/image/card.png"
-                borderTopRightRadius="20px"
-                borderTopLeftRadius="20px"
-                transition="transform 0.3s"
-                backgroundColor={BG_BUTTON_COLOR}
-                color={TEXT_COLOR}
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              />
-            </Box>
-            <Flex direction="column" gap="10px" padding="20px">
-              <Text fontSize="20px" fontWeight="700">
-                Marketing Foundation
-              </Text>
-              <Text
-                borderBottom="1px solid "
-                borderBottomColor={BD_BOTTOM_CARD}
-                paddingBottom="20px"
-              >
-                Khoá học cung cấp tư duy marketing nền tảng dành cho người mới
-                bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng lộ
-                trình phát triển nghề nghiệp.
-              </Text>
-              <Button
-                w="200px"
-                padding="20px"
-                marginBottom="20px"
-                transition="transform 0.3s"
-                backgroundColor={BG_BUTTON_COLOR}
-                color={TEXT_COLOR}
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              >
-                Tìm hiểu thêm
-              </Button>
-            </Flex>
-          </GridItem>
-          <GridItem
-            boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-            borderRadius="20px"
-            overflow="hidden"
-          >
-            <Box overflow="hidden">
-              <Image
-                src="/image/card.png"
-                borderTopRightRadius="20px"
-                borderTopLeftRadius="20px"
-                transition="transform 0.3s"
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              />
-            </Box>
-            <Flex direction="column" gap="10px" padding="20px">
-              <Text fontSize="20px" fontWeight="700">
-                Marketing Foundation
-              </Text>
-              <Text
-                borderBottom="1px solid "
-                borderBottomColor={BD_BOTTOM_CARD}
-                paddingBottom="20px"
-              >
-                Khoá học cung cấp tư duy marketing nền tảng dành cho người mới
-                bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng lộ
-                trình phát triển nghề nghiệp.
-              </Text>
-              <Button
-                w="200px"
-                padding="20px"
-                marginBottom="20px"
-                transition="transform 0.3s"
-                backgroundColor={BG_BUTTON_COLOR}
-                color={TEXT_COLOR}
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              >
-                Tìm hiểu thêm
-              </Button>
-            </Flex>
-          </GridItem>
-          <GridItem
-            boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-            borderRadius="20px"
-            overflow="hidden"
-          >
-            <Box overflow="hidden">
-              <Image
-                src="/image/card.png"
-                borderTopRightRadius="20px"
-                borderTopLeftRadius="20px"
-                transition="transform 0.3s"
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              />
-            </Box>
-            <Flex direction="column" gap="10px" padding="20px">
-              <Text fontSize="20px" fontWeight="700">
-                Marketing Foundation
-              </Text>
-              <Text
-                borderBottom="1px solid "
-                borderBottomColor={BD_BOTTOM_CARD}
-                paddingBottom="20px"
-              >
-                Khoá học cung cấp tư duy marketing nền tảng dành cho người mới
-                bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng lộ
-                trình phát triển nghề nghiệp.
-              </Text>
-              <Button
-                w="200px"
-                padding="20px"
-                marginBottom="20px"
-                transition="transform 0.3s"
-                backgroundColor={BG_BUTTON_COLOR}
-                color={TEXT_COLOR}
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              >
-                Tìm hiểu thêm
-              </Button>
-            </Flex>
-          </GridItem>
-        </Grid> */}
+                  <Box overflow="hidden">
+                    <Image
+                      src="/image/card.png"
+                      borderTopRightRadius="20px"
+                      borderTopLeftRadius="20px"
+                      transition="transform 0.3s"
+                      _hover={{
+                        transform: "scale(1.1)",
+                      }}
+                    />
+                  </Box>
+                  <Flex direction="column" gap="10px" padding="20px">
+                    <Text fontSize="30px" fontWeight="700">
+                      {course.attributes.title}
+                    </Text>
+                    <Text
+                      borderBottom="1px solid "
+                      borderBottomColor={BD_BOTTOM_CARD}
+                      paddingBottom="20px"
+                    >
+                      {course.attributes.description}
+                    </Text>
+                    <Link href={`/course/${course.attributes.slug}`}>
+                      <Button
+                        w="200px"
+                        padding="20px"
+                        marginBottom="20px"
+                        transition="transform 0.3s"
+                        backgroundColor={BG_BUTTON_COLOR}
+                        color={TEXT_COLOR}
+                        _hover={{
+                          transform: "scale(1.1)",
+                        }}
+                      >
+                        Tìm hiểu thêm
+                      </Button>
+                    </Link>
+                  </Flex>
+                </GridItem>
+              ))}
+            </Grid>
+          </Box>
+        </Box>
       </Box>
       <Box background="linear-gradient(rgb(0, 4, 40), rgb(136, 14, 79))">
         <Flex
