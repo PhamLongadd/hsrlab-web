@@ -17,7 +17,7 @@ const CourseFormInput: React.FC<CourseFormInputProps> = () => {
       padding="20px"
     >
       <Text fontSize="20px" fontWeight="700" color={TEXT_BOLD_COLOR}>
-        Đăng ký khoá học tại Tomorrow Marketers
+        Đăng ký khoá học tại HSR LAB
       </Text>
       <Text>
         Vui lòng điền đầy đủ các thông tin dưới đây. Chúng tôi sẽ liên lạc lại
