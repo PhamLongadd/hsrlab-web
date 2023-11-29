@@ -59,7 +59,7 @@ type Thumbnail = {
 
 export const fetchPrograms = async () => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/api/programs/?populate=courses.thumbnail`
+    `/api/programs/?populate=courses.thumbnail`
   );
   const data = await response.json();
   return data.data;
@@ -67,7 +67,7 @@ export const fetchPrograms = async () => {
 
 export const fetchCourseBySlug = async (slug: string) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/api/courses?filters[slug][$eq]=${slug}&populate=*`
+    `/api/courses?filters[slug][$eq]=${slug}&populate=*`
   );
   const data = await response.json();
   return data.data;
