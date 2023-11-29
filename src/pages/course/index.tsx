@@ -109,7 +109,11 @@ const Course: NextPage = () => {
                     />
                   </Box>
                   <Flex direction="column" gap="10px" padding="20px">
-                    <Text fontSize="30px" fontWeight="700" h="90px">
+                    <Text
+                      fontSize={["20px", "25px", "30px"]}
+                      fontWeight="700"
+                      h="90px"
+                    >
                       {course.attributes.name}
                     </Text>
                     <Text
