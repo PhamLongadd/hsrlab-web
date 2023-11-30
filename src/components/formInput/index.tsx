@@ -115,6 +115,7 @@ const FormInput: NextPage = () => {
             >
               <GridItem>
                 <Input
+                  required
                   variant="flushed"
                   placeholder="Họ và Tên"
                   {...register("full_name")}
@@ -122,6 +123,7 @@ const FormInput: NextPage = () => {
               </GridItem>
               <GridItem>
                 <Input
+                  required
                   variant="flushed"
                   placeholder="Số điện thoại"
                   {...register("phone_number")}
@@ -136,6 +138,7 @@ const FormInput: NextPage = () => {
               </GridItem>
               <GridItem>
                 <Select
+                  required
                   variant="flushed"
                   placeholder="Loại dịch vụ"
                   {...register("type")}

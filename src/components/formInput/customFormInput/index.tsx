@@ -91,6 +91,7 @@ const CustomFormInput: NextPage = () => {
             >
               <GridItem>
                 <Input
+                  required
                   variant="flushed"
                   placeholder="Họ và Tên"
                   {...register("full_name")}
@@ -98,6 +99,7 @@ const CustomFormInput: NextPage = () => {
               </GridItem>
               <GridItem>
                 <Input
+                  required
                   variant="flushed"
                   placeholder="Số điện thoại"
                   {...register("phone_number")}
@@ -112,6 +114,7 @@ const CustomFormInput: NextPage = () => {
               </GridItem>
               <GridItem>
                 <Select
+                  required
                   variant="flushed"
                   placeholder="Loại dịch vụ"
                   {...register("type")}
