@@ -31,7 +31,7 @@ const CourseDetail = ({ course }: { course: Course }) => {
       <Box backgroundColor={BG_COLOR}>
         <Box padding="20px">
           <Image
-            src="/image/card.png"
+            src={`${process.env.NEXT_PUBLIC_API_ENDPOINT}${course.attributes.thumbnail.data.attributes.url}`}
             w="1200px"
             margin="auto"
             h={["400px", "600px", "600px"]}
