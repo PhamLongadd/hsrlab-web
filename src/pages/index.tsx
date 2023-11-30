@@ -11,6 +11,7 @@ import {
   CardBody,
   Heading,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 import {
   BG_COLOR,
@@ -110,13 +111,15 @@ export default function Home() {
                 backgroundColor={BG_BUTTON_COLOR}
                 _hover={{ color: BG_BUTTON_COLOR }}
               >
-                <Text
-                  fontSize={["16px", "20px", "20px"]}
-                  fontWeight="600"
-                  color={TEXT_COLOR}
-                >
-                  Giới thiệu về HSR LAB
-                </Text>
+                <Link href="/introduction/hsrLab">
+                  <Text
+                    fontSize={["16px", "20px", "20px"]}
+                    fontWeight="600"
+                    color={TEXT_COLOR}
+                  >
+                    Giới thiệu về HSR LAB
+                  </Text>
+                </Link>
               </Button>
             </Box>
             <Box maxW="555px" borderRadius="20px" overflow="hidden">

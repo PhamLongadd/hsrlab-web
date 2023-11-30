@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export type Program = {
   id: number;
   attributes: {
@@ -73,4 +75,23 @@ export const fetchCourseBySlug = async (slug: string) => {
   );
   const data = await response.json();
   return data.data;
+};
+export interface FormAdviseBody {
+  full_name: string;
+  phone_number: string;
+  email: string;
+  type: string;
+  message: string;
+}
+
+export const formInputAdvise = async (body: FormAdviseBody) => {
+  try {
+    const response = await axios.post(`${API_ENDPOINT}/api/forms`, {
+      data: body,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
 };

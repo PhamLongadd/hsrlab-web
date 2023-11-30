@@ -117,7 +117,10 @@ const Recruitment: React.FC<RecruitmentProps> = () => {
           </Box>
         </Flex>
       </Box>
-      <Box backgroundColor="rgba(234, 242, 254, 0.5)">
+      <Box
+        backgroundColor="rgba(234, 242, 254, 0.5)"
+        padding={["10px", "0px", "0px"]}
+      >
         <Box maxW="1200px" margin="auto" pt="50px" pb="50px">
           <Text
             textAlign="center"
@@ -226,7 +229,7 @@ const Recruitment: React.FC<RecruitmentProps> = () => {
           Các vị trí hiện tại
         </Text>
       </Box>
-      <Box>
+      <Box padding={["10px", "0px", "0px"]}>
         <Flex
           direction="column"
           pt="50px"
