@@ -24,6 +24,6 @@ jobs:
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
             npm install
-            npm run build
+            export NEXT_PUBLIC_API_ENDPOINT=https://api.hsrlab.com.vn && npm run build
             pm2 start ecosystem.config.js
             pm2 restart web
