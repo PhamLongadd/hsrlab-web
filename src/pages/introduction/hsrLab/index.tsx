@@ -10,12 +10,6 @@ import {
 } from "@chakra-ui/react";
 
 import {
-  BG_COLOR,
-  BG_TEXT_COLOR,
-  BD_BOTTOM_CARD,
-  BG_BUTTON_COLOR,
-  TEXT_COLOR,
-  BD_COLOR,
   TEXT_BOLD_COLOR,
   BD_CARD_COLOR,
   BG_CARD_COLOR,
@@ -123,84 +117,9 @@ const HsrLab: React.FC<HsrLabProps> = () => {
           Thay đổi phương pháp dạy và học tăng cường việc học cho các con bằng
           những giờ thực hành thực tế
         </Text>
-        <Flex
-          gap={["10px", "30px", "50px"]}
-          mt="30px"
-          alignItems="center"
-          textAlign="center"
-          backgroundColor={BG_CARD_COLOR}
-          padding="30px"
-          borderRadius="10px"
-          flexDirection={["column", "column", "row"]}
-        >
-          <Flex
-            direction="column"
-            gap={["10px", "10px", "20px"]}
-            alignItems="center"
-          >
-            <Text
-              fontSize={["40px", "40px", "50px"]}
-              fontWeight="700"
-              color={TEXT_COLOR}
-            >
-              08
-            </Text>
-            <Text fontSize="16px" fontWeight="600" color={TEXT_COLOR}>
-              Năm
-            </Text>
-          </Flex>
-          <Flex direction="column" gap="20px" alignItems="center">
-            <Text
-              fontSize={["40px", "40px", "50px"]}
-              fontWeight="700"
-              color={TEXT_COLOR}
-            >
-              1000+
-            </Text>
-            <Text fontSize="16px" fontWeight="600" color={TEXT_COLOR}>
-              Học viên
-            </Text>
-          </Flex>
-          <Flex direction="column" gap="20px" alignItems="center">
-            <Text
-              fontSize={["40px", "40px", "50px"]}
-              fontWeight="700"
-              color={TEXT_COLOR}
-            >
-              350+
-            </Text>
-            <Text fontSize="16px" fontWeight="600" color={TEXT_COLOR}>
-              Lớp học
-            </Text>
-          </Flex>
-          <Flex direction="column" gap="20px" alignItems="center">
-            <Text
-              fontSize={["40px", "40px", "50px"]}
-              fontWeight="700"
-              color={TEXT_COLOR}
-            >
-              40+
-            </Text>
-            <Text fontSize="16px" fontWeight="600" color={TEXT_COLOR}>
-              Giảng viên
-            </Text>
-          </Flex>
-          <Flex direction="column" gap="20px" alignItems="center">
-            <Text
-              fontSize={["40px", "40px", "50px"]}
-              fontWeight="700"
-              color={TEXT_COLOR}
-            >
-              150+
-            </Text>
-            <Text fontSize="16px" fontWeight="600" color={TEXT_COLOR}>
-              Sự kiện
-            </Text>
-          </Flex>
-        </Flex>
       </Box>
-      <Box backgroundColor={BG_COLOR} padding="70px">
-        <Flex direction="column">
+      <Box marginTop="70px" marginBottom="70px">
+        <Flex direction="column" gap="70px">
           <Text
             fontSize="30px"
             fontWeight="700"
@@ -209,12 +128,80 @@ const HsrLab: React.FC<HsrLabProps> = () => {
           >
             Các đối tác đồng hành cùng HSR LAB
           </Text>
-          <Flex flexDirection={["column", "column", "row"]}>
-            <Image src="/image/Techcombank.png" w="450px" objectFit="contain" />
-            <Image src="/image/vietinbank.png" w="450px" objectFit="contain" />
-            <Image src="/image/Vietcombank.png" w="450px" objectFit="contain" />
-            <Image src="/image/mbBank.png" w="450px" objectFit="contain" />
-          </Flex>
+          <Grid
+            templateColumns={{
+              base: "1fr",
+              md: "repeat(3, 1fr)",
+              lg: "repeat(4, 1fr)",
+            }}
+            gap="100px"
+            margin="auto"
+          >
+            <GridItem>
+              <Image
+                src="/image/WRO.png"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/TuePhatEdu.jpg"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/TieuhocDoanThiDiem.png"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/NewtonGrammarSchool.png"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/FLL.png"
+                w="200px"
+                h="150px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/BanMaiSchool.jpg"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/EverestSchool.png"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/LegoEducation.png"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+          </Grid>
         </Flex>
       </Box>
       <Box backgroundColor={BG_CARD_COLOR}>

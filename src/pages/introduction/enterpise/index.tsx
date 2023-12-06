@@ -1,11 +1,31 @@
-import { Box, Image, Text, Flex } from "@chakra-ui/react";
+import React from "react";
+import {
+  Box,
+  Image,
+  Text,
+  Flex,
+  Grid,
+  GridItem,
+  Button,
+} from "@chakra-ui/react";
 
-import { BG_COLOR, TEXT_BOLD_COLOR } from "@/components/styles/color";
+import {
+  TEXT_BOLD_COLOR,
+  BD_COLOR,
+  BG_BUTTON_COLOR,
+  TEXT_COLOR,
+} from "@/components/styles/color";
 import EnterpiseFormInput from "@/components/formInput/enterpiseFormInput";
 
 interface StudentsProps {}
 
-const Students: React.FC<StudentsProps> = () => {
+const Enterpise: React.FC<StudentsProps> = () => {
+  const targetRef = React.createRef<HTMLDivElement>();
+
+  const scrollToTarget = () => {
+    targetRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <Box mt="80px">
       <Image
@@ -33,15 +53,33 @@ const Students: React.FC<StudentsProps> = () => {
               ABOUT US
             </Text>
             <Text>
-              Tomorrow Marketers cung cấp dịch vụ đào tạo marketing cho nội bộ
-              doanh nghiệp trong lĩnh vực Marketing - Branding - Communication -
-              Digital & Content strategy - Data Operation
+              HSRL cung cấp dịch vụ nội dung giảng dạy STEM Robtics cũng như đào
+              tạo giảng dạy cho doanh nghiệp trong lĩnh vực Giáo dục. Tìm hiểu
+              ngay về dịch vụ tư vấn & huấn luyện nội bộ doanh nghiệp tại đây.
             </Text>
+            <Button
+              padding={["10px", "20px", "25px"]}
+              borderRadius="10px"
+              border="4px solid"
+              borderColor={BD_COLOR}
+              backgroundColor={BG_BUTTON_COLOR}
+              _hover={{ color: BG_BUTTON_COLOR }}
+              boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+              onClick={scrollToTarget}
+            >
+              <Text
+                fontSize={["16px", "20px", "20px"]}
+                fontWeight="600"
+                color={TEXT_COLOR}
+              >
+                Nhận tư vấn Ngay
+              </Text>
+            </Button>
           </Box>
         </Flex>
       </Box>
-      <Box backgroundColor={BG_COLOR} padding="70px">
-        <Flex direction="column">
+      <Box marginTop="70px" marginBottom="70px">
+        <Flex direction="column" gap="70px">
           <Text
             fontSize="30px"
             fontWeight="700"
@@ -50,12 +88,80 @@ const Students: React.FC<StudentsProps> = () => {
           >
             Các đối tác đồng hành cùng HSR LAB
           </Text>
-          <Flex flexDirection={["column", "column", "row"]}>
-            <Image src="/image/Techcombank.png" w="450px" objectFit="contain" />
-            <Image src="/image/vietinbank.png" w="450px" objectFit="contain" />
-            <Image src="/image/Vietcombank.png" w="450px" objectFit="contain" />
-            <Image src="/image/mbBank.png" w="450px" objectFit="contain" />
-          </Flex>
+          <Grid
+            templateColumns={{
+              base: "1fr",
+              md: "repeat(3, 1fr)",
+              lg: "repeat(4, 1fr)",
+            }}
+            gap="100px"
+            margin="auto"
+          >
+            <GridItem>
+              <Image
+                src="/image/WRO.png"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/TuePhatEdu.jpg"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/TieuhocDoanThiDiem.png"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/NewtonGrammarSchool.png"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/FLL.png"
+                w="200px"
+                h="150px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/BanMaiSchool.jpg"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/EverestSchool.png"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/LegoEducation.png"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+          </Grid>
         </Flex>
       </Box>
       <Box mt="50px" mb="50px">
@@ -142,7 +248,12 @@ const Students: React.FC<StudentsProps> = () => {
                 giải pháp phù hợp và thực tế.
               </Text>
             </Box>
-            <Box maxW="555px" borderRadius="20px" overflow="hidden">
+            <Box
+              maxW="555px"
+              borderRadius="20px"
+              overflow="hidden"
+              ref={targetRef}
+            >
               <EnterpiseFormInput />
             </Box>
           </Flex>
@@ -151,4 +262,4 @@ const Students: React.FC<StudentsProps> = () => {
     </Box>
   );
 };
-export default Students;
+export default Enterpise;

@@ -61,48 +61,7 @@ export default function Home() {
                 truyền cảm hứng và chuẩn bị hành trang cho các công dân tương
                 lai của thời đại 4.0.
               </Text>
-              <Flex gap={["10px", "20px", "30px"]}>
-                <Flex direction="column" gap="20px" alignItems="center">
-                  <Text color="white" fontSize="30px" fontWeight="700">
-                    08
-                  </Text>
-                  <Text color="white" fontSize="16px" fontWeight="600">
-                    Năm
-                  </Text>
-                </Flex>
-                <Flex direction="column" gap="20px" alignItems="center">
-                  <Text color="white" fontSize="30px" fontWeight="700">
-                    1000+
-                  </Text>
-                  <Text color="white" fontSize="16px" fontWeight="600">
-                    Học viên
-                  </Text>
-                </Flex>
-                <Flex direction="column" gap="20px" alignItems="center">
-                  <Text color="white" fontSize="30px" fontWeight="700">
-                    350+
-                  </Text>
-                  <Text color="white" fontSize="16px" fontWeight="600">
-                    Lớp học
-                  </Text>
-                </Flex>
-                <Flex direction="column" gap="20px" alignItems="center">
-                  <Text color="white" fontSize="30px" fontWeight="700">
-                    40+
-                  </Text>
-                  <Text color="white" fontSize="16px" fontWeight="600">
-                    Giảng viên
-                  </Text>
-                </Flex>
-                <Flex direction="column" gap="20px" alignItems="center">
-                  <Text color="white" fontSize="30px" fontWeight="700">
-                    150+
-                  </Text>
-                  <Text color="white" fontSize="16px" fontWeight="600">
-                    Sự kiện
-                  </Text>
-                </Flex>
-              </Flex>
+
               <Button
                 padding={["10px", "20px", "25px"]}
                 borderRadius="10px"
@@ -177,8 +136,8 @@ export default function Home() {
           </Box>
         </Flex>
       </Box>
-      <Box backgroundColor={BG_COLOR} padding="70px">
-        <Flex direction="column">
+      <Box marginTop="70px" marginBottom="70px">
+        <Flex direction="column" gap="70px">
           <Text
             fontSize="30px"
             fontWeight="700"
@@ -187,257 +146,81 @@ export default function Home() {
           >
             Các đối tác đồng hành cùng HSR LAB
           </Text>
-          <Flex flexDirection={["column", "column", "row"]}>
-            <Image src="/image/Techcombank.png" w="450px" objectFit="contain" />
-            <Image src="/image/vietinbank.png" w="450px" objectFit="contain" />
-            <Image src="/image/Vietcombank.png" w="450px" objectFit="contain" />
-            <Image src="/image/mbBank.png" w="450px" objectFit="contain" />
-          </Flex>
-        </Flex>
-      </Box>
-      <Box>
-        <Box padding="70px" maxWidth="1200px" width="100%" margin="auto">
-          <Text
-            fontSize="30px"
-            fontWeight="700"
-            textAlign="center"
-            marginBottom="30px"
-            color={TEXT_BOLD_COLOR}
-          >
-            Các khóa học
-          </Text>
           <Grid
             templateColumns={{
               base: "1fr",
-              md: "repeat(2, 1fr)",
-              lg: "repeat(3, 1fr)",
+              md: "repeat(3, 1fr)",
+              lg: "repeat(4, 1fr)",
             }}
-            gap={6}
+            gap="100px"
+            margin="auto"
           >
-            <GridItem
-              boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-              borderRadius="20px"
-              overflow="hidden"
-            >
-              <Box overflow="hidden">
-                <Image
-                  src="/image/card.png"
-                  borderTopRightRadius="20px"
-                  borderTopLeftRadius="20px"
-                  transition="transform 0.3s"
-                  _hover={{
-                    transform: "scale(1.1)",
-                  }}
-                />
-              </Box>
-              <Flex direction="column" gap="10px" padding="20px">
-                <Text fontSize="20px" fontWeight="700">
-                  Marketing Foundation
-                </Text>
-                <Text
-                  borderBottom="1px solid "
-                  borderBottomColor={BD_BOTTOM_CARD}
-                  paddingBottom="20px"
-                >
-                  Khoá học cung cấp tư duy marketing nền tảng dành cho người mới
-                  bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng
-                  lộ trình phát triển nghề nghiệp.
-                </Text>
-                <Button
-                  w="200px"
-                  padding="20px"
-                  marginBottom="20px"
-                  transition="transform 0.3s"
-                  backgroundColor={BG_BUTTON_COLOR}
-                  color={TEXT_COLOR}
-                  _hover={{
-                    transform: "scale(1.1)",
-                  }}
-                >
-                  Tìm hiểu thêm
-                </Button>
-              </Flex>
+            <GridItem>
+              <Image
+                src="/image/WRO.png"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
             </GridItem>
-            <GridItem
-              boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-              borderRadius="20px"
-              overflow="hidden"
-            >
-              <Box overflow="hidden">
-                <Image
-                  src="/image/card.png"
-                  borderTopRightRadius="20px"
-                  borderTopLeftRadius="20px"
-                  transition="transform 0.3s"
-                  _hover={{
-                    transform: "scale(1.1)",
-                  }}
-                />
-              </Box>
-              <Flex direction="column" gap="10px" padding="20px">
-                <Text fontSize="20px" fontWeight="700">
-                  Marketing Foundation
-                </Text>
-                <Text
-                  borderBottom="1px solid "
-                  borderBottomColor={BD_BOTTOM_CARD}
-                  paddingBottom="20px"
-                >
-                  Khoá học cung cấp tư duy marketing nền tảng dành cho người mới
-                  bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng
-                  lộ trình phát triển nghề nghiệp.
-                </Text>
-                <Button
-                  w="200px"
-                  padding="20px"
-                  marginBottom="20px"
-                  backgroundColor={BG_BUTTON_COLOR}
-                  color={TEXT_COLOR}
-                  transition="transform 0.3s"
-                  _hover={{
-                    transform: "scale(1.1)",
-                  }}
-                >
-                  Tìm hiểu thêm
-                </Button>
-              </Flex>
+            <GridItem>
+              <Image
+                src="/image/TuePhatEdu.jpg"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
             </GridItem>
-            <GridItem
-              boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-              borderRadius="20px"
-              overflow="hidden"
-            >
-              <Box overflow="hidden">
-                <Image
-                  src="/image/card.png"
-                  borderTopRightRadius="20px"
-                  borderTopLeftRadius="20px"
-                  transition="transform 0.3s"
-                  _hover={{
-                    transform: "scale(1.1)",
-                  }}
-                />
-              </Box>
-              <Flex direction="column" gap="10px" padding="20px">
-                <Text fontSize="20px" fontWeight="700">
-                  Marketing Foundation
-                </Text>
-                <Text
-                  borderBottom="1px solid "
-                  borderBottomColor={BD_BOTTOM_CARD}
-                  paddingBottom="20px"
-                >
-                  Khoá học cung cấp tư duy marketing nền tảng dành cho người mới
-                  bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng
-                  lộ trình phát triển nghề nghiệp.
-                </Text>
-                <Button
-                  w="200px"
-                  padding="20px"
-                  marginBottom="20px"
-                  backgroundColor={BG_BUTTON_COLOR}
-                  color={TEXT_COLOR}
-                  transition="transform 0.3s"
-                  _hover={{
-                    transform: "scale(1.1)",
-                  }}
-                >
-                  Tìm hiểu thêm
-                </Button>
-              </Flex>
+            <GridItem>
+              <Image
+                src="/image/TieuhocDoanThiDiem.png"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
             </GridItem>
-            <GridItem
-              boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-              borderRadius="20px"
-              overflow="hidden"
-            >
-              <Box overflow="hidden">
-                <Image
-                  src="/image/card.png"
-                  borderTopRightRadius="20px"
-                  borderTopLeftRadius="20px"
-                  backgroundColor={BG_BUTTON_COLOR}
-                  color={TEXT_COLOR}
-                  transition="transform 0.3s"
-                  _hover={{
-                    transform: "scale(1.1)",
-                  }}
-                />
-              </Box>
-              <Flex direction="column" gap="10px" padding="20px">
-                <Text fontSize="20px" fontWeight="700">
-                  Marketing Foundation
-                </Text>
-                <Text
-                  borderBottom="1px solid "
-                  borderBottomColor={BD_BOTTOM_CARD}
-                  paddingBottom="20px"
-                >
-                  Khoá học cung cấp tư duy marketing nền tảng dành cho người mới
-                  bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng
-                  lộ trình phát triển nghề nghiệp.
-                </Text>
-                <Button
-                  w="200px"
-                  padding="20px"
-                  marginBottom="20px"
-                  backgroundColor={BG_BUTTON_COLOR}
-                  color={TEXT_COLOR}
-                  transition="transform 0.3s"
-                  _hover={{
-                    transform: "scale(1.1)",
-                  }}
-                >
-                  Tìm hiểu thêm
-                </Button>
-              </Flex>
+            <GridItem>
+              <Image
+                src="/image/NewtonGrammarSchool.png"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
             </GridItem>
-            <GridItem
-              boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-              borderRadius="20px"
-              overflow="hidden"
-            >
-              <Box overflow="hidden">
-                <Image
-                  src="/image/card.png"
-                  borderTopRightRadius="20px"
-                  borderTopLeftRadius="20px"
-                  transition="transform 0.3s"
-                  _hover={{
-                    transform: "scale(1.1)",
-                  }}
-                />
-              </Box>
-              <Flex direction="column" gap="10px" padding="20px">
-                <Text fontSize="20px" fontWeight="700">
-                  Marketing Foundation
-                </Text>
-                <Text
-                  borderBottom="1px solid "
-                  borderBottomColor={BD_BOTTOM_CARD}
-                  paddingBottom="20px"
-                >
-                  Khoá học cung cấp tư duy marketing nền tảng dành cho người mới
-                  bắt đầu, giúp hệ thống hoá kiến thức chuyên môn và định hướng
-                  lộ trình phát triển nghề nghiệp.
-                </Text>
-                <Button
-                  w="200px"
-                  padding="20px"
-                  marginBottom="20px"
-                  backgroundColor={BG_BUTTON_COLOR}
-                  color={TEXT_COLOR}
-                  transition="transform 0.3s"
-                  _hover={{
-                    transform: "scale(1.1)",
-                  }}
-                >
-                  Tìm hiểu thêm
-                </Button>
-              </Flex>
+            <GridItem>
+              <Image
+                src="/image/FLL.png"
+                w="200px"
+                h="150px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/BanMaiSchool.jpg"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/EverestSchool.png"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/LegoEducation.png"
+                w="200px"
+                h="100px"
+                objectFit="contain"
+              />
             </GridItem>
           </Grid>
-        </Box>
+        </Flex>
       </Box>
       <Box backgroundColor={BG_COLOR}>
         <Flex

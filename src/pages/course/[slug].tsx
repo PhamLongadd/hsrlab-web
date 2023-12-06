@@ -65,24 +65,6 @@ const CourseDetail = ({ course }: { course: Course }) => {
                 padding="20px"
               >
                 <Text color="white" fontSize="20px" fontWeight="600">
-                  Lớp học online
-                </Text>
-                <Text color="white">- Khai giảng: 04/12/2023</Text>
-                <Text color="white">
-                  - Lịch học (10 buổi): Thứ 2 & Thứ 4 (19:00 - 21:00)
-                </Text>
-                <Text color="white">
-                  - Hình thức học: Online qua nền tảng Zoom
-                </Text>
-                <Text color="white">- Hotline: 090.586.2499 (Ms. Yến)</Text>
-              </Flex>
-              <Flex
-                direction="column"
-                gap="10px"
-                backgroundColor={BG_TEXT_COLOR}
-                padding="20px"
-              >
-                <Text color="white" fontSize="20px" fontWeight="600">
                   Lớp học tại Hà Nội
                 </Text>
                 <Text color="white">- Khai giảng: 04/12/2023</Text>
