@@ -12,11 +12,11 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import Head from "next/head";
 
 import {
   BG_COLOR,
   BG_TEXT_COLOR,
-  BD_BOTTOM_CARD,
   BG_BUTTON_COLOR,
   TEXT_COLOR,
   BD_COLOR,
@@ -28,6 +28,9 @@ import FormInput from "@/components/formInput";
 export default function Home() {
   return (
     <Box mt="80px">
+      <Head>
+        <link rel="icon" href="/image/favicon.ico" />
+      </Head>
       <Image
         src="/image/thumnail.jpg"
         w="100%"
