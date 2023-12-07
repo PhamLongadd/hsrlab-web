@@ -101,6 +101,9 @@ const Course: NextPage = () => {
                     <Image
                       // src={`${process.env.NEXT_PUBLIC_API_ENDPOINT}${course.attributes.thumbnail.data.attributes.url}`}
                       src="/image/gioithieu.png"
+                      h="300px"
+                      w="100%"
+                      objectFit="cover"
                       borderTopRightRadius="20px"
                       borderTopLeftRadius="20px"
                       transition="transform 0.3s"
