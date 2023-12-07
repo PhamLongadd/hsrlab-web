@@ -244,11 +244,11 @@ export default function Home() {
             Ưu đãi khóa học mới
           </Text>
           <Image
-            src="/image/sale.png"
+            src="/image/trangchu1.jpg"
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
             borderRadius="20px"
             objectFit="cover"
-            w="auto"
+            w="100%"
             h={["200px", "400px", "550px"]}
           />
           <Button
@@ -291,7 +291,7 @@ export default function Home() {
             Sự kiện sắp tới
           </Text>
           <Image
-            src="/image/sale.png"
+            src="/image/trangchu1.jpg"
             boxShadow="rgb(224, 224, 224) 3px 3px 5px 0px"
             border="2px solid rgb(224, 224, 224)"
             borderRadius="20px"

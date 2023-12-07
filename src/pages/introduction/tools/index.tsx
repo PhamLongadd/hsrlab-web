@@ -391,9 +391,12 @@ const Tools: React.FC<ToolsProps> = () => {
                 SPIKE Prime Core Set
               </Text>
               <Text>
-                Giải pháp STEAM Mầm non, phù hợp với trẻ từ 3- 5 tuổi (lứa tuổi
-                mầm non), bộ học cụ bao gồm 137 chi tiết giúp trẻ thỏa sức sáng
-                tạo & học tập.
+                LEGO® Education SPIKE Prime thúc đẩy tất cả học sinh suy nghĩ,
+                phân tích dữ liệu và thiết kế cho các giải pháp sáng tạo thông
+                qua các vấn đề phức tạp có liên quan đến thế giới thực. Từ bài
+                học dễ nhập cảnh đến những trải nghiệm nâng cao, học sinh ở mọi
+                cấp độ có thể xây dựng sự tự tin và lòng kiên nhẫn và những kỹ
+                năng quan trọng cho sự thành công trong tương lai.
               </Text>
               <Text
                 fontSize="18px"
@@ -512,9 +515,12 @@ const Tools: React.FC<ToolsProps> = () => {
                 SPIKE Prime Expand Set
               </Text>
               <Text>
-                Giải pháp STEAM Mầm non, phù hợp với trẻ từ 3- 5 tuổi (lứa tuổi
-                mầm non), bộ học cụ bao gồm 137 chi tiết giúp trẻ thỏa sức sáng
-                tạo & học tập.
+                LEGO® Education SPIKE Prime thúc đẩy tất cả học sinh suy nghĩ,
+                phân tích dữ liệu và thiết kế cho các giải pháp sáng tạo thông
+                qua các vấn đề phức tạp có liên quan đến thế giới thực. Từ bài
+                học dễ nhập cảnh đến những trải nghiệm nâng cao, học sinh ở mọi
+                cấp độ có thể xây dựng sự tự tin và lòng kiên nhẫn và những kỹ
+                năng quan trọng cho sự thành công trong tương lai.
               </Text>
               <Text
                 fontSize="18px"

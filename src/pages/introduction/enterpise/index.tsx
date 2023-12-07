@@ -29,7 +29,7 @@ const Enterpise: React.FC<StudentsProps> = () => {
   return (
     <Box mt="80px">
       <Image
-        src="/image/enterpise.jpg"
+        src="/image/thumnail.jpg"
         w="100%"
         h={["400px", "600px", "700px"]}
         objectFit="cover"
@@ -43,7 +43,7 @@ const Enterpise: React.FC<StudentsProps> = () => {
           <Box maxW="555px">
             <Image
               borderRadius="20px"
-              src="/image/enterpise2.png"
+              src="/image/gioithieu.png"
               width="100%"
               objectFit="contain"
             />
@@ -179,8 +179,8 @@ const Enterpise: React.FC<StudentsProps> = () => {
             </Text>
             <Text borderBottom="1px solid #000" pb="20px">
               Với kinh nghiệm 6 năm trong lĩnh vực đào tạo, tư vấn, cùng đội ngũ
-              trainer giàu kinh nghiệm, Tomorrow Marketers tự tin thiết kế
-              chương trình training phù hợp với vấn đề của các doanh nghiệp.
+              trainer giàu kinh nghiệm, HSR LAB tự tin thiết kế chương trình
+              training phù hợp với vấn đề của các doanh nghiệp.
             </Text>
             <Flex gap="20px">
               <Text fontSize="40px" fontWeight="700" color={TEXT_BOLD_COLOR}>
@@ -210,7 +210,7 @@ const Enterpise: React.FC<StudentsProps> = () => {
             </Flex>
           </Flex>
           <Image
-            src="/image/ourTeam.png"
+            src="/image/gioithieu.png"
             w="450px"
             h="100%"
             objectFit="contain"

@@ -12,12 +12,12 @@ const Enterpise: React.FC<EnterpiseProps> = () => {
   return (
     <Box mt="80px">
       <Image
-        src="/image/enterpise.jpg"
+        src="/image/trangchu1.jpg"
         w="100%"
         h={["400px", "600px", "700px"]}
         objectFit="cover"
       />
-      <Box padding="30px" maxWidth="1200px" width="100%" margin="auto">
+      {/* <Box padding="30px" maxWidth="1200px" width="100%" margin="auto">
         <Text
           fontSize="30px"
           fontWeight="700"
@@ -333,7 +333,7 @@ const Enterpise: React.FC<EnterpiseProps> = () => {
             </Flex>
           </GridItem>
         </Grid>
-      </Box>
+      </Box> */}
       <Box backgroundColor={BG_CARD_COLOR}>
         <Text
           color="white"
@@ -362,7 +362,7 @@ const Enterpise: React.FC<EnterpiseProps> = () => {
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.8)"
           >
             <Image
-              src="/image/ourTeam.png"
+              src="/image/gioithieu.png"
               w="450px"
               objectFit="contain"
               borderRadius="10px"
@@ -446,7 +446,7 @@ const Enterpise: React.FC<EnterpiseProps> = () => {
             </Flex>
             <Box maxW="555px">
               <Image
-                src="/image/ourTeam.png"
+                src="/image/gioithieu.png"
                 w="450px"
                 objectFit="contain"
                 borderRadius="10px"
@@ -473,7 +473,7 @@ const Enterpise: React.FC<EnterpiseProps> = () => {
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.8)"
           >
             <Image
-              src="/image/ourTeam.png"
+              src="/image/gioithieu.png"
               w="450px"
               objectFit="contain"
               borderRadius="10px"

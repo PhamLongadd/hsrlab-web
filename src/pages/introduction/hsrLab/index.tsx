@@ -19,7 +19,12 @@ interface HsrLabProps {}
 const HsrLab: React.FC<HsrLabProps> = () => {
   return (
     <Box mt="80px">
-      <Image src="/image/bannerIntroduction.png" w="100%" />
+      <Image
+        src="/image/thumnail.jpg"
+        w="100%"
+        h={["400px", "600px", "700px"]}
+        objectFit="cover"
+      />
       <Box backgroundImage="url('/image/bgIntroduction2.jpg')" bgSize="cover">
         <Box maxW="1200px" margin="auto" pt="100px" pb="100px">
           <Card
@@ -232,7 +237,7 @@ const HsrLab: React.FC<HsrLabProps> = () => {
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.8)"
           >
             <Image
-              src="/image/ourTeam.png"
+              src="/image/gioithieu.png"
               w="450px"
               objectFit="contain"
               borderRadius="10px"
@@ -316,7 +321,7 @@ const HsrLab: React.FC<HsrLabProps> = () => {
             </Flex>
             <Box maxW="555px">
               <Image
-                src="/image/ourTeam.png"
+                src="/image/gioithieu.png"
                 w="450px"
                 objectFit="contain"
                 borderRadius="10px"
@@ -343,7 +348,7 @@ const HsrLab: React.FC<HsrLabProps> = () => {
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.8)"
           >
             <Image
-              src="/image/ourTeam.png"
+              src="/image/gioithieu.png"
               w="450px"
               objectFit="contain"
               borderRadius="10px"
@@ -394,7 +399,7 @@ const HsrLab: React.FC<HsrLabProps> = () => {
           >
             <GridItem>
               <Image
-                src="/image/imageIn1.png"
+                src="/image/gioithieu.png"
                 w="555px"
                 boxShadow="0 2px 4px rgba(0, 0, 0, 0.8)"
                 borderRadius="20px"
@@ -402,7 +407,7 @@ const HsrLab: React.FC<HsrLabProps> = () => {
             </GridItem>
             <GridItem>
               <Image
-                src="/image/imageIn1.png"
+                src="/image/gioithieu.png"
                 w="555px"
                 boxShadow="0 2px 4px rgba(0, 0, 0, 0.8)"
                 borderRadius="20px"
@@ -410,7 +415,7 @@ const HsrLab: React.FC<HsrLabProps> = () => {
             </GridItem>
             <GridItem>
               <Image
-                src="/image/imageIn3.png"
+                src="/image/gioithieu.png"
                 w="555px"
                 boxShadow="0 2px 4px rgba(0, 0, 0, 0.8)"
                 borderRadius="20px"
@@ -418,7 +423,7 @@ const HsrLab: React.FC<HsrLabProps> = () => {
             </GridItem>
             <GridItem>
               <Image
-                src="/image/imageIn3.png"
+                src="/image/gioithieu.png"
                 w="555px"
                 boxShadow="0 2px 4px rgba(0, 0, 0, 0.8)"
                 borderRadius="20px"

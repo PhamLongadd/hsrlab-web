@@ -51,7 +51,7 @@ const Course: NextPage = () => {
   return (
     <Box mt="80px">
       <Image
-        src="/image/course.png"
+        src="/image/thumnail.jpg"
         w="100%"
         h={["400px", "600px", "700px"]}
         objectFit="cover"
@@ -99,7 +99,8 @@ const Course: NextPage = () => {
                 >
                   <Box overflow="hidden">
                     <Image
-                      src={`${process.env.NEXT_PUBLIC_API_ENDPOINT}${course.attributes.thumbnail.data.attributes.url}`}
+                      // src={`${process.env.NEXT_PUBLIC_API_ENDPOINT}${course.attributes.thumbnail.data.attributes.url}`}
+                      src="/image/gioithieu.png"
                       borderTopRightRadius="20px"
                       borderTopLeftRadius="20px"
                       transition="transform 0.3s"
@@ -164,7 +165,7 @@ const Course: NextPage = () => {
             Khóa học mới
           </Text>
           <Image
-            src="/image/sale.png"
+            src="/image/trangchu1.jpg"
             boxShadow="rgb(224, 224, 224) 3px 3px 5px 0px"
             border="2px solid rgb(224, 224, 224)"
             borderRadius="20px"

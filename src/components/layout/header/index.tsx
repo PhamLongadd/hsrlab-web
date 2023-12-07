@@ -170,7 +170,7 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                     </MenuList>
                   </Menu>
                 </Box>
-                <Link href="/recruitment">
+                {/* <Link href="/recruitment">
                   <Text
                     fontWeight="700"
                     fontSize="20px"
@@ -180,7 +180,7 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                   >
                     Tuyển dụng
                   </Text>
-                </Link>
+                </Link> */}
               </DrawerBody>
             </DrawerContent>
           </DrawerOverlay>
@@ -254,14 +254,14 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                 </Flex>
               </MenuButton>
               <MenuList>
-                <Link href="/blog">
-                  <MenuItem fontWeight="700">Blog</MenuItem>
-                </Link>
+                {/* <Link href="/blog"> */}
+                <MenuItem fontWeight="700">Blog</MenuItem>
+                {/* </Link> */}
                 <MenuItem fontWeight="700">Video</MenuItem>
               </MenuList>
             </Menu>
           </Box>
-          <Link href="/recruitment">
+          {/* <Link href="/recruitment">
             <Text
               fontWeight="700"
               fontSize="18px"
@@ -270,7 +270,7 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
             >
               Tuyển dụng
             </Text>
-          </Link>
+          </Link> */}
         </Flex>
       </Flex>
     </Box>
