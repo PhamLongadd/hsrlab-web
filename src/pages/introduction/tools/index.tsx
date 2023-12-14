@@ -4,23 +4,10 @@ import {
   Text,
   Flex,
   Button,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverHeader,
-  PopoverBody,
-  PopoverFooter,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverAnchor,
   Table,
-  Thead,
   Tbody,
-  Tfoot,
   Tr,
-  Th,
   Td,
-  TableCaption,
   TableContainer,
   Modal,
   ModalOverlay,
@@ -32,6 +19,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import React from "react";
 
 import {
   BG_COLOR,
@@ -41,11 +29,18 @@ import {
   BD_COLOR,
   TEXT_BOLD_COLOR,
 } from "@/components/styles/color";
+import CustomFormInput from "@/components/formInput/customFormInput";
 
 interface ToolsProps {}
 
 const Tools: React.FC<ToolsProps> = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const targetRef = React.createRef<HTMLDivElement>();
+
+  const scrollToTarget = () => {
+    targetRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   const {
     isOpen: isOpenTool2,
     onOpen: onOpenTool2,
@@ -68,6 +63,12 @@ const Tools: React.FC<ToolsProps> = () => {
     isOpen: isOpenTool5,
     onOpen: onOpenTool5,
     onClose: onCloseTool5,
+  } = useDisclosure();
+
+  const {
+    isOpen: isOpenTool6,
+    onOpen: onOpenTool6,
+    onClose: onCloseTool6,
   } = useDisclosure();
 
   return (
@@ -242,30 +243,43 @@ const Tools: React.FC<ToolsProps> = () => {
                     <Button variant="ghost" mr={3} onClick={onClose}>
                       Đóng
                     </Button>
-                    <Button colorScheme="red">Nhận tư vẫn ngay</Button>
+                    <Button
+                      colorScheme="red"
+                      onClick={() => {
+                        onClose();
+                        scrollToTarget();
+                      }}
+                    >
+                      Nhận tư vẫn ngay
+                    </Button>
                   </ModalFooter>
                 </ModalContent>
               </Modal>
-              <Button
-                padding={["20px", "20px", "25px"]}
-                borderRadius="10px"
-                border="4px solid"
-                borderColor={BD_COLOR}
-                boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-                backgroundColor={BG_BUTTON_COLOR}
-                transition="transform 0.3s"
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              >
-                <Text
-                  fontSize={["20px", "20px", "25px"]}
-                  fontWeight="600"
-                  color={TEXT_COLOR}
-                >
-                  Đặt hàng ngay
-                </Text>
-              </Button>
+              <Box>
+                <Link href="https://www.facebook.com/HSRLab" target="_blank">
+                  <Button
+                    padding={["20px", "20px", "25px"]}
+                    borderRadius="10px"
+                    border="4px solid"
+                    borderColor={BD_COLOR}
+                    boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+                    backgroundColor={BG_BUTTON_COLOR}
+                    transition="transform 0.3s"
+                    _hover={{
+                      transform: "scale(1.1)",
+                    }}
+                    w="100%"
+                  >
+                    <Text
+                      fontSize={["20px", "20px", "25px"]}
+                      fontWeight="600"
+                      color={TEXT_COLOR}
+                    >
+                      Đặt hàng ngay
+                    </Text>
+                  </Button>
+                </Link>
+              </Box>
             </Box>
           </Flex>
           <Flex
@@ -346,30 +360,43 @@ const Tools: React.FC<ToolsProps> = () => {
                     <Button variant="ghost" mr={3} onClick={onCloseTool2}>
                       Đóng
                     </Button>
-                    <Button colorScheme="red">Nhận tư vẫn ngay</Button>
+                    <Button
+                      colorScheme="red"
+                      onClick={() => {
+                        onCloseTool2();
+                        scrollToTarget();
+                      }}
+                    >
+                      Nhận tư vẫn ngay
+                    </Button>
                   </ModalFooter>
                 </ModalContent>
               </Modal>
-              <Button
-                padding={["20px", "20px", "25px"]}
-                borderRadius="10px"
-                border="4px solid"
-                borderColor={BD_COLOR}
-                boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-                backgroundColor={BG_BUTTON_COLOR}
-                transition="transform 0.3s"
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              >
-                <Text
-                  fontSize={["20px", "20px", "25px"]}
-                  fontWeight="600"
-                  color={TEXT_COLOR}
-                >
-                  Đặt hàng ngay
-                </Text>
-              </Button>
+              <Box>
+                <Link href="https://www.facebook.com/HSRLab" target="_blank">
+                  <Button
+                    padding={["20px", "20px", "25px"]}
+                    borderRadius="10px"
+                    border="4px solid"
+                    borderColor={BD_COLOR}
+                    boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+                    backgroundColor={BG_BUTTON_COLOR}
+                    transition="transform 0.3s"
+                    _hover={{
+                      transform: "scale(1.1)",
+                    }}
+                    w="100%"
+                  >
+                    <Text
+                      fontSize={["20px", "20px", "25px"]}
+                      fontWeight="600"
+                      color={TEXT_COLOR}
+                    >
+                      Đặt hàng ngay
+                    </Text>
+                  </Button>
+                </Link>
+              </Box>
             </Box>
           </Flex>
           <Flex
@@ -467,33 +494,46 @@ const Tools: React.FC<ToolsProps> = () => {
                     </Box>
                   </ModalBody>
                   <ModalFooter>
-                    <Button variant="ghost" mr={3} onClick={onClose}>
+                    <Button variant="ghost" mr={3} onClick={onCloseTool3}>
                       Đóng
                     </Button>
-                    <Button colorScheme="red">Nhận tư vẫn ngay</Button>
+                    <Button
+                      colorScheme="red"
+                      onClick={() => {
+                        onCloseTool3();
+                        scrollToTarget();
+                      }}
+                    >
+                      Nhận tư vẫn ngay
+                    </Button>
                   </ModalFooter>
                 </ModalContent>
               </Modal>
-              <Button
-                padding={["20px", "20px", "25px"]}
-                borderRadius="10px"
-                border="4px solid"
-                borderColor={BD_COLOR}
-                boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-                backgroundColor={BG_BUTTON_COLOR}
-                transition="transform 0.3s"
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              >
-                <Text
-                  fontSize={["20px", "20px", "25px"]}
-                  fontWeight="600"
-                  color={TEXT_COLOR}
-                >
-                  Đặt hàng ngay
-                </Text>
-              </Button>
+              <Box>
+                <Link href="https://www.facebook.com/HSRLab" target="_blank">
+                  <Button
+                    padding={["20px", "20px", "25px"]}
+                    borderRadius="10px"
+                    border="4px solid"
+                    borderColor={BD_COLOR}
+                    boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+                    backgroundColor={BG_BUTTON_COLOR}
+                    transition="transform 0.3s"
+                    _hover={{
+                      transform: "scale(1.1)",
+                    }}
+                    w="100%"
+                  >
+                    <Text
+                      fontSize={["20px", "20px", "25px"]}
+                      fontWeight="600"
+                      color={TEXT_COLOR}
+                    >
+                      Đặt hàng ngay
+                    </Text>
+                  </Button>
+                </Link>
+              </Box>
             </Box>
           </Flex>
           <Flex
@@ -593,30 +633,43 @@ const Tools: React.FC<ToolsProps> = () => {
                     <Button variant="ghost" mr={3} onClick={onCloseTool4}>
                       Đóng
                     </Button>
-                    <Button colorScheme="red">Nhận tư vẫn ngay</Button>
+                    <Button
+                      colorScheme="red"
+                      onClick={() => {
+                        onCloseTool4();
+                        scrollToTarget();
+                      }}
+                    >
+                      Nhận tư vẫn ngay
+                    </Button>
                   </ModalFooter>
                 </ModalContent>
               </Modal>
-              <Button
-                padding={["20px", "20px", "25px"]}
-                borderRadius="10px"
-                border="4px solid"
-                borderColor={BD_COLOR}
-                boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-                backgroundColor={BG_BUTTON_COLOR}
-                transition="transform 0.3s"
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              >
-                <Text
-                  fontSize={["20px", "20px", "25px"]}
-                  fontWeight="600"
-                  color={TEXT_COLOR}
-                >
-                  Đặt hàng ngay
-                </Text>
-              </Button>
+              <Box>
+                <Link href="https://www.facebook.com/HSRLab" target="_blank">
+                  <Button
+                    padding={["20px", "20px", "25px"]}
+                    borderRadius="10px"
+                    border="4px solid"
+                    borderColor={BD_COLOR}
+                    boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+                    backgroundColor={BG_BUTTON_COLOR}
+                    transition="transform 0.3s"
+                    _hover={{
+                      transform: "scale(1.1)",
+                    }}
+                    w="100%"
+                  >
+                    <Text
+                      fontSize={["20px", "20px", "25px"]}
+                      fontWeight="600"
+                      color={TEXT_COLOR}
+                    >
+                      Đặt hàng ngay
+                    </Text>
+                  </Button>
+                </Link>
+              </Box>
             </Box>
           </Flex>
           <Flex
@@ -699,30 +752,43 @@ const Tools: React.FC<ToolsProps> = () => {
                     <Button variant="ghost" mr={3} onClick={onCloseTool5}>
                       Đóng
                     </Button>
-                    <Button colorScheme="red">Nhận tư vẫn ngay</Button>
+                    <Button
+                      colorScheme="red"
+                      onClick={() => {
+                        onCloseTool5();
+                        scrollToTarget();
+                      }}
+                    >
+                      Nhận tư vẫn ngay
+                    </Button>
                   </ModalFooter>
                 </ModalContent>
               </Modal>
-              <Button
-                padding={["20px", "20px", "25px"]}
-                borderRadius="10px"
-                border="4px solid"
-                borderColor={BD_COLOR}
-                boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-                backgroundColor={BG_BUTTON_COLOR}
-                transition="transform 0.3s"
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              >
-                <Text
-                  fontSize={["20px", "20px", "25px"]}
-                  fontWeight="600"
-                  color={TEXT_COLOR}
-                >
-                  Đặt hàng ngay
-                </Text>
-              </Button>
+              <Box>
+                <Link href="https://www.facebook.com/HSRLab" target="_blank">
+                  <Button
+                    padding={["20px", "20px", "25px"]}
+                    borderRadius="10px"
+                    border="4px solid"
+                    borderColor={BD_COLOR}
+                    boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+                    backgroundColor={BG_BUTTON_COLOR}
+                    transition="transform 0.3s"
+                    _hover={{
+                      transform: "scale(1.1)",
+                    }}
+                    w="100%"
+                  >
+                    <Text
+                      fontSize={["20px", "20px", "25px"]}
+                      fontWeight="600"
+                      color={TEXT_COLOR}
+                    >
+                      Đặt hàng ngay
+                    </Text>
+                  </Button>
+                </Link>
+              </Box>
             </Box>
           </Flex>
           <Flex
@@ -760,14 +826,14 @@ const Tools: React.FC<ToolsProps> = () => {
               <Text
                 fontSize="18px"
                 color={TEXT_BOLD_COLOR}
-                onClick={onOpenTool4}
+                onClick={onOpenTool6}
                 cursor="pointer"
               >
                 Xem chi tiết
               </Text>
               <Modal
-                isOpen={isOpenTool4}
-                onClose={onCloseTool4}
+                isOpen={isOpenTool6}
+                onClose={onCloseTool6}
                 isCentered
                 size="5xl"
               >
@@ -826,36 +892,61 @@ const Tools: React.FC<ToolsProps> = () => {
                     </Box>
                   </ModalBody>
                   <ModalFooter>
-                    <Button variant="ghost" mr={3} onClick={onCloseTool4}>
+                    <Button variant="ghost" mr={3} onClick={onCloseTool6}>
                       Đóng
                     </Button>
-                    <Button colorScheme="red">Nhận tư vẫn ngay</Button>
+                    <Button
+                      colorScheme="red"
+                      onClick={() => {
+                        onCloseTool6();
+                        scrollToTarget();
+                      }}
+                    >
+                      Nhận tư vẫn ngay
+                    </Button>
                   </ModalFooter>
                 </ModalContent>
               </Modal>
-              <Button
-                padding={["20px", "20px", "25px"]}
-                borderRadius="10px"
-                border="4px solid"
-                borderColor={BD_COLOR}
-                boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-                backgroundColor={BG_BUTTON_COLOR}
-                transition="transform 0.3s"
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              >
-                <Text
-                  fontSize={["20px", "20px", "25px"]}
-                  fontWeight="600"
-                  color={TEXT_COLOR}
-                >
-                  Đặt hàng ngay
-                </Text>
-              </Button>
+              <Box>
+                <Link href="https://www.facebook.com/HSRLab" target="_blank">
+                  <Button
+                    padding={["20px", "20px", "25px"]}
+                    borderRadius="10px"
+                    border="4px solid"
+                    borderColor={BD_COLOR}
+                    boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+                    backgroundColor={BG_BUTTON_COLOR}
+                    transition="transform 0.3s"
+                    _hover={{
+                      transform: "scale(1.1)",
+                    }}
+                    w="100%"
+                  >
+                    <Text
+                      fontSize={["20px", "20px", "25px"]}
+                      fontWeight="600"
+                      color={TEXT_COLOR}
+                    >
+                      Đặt hàng ngay
+                    </Text>
+                  </Button>
+                </Link>
+              </Box>
             </Box>
           </Flex>
         </Flex>
+      </Box>
+      <Box padding="70px" borderTop="1px solid #000" ref={targetRef}>
+        <Text
+          textAlign="center"
+          fontSize="30px"
+          fontWeight="700"
+          marginBottom="50px"
+          color={TEXT_BOLD_COLOR}
+        >
+          Vui lòng để lại thông tin tư vấn?
+        </Text>
+        <CustomFormInput />
       </Box>
     </Box>
   );

@@ -57,15 +57,6 @@ const CustomFormInput: NextPage = () => {
 
   return (
     <Box maxWidth="1200px" margin="auto">
-      <Text
-        textAlign="center"
-        fontSize="30px"
-        fontWeight="700"
-        marginBottom="50px"
-        color={TEXT_BOLD_COLOR}
-      >
-        Bạn chưa biết liệu khoá học có phù hợp với mình hay không?
-      </Text>
       <Box
         display="flex"
         alignItems="center"

@@ -8,12 +8,14 @@ import {
   GridItem,
   Button,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 import {
   TEXT_BOLD_COLOR,
   BD_COLOR,
   BG_BUTTON_COLOR,
   TEXT_COLOR,
+  BD_CARD_COLOR,
 } from "@/components/styles/color";
 import EnterpiseFormInput from "@/components/formInput/enterpiseFormInput";
 
@@ -78,13 +80,17 @@ const Enterpise: React.FC<StudentsProps> = () => {
           </Box>
         </Flex>
       </Box>
-      <Box marginTop="70px" marginBottom="70px">
+      <Box paddingTop="70px" paddingBottom="70px" maxW="1200px" margin="auto">
         <Flex direction="column" gap="70px">
           <Text
             fontSize="30px"
             fontWeight="700"
-            textAlign="center"
             color={TEXT_BOLD_COLOR}
+            borderLeft="5px solid"
+            borderColor={BD_CARD_COLOR}
+            borderRadius="4px"
+            paddingLeft="15px"
+            marginLeft="10px"
           >
             Các đối tác đồng hành cùng HSR LAB
           </Text>
@@ -92,47 +98,39 @@ const Enterpise: React.FC<StudentsProps> = () => {
             templateColumns={{
               base: "1fr",
               md: "repeat(3, 1fr)",
-              lg: "repeat(4, 1fr)",
+              lg: "repeat(3, 1fr)",
             }}
             gap="100px"
             margin="auto"
           >
             <GridItem>
               <Image
-                src="/image/WRO.png"
-                w="200px"
-                h="100px"
+                src="/image/LegoEducation.png"
+                w="250px"
+                h="150px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                src="/image/EverestSchool.png"
+                w="250px"
+                h="150px"
                 objectFit="contain"
               />
             </GridItem>
             <GridItem>
               <Image
                 src="/image/TuePhatEdu.jpg"
-                w="200px"
-                h="100px"
+                w="250px"
+                h="150px"
                 objectFit="contain"
               />
             </GridItem>
             <GridItem>
               <Image
                 src="/image/TieuhocDoanThiDiem.png"
-                w="200px"
-                h="100px"
-                objectFit="contain"
-              />
-            </GridItem>
-            <GridItem>
-              <Image
-                src="/image/NewtonGrammarSchool.png"
-                w="200px"
-                h="100px"
-                objectFit="contain"
-              />
-            </GridItem>
-            <GridItem>
-              <Image
-                src="/image/FLL.png"
-                w="200px"
+                w="250px"
                 h="150px"
                 objectFit="contain"
               />
@@ -140,26 +138,77 @@ const Enterpise: React.FC<StudentsProps> = () => {
             <GridItem>
               <Image
                 src="/image/BanMaiSchool.jpg"
-                w="200px"
-                h="100px"
+                w="250px"
+                h="150px"
                 objectFit="contain"
               />
             </GridItem>
             <GridItem>
               <Image
-                src="/image/EverestSchool.png"
-                w="200px"
-                h="100px"
+                src="/image/NewtonGrammarSchool.png"
+                w="250px"
+                h="150px"
                 objectFit="contain"
               />
             </GridItem>
+          </Grid>
+        </Flex>
+      </Box>
+      <Box paddingTop="70px" paddingBottom="70px" maxW="1200px" margin="auto">
+        <Flex direction="column" gap="70px">
+          <Text
+            fontSize="30px"
+            fontWeight="700"
+            color={TEXT_BOLD_COLOR}
+            borderLeft="5px solid"
+            borderColor={BD_CARD_COLOR}
+            borderRadius="4px"
+            paddingLeft="15px"
+            marginLeft="10px"
+          >
+            Các cuộc thi HSR LAB tham gia
+          </Text>
+          <Grid
+            templateColumns={{
+              base: "1fr",
+              md: "repeat(3, 1fr)",
+              lg: "repeat(3, 1fr)",
+            }}
+            gap="100px"
+            margin="auto"
+          >
             <GridItem>
-              <Image
-                src="/image/LegoEducation.png"
-                w="200px"
-                h="100px"
-                objectFit="contain"
-              />
+              <Link href="https://wro-association.org/" target="_blank">
+                <Image
+                  src="/image/WRO.png"
+                  w="250px"
+                  h="150px"
+                  objectFit="contain"
+                />
+              </Link>
+            </GridItem>
+            <GridItem>
+              <Link href="https://www.firstlegoleague.org/" target="_blank">
+                <Image
+                  src="/image/FLL.png"
+                  w="250px"
+                  h="150px"
+                  objectFit="contain"
+                />
+              </Link>
+            </GridItem>
+            <GridItem>
+              <Link
+                href="https://www.facebook.com/uetmakerthon"
+                target="_blank"
+              >
+                <Image
+                  src="/image/UET.jpg"
+                  w="250px"
+                  h="150px"
+                  objectFit="contain"
+                />
+              </Link>
             </GridItem>
           </Grid>
         </Flex>
