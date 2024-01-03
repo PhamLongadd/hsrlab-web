@@ -15,7 +15,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import {
-  TEXT_BOLD_COLOR,
   BG_BUTTON_COLOR,
   TEXT_COLOR,
   BD_COLOR,

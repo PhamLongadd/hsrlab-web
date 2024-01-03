@@ -469,7 +469,6 @@ CourseDetail.getInitialProps = async ({ query }: NextPageContext) => {
   }
 
   const res = await fetchCourseBySlug(slug);
-  console.log(res);
 
   if (res.lenght != 0) {
     return { course: res[0] };
