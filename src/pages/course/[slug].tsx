@@ -7,25 +7,22 @@ import {
   Grid,
   GridItem,
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import {
   BG_COLOR,
   BG_TEXT_COLOR,
-  BD_BOTTOM_CARD,
   BG_BUTTON_COLOR,
   TEXT_COLOR,
   TEXT_BOLD_COLOR,
   BD_CARD_COLOR,
   BG_CARD_COLOR,
-  TEXT_BLACK_COLOR,
 } from "@/components/styles/color";
 import CourseFormInput from "@/components/formInput/courseFormInput";
 import { Course, fetchCourseBySlug } from "../api";
 import { NextPageContext } from "next";
 
 const CourseDetail = ({ course }: { course: Course }) => {
-  console.log(course);
   return (
     <Box mt="80px">
       <Box backgroundColor={BG_COLOR}>

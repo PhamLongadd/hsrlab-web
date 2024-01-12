@@ -51,6 +51,45 @@ export type Course = {
   };
 };
 
+export type BlogData = {
+  data: Blog[];
+  meta: {
+    pagination: {
+      page: number;
+      pageSize: number;
+      pageCount: number;
+      total: number;
+    };
+  };
+};
+
+export type Blog = {
+  id: number;
+  attributes: {
+    author: string;
+    publishedAt: string;
+    slug: string;
+    updatedAt: string;
+    thumnail: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    content: string;
+    title: string;
+    blog_category: {
+      data: {
+        id: number;
+        attributes: {
+          name: string;
+        };
+      };
+    };
+  };
+};
+
 type Thumbnail = {
   data: {
     attributes: {
@@ -119,7 +158,7 @@ export const formInputCourse = async (body: FormCourseBody) => {
     const response = await axios.post(`${API_ENDPOINT}/api/course-forms`, {
       data: body,
     });
-    console.log(response.data);
+
     return response.data;
   } catch (error) {
     console.log(error);
@@ -142,6 +181,42 @@ export const formInputEnterprise = async (body: FormEnterpriseBody) => {
     const response = await axios.post(`${API_ENDPOINT}/api/enterprise-forms`, {
       data: body,
     });
+
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const fetchBlogs = async (page: number) => {
+  try {
+    const response =
+      await axios.get(`${API_ENDPOINT}/api/blogs?pagination[page]=${page}&pagination[pageSize]=12&sort[0]=updatedAt&populate=thumbail
+    `);
+
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const fetchBlogBySlug = async (slug: string) => {
+  try {
+    const response = await axios.get(
+      `${API_ENDPOINT}/api/blogs?filters[slug][$eq]=${slug}&populate=*`
+    );
+
+    return response.data.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const fetchBlogByCategories = async (id: string, page: number) => {
+  try {
+    const response = await axios.get(
+      `${API_ENDPOINT}/api/blogs?filters[blog_category][id][$eq]=${id}&pagination[page]=${page}&pagination[pageSize]=12&sort[0]=updatedAt&populate=*`
+    );
 
     return response.data;
   } catch (error) {

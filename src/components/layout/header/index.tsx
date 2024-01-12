@@ -151,15 +151,15 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                       </Flex>
                     </MenuButton>
                     <MenuList>
-                      {/* <Link href="/blog"> */}
-                      <MenuItem
-                        fontWeight="700"
-                        onClick={onClose}
-                        cursor="pointer"
-                      >
-                        Blog
-                      </MenuItem>
-                      {/* </Link> */}
+                      <Link href="/blog">
+                        <MenuItem
+                          fontWeight="700"
+                          onClick={onClose}
+                          cursor="pointer"
+                        >
+                          Blog
+                        </MenuItem>
+                      </Link>
                       <MenuItem
                         fontWeight="700"
                         onClick={onClose}
@@ -254,9 +254,9 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                 </Flex>
               </MenuButton>
               <MenuList>
-                {/* <Link href="/blog"> */}
-                <MenuItem fontWeight="700">Blog</MenuItem>
-                {/* </Link> */}
+                <Link href="/blog">
+                  <MenuItem fontWeight="700">Blog</MenuItem>
+                </Link>
                 <MenuItem fontWeight="700">Video</MenuItem>
               </MenuList>
             </Menu>

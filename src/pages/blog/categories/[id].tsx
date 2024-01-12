@@ -7,29 +7,28 @@ import {
   GridItem,
   Button,
 } from "@chakra-ui/react";
-import Link from "next/link";
-import { NextPage } from "next";
+import React from "react";
 import { format } from "date-fns";
+import { NextPageContext } from "next";
 
-import { BG_COLOR, HOVER_TEXT_COLOR } from "@/components/styles/color";
-import { useEffect, useState } from "react";
-import { fetchBlogs } from "../api";
-import { BlogData } from "../api";
+import {
+  BD_CARD_COLOR,
+  BG_COLOR,
+  TEXT_BOLD_COLOR,
+  HOVER_TEXT_COLOR,
+} from "@/components/styles/color";
+import { BlogData, fetchBlogByCategories } from "../../api";
+import Link from "next/link";
 
-const Blog: NextPage = () => {
-  const [blogs, setBlogs] = useState<BlogData>();
-
-  useEffect(() => {
-    fetchDataBlogs(1);
-  }, []);
-
-  async function fetchDataBlogs(page: number) {
-    const res = await fetchBlogs(page);
-    setBlogs(res);
-  }
-
+const BlogCategories = ({
+  categories,
+  id,
+}: {
+  categories: BlogData;
+  id: string;
+}) => {
   const handleClickButton = (page: number) => {
-    fetchDataBlogs(page);
+    fetchBlogByCategories(id, page);
   };
 
   const renderButtons = (pageCount: number, currentPage: number) => {
@@ -66,25 +65,41 @@ const Blog: NextPage = () => {
         alignItems="center"
       >
         <Flex padding="30px" gap="5px">
-          <Link href="/">
-            <Text
-              fontSize="18px"
-              fontWeight="700"
-              _hover={{ color: HOVER_TEXT_COLOR }}
-            >
-              Trang chủ
-            </Text>
-          </Link>
           <Link href="/blog">
             <Text
               fontSize="18px"
               fontWeight="700"
               _hover={{ color: HOVER_TEXT_COLOR }}
             >
-              / Blog
+              Blog
             </Text>
           </Link>
+          {categories.data.map((e) => (
+            <Text
+              fontSize="18px"
+              fontWeight="700"
+              _hover={{ color: HOVER_TEXT_COLOR }}
+            >
+              / {e.attributes.blog_category.data.attributes.name}
+            </Text>
+          ))}
         </Flex>
+      </Box>
+      <Box paddingTop="30px" maxW="1200px" margin="auto">
+        {categories.data.map((e) => (
+          <Text
+            fontSize="25px"
+            fontWeight="700"
+            color={TEXT_BOLD_COLOR}
+            borderLeft="5px solid"
+            borderColor={BD_CARD_COLOR}
+            borderRadius="4px"
+            paddingLeft="15px"
+            marginLeft="10px"
+          >
+            {e.attributes.blog_category.data.attributes.name}
+          </Text>
+        ))}
       </Box>
       <Box padding="30px" maxWidth="1200px" width="100%" margin="auto">
         <Grid
@@ -95,8 +110,8 @@ const Blog: NextPage = () => {
           }}
           gap={6}
         >
-          {blogs?.data.map((blog, index) => (
-            <Link href={`/blog/${blog.attributes.slug}`}>
+          {categories.data.map((e, index) => (
+            <Link href={`/blog/${e.attributes.slug}`}>
               <GridItem
                 boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
                 borderRadius="20px"
@@ -120,7 +135,7 @@ const Blog: NextPage = () => {
                     fontWeight="700"
                     h="120px"
                   >
-                    {blog.attributes.title}
+                    {e.attributes.title}
                   </Text>
                   <Text
                     fontSize={["14px", "15px", "15px"]}
@@ -129,11 +144,8 @@ const Blog: NextPage = () => {
                     justifyItems="end"
                   >
                     POST ON{" "}
-                    {format(
-                      new Date(blog.attributes.publishedAt),
-                      "dd/MM/yyyy"
-                    )}{" "}
-                    BY {blog.attributes.author}
+                    {format(new Date(e.attributes.publishedAt), "dd/MM/yyyy")}{" "}
+                    BY {e.attributes.author}
                   </Text>
                 </Flex>
               </GridItem>
@@ -150,11 +162,22 @@ const Blog: NextPage = () => {
         pb="20px"
       >
         {renderButtons(
-          blogs?.meta.pagination.pageCount || 0,
-          blogs?.meta.pagination.page || 0
+          categories?.meta.pagination.pageCount || 0,
+          categories?.meta.pagination.page || 0
         )}
       </Box>
     </Box>
   );
 };
-export default Blog;
+export default BlogCategories;
+
+BlogCategories.getInitialProps = async ({ query }: NextPageContext) => {
+  const { id } = query;
+  if (id === null) {
+    return {};
+  }
+
+  const res = await fetchBlogByCategories(id as string, 1);
+
+  return { categories: res, id: id };
+};

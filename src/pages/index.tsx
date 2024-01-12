@@ -400,26 +400,28 @@ export default function Home() {
               </Box>
             </CardBody>
             <CardBody>
-              <Button
-                padding={["10px", "20px", "25px"]}
-                borderRadius="10px"
-                border="4px solid"
-                borderColor={BD_COLOR}
-                boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-                backgroundColor={BG_BUTTON_COLOR}
-                transition="transform 0.3s"
-                _hover={{
-                  transform: "scale(1.1)",
-                }}
-              >
-                <Text
-                  fontSize={["16px", "20px", "20px"]}
-                  fontWeight="600"
-                  color={TEXT_COLOR}
+              <Link href="/blog">
+                <Button
+                  padding={["10px", "20px", "25px"]}
+                  borderRadius="10px"
+                  border="4px solid"
+                  borderColor={BD_COLOR}
+                  boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+                  backgroundColor={BG_BUTTON_COLOR}
+                  transition="transform 0.3s"
+                  _hover={{
+                    transform: "scale(1.1)",
+                  }}
                 >
-                  Khám phá Blog
-                </Text>
-              </Button>
+                  <Text
+                    fontSize={["16px", "20px", "20px"]}
+                    fontWeight="600"
+                    color={TEXT_COLOR}
+                  >
+                    Khám phá Blog
+                  </Text>
+                </Button>
+              </Link>
             </CardBody>
           </Card>
         </Box>
