@@ -21,6 +21,7 @@ import {
 import CourseFormInput from "@/components/formInput/courseFormInput";
 import { Course, fetchCourseBySlug } from "../api";
 import { NextPageContext } from "next";
+import Markdown from "react-markdown";
 
 const CourseDetail = ({ course }: { course: Course }) => {
   return (
@@ -228,62 +229,63 @@ const CourseDetail = ({ course }: { course: Course }) => {
           </Flex>
         </Box>
       </Box>
-      <Box backgroundColor={BG_COLOR}>
-        <Box padding="70px" maxWidth="1200px" width="100%" margin="auto">
-          <Text
-            fontSize="30px"
-            fontWeight="700"
-            textAlign="center"
-            marginBottom="30px"
-            color={TEXT_BOLD_COLOR}
-          >
-            Nội dung khóa học
-          </Text>
-          <Grid
-            templateColumns={{
-              base: "1fr",
-              md: "repeat(2, 1fr)",
-              lg: "repeat(4, 1fr)",
-            }}
-            gap={6}
-          >
-            {course.attributes.course_contents.data.map((e, index) => (
-              <GridItem
-                boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
-                borderRadius="20px"
-                overflow="hidden"
-                backgroundColor="white"
-                h="370px"
+      {course.attributes.course_contents &&
+        course.attributes.course_contents.data.length > 0 && (
+          <Box backgroundColor={BG_COLOR}>
+            <Box padding="70px" maxWidth="1200px" width="100%" margin="auto">
+              <Text
+                fontSize="30px"
+                fontWeight="700"
+                textAlign="center"
+                marginBottom="30px"
+                color={TEXT_BOLD_COLOR}
               >
-                <Flex
-                  alignItems="center"
-                  gap="10px"
-                  borderBottom="1px solid"
-                  borderColor={BD_CARD_COLOR}
-                >
-                  <Text
-                    backgroundColor={BG_CARD_COLOR}
-                    fontSize="30px"
-                    fontWeight="700"
-                    padding="20px"
-                    color="white"
+                Nội dung khóa học
+              </Text>
+              <Grid
+                templateColumns={{
+                  base: "1fr",
+                  md: "repeat(2, 1fr)",
+                  lg: "repeat(4, 1fr)",
+                }}
+                gap={6}
+              >
+                {course.attributes.course_contents.data.map((e, index) => (
+                  <GridItem
+                    boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+                    borderRadius="20px"
+                    overflow="hidden"
+                    backgroundColor="white"
+                    h="370px"
                   >
-                    {index + 1}
-                  </Text>
-                  <Text fontSize="16px" fontWeight="700">
-                    {e.attributes.name}
-                  </Text>
-                </Flex>
-                <Flex direction="column" gap="10px" padding="20px">
-                  <Text>
-                    <span>• {e.attributes.description}</span>
-                  </Text>
-                </Flex>
-              </GridItem>
-            ))}
-          </Grid>
-        </Box>
-      </Box>
+                    <Flex
+                      alignItems="center"
+                      gap="10px"
+                      borderBottom="1px solid"
+                      borderColor={BD_CARD_COLOR}
+                    >
+                      <Text
+                        backgroundColor={BG_CARD_COLOR}
+                        fontSize="30px"
+                        fontWeight="700"
+                        padding="20px"
+                        color="white"
+                      >
+                        {index + 1}
+                      </Text>
+                      <Text fontSize="16px" fontWeight="700">
+                        {e.attributes.name}
+                      </Text>
+                    </Flex>
+                    <Flex direction="column" gap="10px" padding="20px">
+                      <Markdown>{e.attributes.description}</Markdown>
+                    </Flex>
+                  </GridItem>
+                ))}
+              </Grid>
+            </Box>
+          </Box>
+        )}
       <Box>
         <Box padding="70px" maxWidth="1200px" width="100%" margin="auto">
           <Text
