@@ -227,8 +227,8 @@ const Enterpise: React.FC<StudentsProps> = () => {
               Lĩnh vực tư vấn
             </Text>
             <Text borderBottom="1px solid #000" pb="20px">
-              Với kinh nghiệm 6 năm trong lĩnh vực đào tạo, tư vấn, cùng đội ngũ
-              trainer giàu kinh nghiệm, HSR LAB tự tin thiết kế chương trình
+              Với kinh nghiệm 4 năm trong lĩnh vực đào tạo, tư vấn, cùng đội ngũ
+              nhân sự giàu kinh nghiệm, HSR LAB tự tin thiết kế chương trình
               training phù hợp với vấn đề của các doanh nghiệp.
             </Text>
             <Flex gap="20px">
@@ -237,11 +237,15 @@ const Enterpise: React.FC<StudentsProps> = () => {
               </Text>
               <Flex direction="column">
                 <Text fontSize="16px" fontWeight="700">
-                  Brand Strategy
+                  Nội dung học tập
                 </Text>
-                <Text>Market Research & Consumer Insight </Text>
-                <Text>Brand Building & Development </Text>
-                <Text>Brand Communication </Text>
+                <Text>
+                  Cung cấp giáo trình, nội dung giảng dạy phù hợp với từng doanh
+                  nghiệp
+                </Text>
+                <Text>
+                  Cung cấp nhân sự giảng dạy, training cho doanh nghiệp
+                </Text>
               </Flex>
             </Flex>
             <Flex gap="20px">
@@ -250,16 +254,17 @@ const Enterpise: React.FC<StudentsProps> = () => {
               </Text>
               <Flex direction="column">
                 <Text fontSize="16px" fontWeight="700">
-                  Brand Strategy
+                  Công cụ
                 </Text>
-                <Text>Market Research & Consumer Insight </Text>
-                <Text>Brand Building & Development </Text>
-                <Text>Brand Communication </Text>
+                <Text>
+                  Cung cấp các công cụ đầy đủ trong giáo trình giảng dạy: Bộ
+                  dụng cụ, sa bàn, …
+                </Text>
               </Flex>
             </Flex>
           </Flex>
           <Image
-            src="/image/gioithieu.png"
+            src="/image/logo1.jpg"
             w="450px"
             h="100%"
             objectFit="contain"
@@ -269,10 +274,25 @@ const Enterpise: React.FC<StudentsProps> = () => {
         </Flex>
       </Box>
       <Box
-        backgroundImage="url('/image/bgEnterpise.png')"
+        backgroundImage="url('/image/anh1.jpg')"
         backgroundSize="cover"
+        position="relative"
       >
-        <Box display="flex" justifyContent="center" padding="70px">
+        <Box
+          position="absolute"
+          top="0"
+          left="0"
+          width="100%"
+          height="100%"
+          backgroundColor="black"
+          opacity="0.5" // Adjust the opacity as needed
+        ></Box>
+        <Box
+          display="flex"
+          justifyContent="center"
+          padding="70px"
+          position="relative"
+        >
           <Flex
             flexDirection={["column", "column", "row"]}
             justifyContent="space-between"

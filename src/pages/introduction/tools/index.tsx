@@ -127,7 +127,7 @@ const Tools: React.FC<ToolsProps> = () => {
             <Box maxW="555px">
               <Image
                 borderRadius="20px"
-                src="/image/tools.png"
+                src="/image/LEGOEDUCATIONSPIKEESSENTIAL.jpg"
                 width="100%"
                 height="460px"
                 objectFit="contain"
@@ -290,7 +290,7 @@ const Tools: React.FC<ToolsProps> = () => {
             <Box maxW="555px">
               <Image
                 borderRadius="20px"
-                src="/image/tools.png"
+                src="/image/LEGOEDUCATIONBRICQESSENTIAL.png"
                 width="100%"
                 height="460px"
                 objectFit="contain"
@@ -407,7 +407,7 @@ const Tools: React.FC<ToolsProps> = () => {
             <Box maxW="555px">
               <Image
                 borderRadius="20px"
-                src="/image/tools.png"
+                src="/image/SPIKEPrimeCoreSet.png"
                 width="100%"
                 height="460px"
                 objectFit="contain"
@@ -544,7 +544,7 @@ const Tools: React.FC<ToolsProps> = () => {
             <Box maxW="555px">
               <Image
                 borderRadius="20px"
-                src="/image/tools.png"
+                src="/image/SPIKEPrimeExpandSet.png"
                 width="100%"
                 height="460px"
                 objectFit="contain"
@@ -680,7 +680,7 @@ const Tools: React.FC<ToolsProps> = () => {
             <Box maxW="555px">
               <Image
                 borderRadius="20px"
-                src="/image/tools.png"
+                src="/image/LEGOEDUCATIONBRICQPRIME.png"
                 width="100%"
                 height="460px"
                 objectFit="contain"
@@ -799,7 +799,7 @@ const Tools: React.FC<ToolsProps> = () => {
             <Box maxW="555px">
               <Image
                 borderRadius="20px"
-                src="/image/tools.png"
+                src="/image/MINDSTORMSEV3.png"
                 width="100%"
                 height="460px"
                 objectFit="contain"

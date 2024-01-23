@@ -26,7 +26,7 @@ const HsrLab: NextPage = () => {
         h={["400px", "600px", "700px"]}
         objectFit="cover"
       />
-      <Box backgroundImage="url('/image/bgIntroduction2.jpg')" bgSize="cover">
+      <Box backgroundImage="url('/image/anhnen.png')" bgSize="cover">
         <Box maxW="1200px" margin="auto" pt="100px" pb="100px">
           <Card
             maxW="1200px"
@@ -120,10 +120,10 @@ const HsrLab: NextPage = () => {
         >
           MANG STEM - ROBOTICS ĐẾN VỚI MỌI HỌC SINH VIỆT NAM
         </Text>
-        <Text textAlign="center" alignItems="center">
+        {/* <Text textAlign="center" alignItems="center">
           Thay đổi phương pháp dạy và học tăng cường việc học cho các con bằng
           những giờ thực hành thực tế
-        </Text>
+        </Text> */}
       </Box>
       <Box paddingTop="70px" paddingBottom="70px" maxW="1200px" margin="auto">
         <Flex direction="column" gap="70px">
@@ -258,7 +258,7 @@ const HsrLab: NextPage = () => {
           </Grid>
         </Flex>
       </Box>
-      <Box backgroundColor={BG_CARD_COLOR}>
+      {/* <Box backgroundColor={BG_CARD_COLOR}>
         <Text
           color="white"
           fontSize="30px"
@@ -268,8 +268,8 @@ const HsrLab: NextPage = () => {
         >
           Human of TM - Our team
         </Text>
-      </Box>
-      <Box mt="50px" mb="50px">
+      </Box> */}
+      {/* <Box mt="50px" mb="50px">
         <Flex
           maxW="1200px"
           margin="auto"
@@ -480,7 +480,7 @@ const HsrLab: NextPage = () => {
             </GridItem>
           </Grid>
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 };

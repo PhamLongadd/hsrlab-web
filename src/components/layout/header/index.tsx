@@ -44,8 +44,9 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
         marginLeft="10px"
         marginRight="10px"
       >
-        <Image src="/image/logohsr.png" w="60px" h="80px" />
-
+        <Link href="/">
+          <Image src="/image/logohsr.png" w="60px" h="80px" />
+        </Link>
         <Button
           display={{ base: "block", md: "none" }}
           onClick={onToggle}

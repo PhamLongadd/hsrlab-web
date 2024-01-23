@@ -88,11 +88,21 @@ const FormInput: NextPage = () => {
             Giờ Làm Việc
           </Text>
           <Text>8:00AM - 5:00PM (Mon - Sun)</Text>
-          <Text fontSize="30px" fontWeight="700">
-            Địa Chỉ
-          </Text>
-          <Text>76 Duy Tân, Cầu Giấy, Hà Nội</Text>
-          <Text>12 Vũ Trọng Khánh, Hà Đông, Hà Nội</Text>
+          <Box maxW="500px" display="flex" flexDirection="column" gap="10px">
+            <Text fontSize="30px" fontWeight="700">
+              Địa Chỉ
+            </Text>
+            <Text>Cơ sở 1: 76 Duy Tân, Cầu Giấy, Hà Nội</Text>
+            <Text>Cơ sở 2: 12 Vũ Trọng Khánh, Hà Đông, Hà Nội</Text>
+            <Text>
+              Cơ sở 3: Trường Liên cấp Everest - Ng. 106 Đ. Hoàng Quốc Việt, Cổ
+              Nhuế, Từ Liêm, Hà Nội
+            </Text>
+            <Text>
+              Cơ sở 4: Trung tâm Tuệ Phát - A18 - BT4 phố Bùi Xuân Phái, KĐT Mỹ
+              Đình II, Nam Từ Liêm, Hà Nội
+            </Text>
+          </Box>
         </Flex>
         <Flex direction="column" gap="30px" alignItems="center">
           <Text fontSize="20px" fontWeight="700">

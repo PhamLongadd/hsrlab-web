@@ -32,13 +32,31 @@ export default function Home() {
         <link rel="icon" href="/image/favicon.ico" />
       </Head>
       <Image
-        src="/image/thumnail.jpg"
+        src="/image/thumb.jpg"
         w="100%"
-        h={["400px", "600px", "700px"]}
+        h={["200px", "400px", "700px"]}
         objectFit="cover"
       />
-      <Box backgroundImage="url('/image/banner1.jpg')">
-        <Box display="flex" justifyContent="center" padding="70px">
+      <Box
+        position="relative"
+        backgroundImage="url('/image/anhnen.png')"
+        backgroundSize="cover"
+      >
+        <Box
+          position="absolute"
+          top="0"
+          left="0"
+          width="100%"
+          height="100%"
+          backgroundColor="black"
+          opacity="0.3"
+        ></Box>
+        <Box
+          display="flex"
+          justifyContent="center"
+          padding={["10px", "50px", "70px"]}
+          position="relative"
+        >
           <Flex
             flexDirection={["column", "column", "row"]}
             justifyContent="space-between"
@@ -51,7 +69,7 @@ export default function Home() {
               gap="40px"
               alignItems="center"
             >
-              <Text color="white" fontSize="30px" fontWeight="700">
+              <Text color={TEXT_BOLD_COLOR} fontSize="30px" fontWeight="700">
                 HSR LAB
               </Text>
               <Text
@@ -64,7 +82,6 @@ export default function Home() {
                 truyền cảm hứng và chuẩn bị hành trang cho các công dân tương
                 lai của thời đại 4.0.
               </Text>
-
               <Button
                 padding={["10px", "20px", "25px"]}
                 borderRadius="10px"
@@ -84,7 +101,12 @@ export default function Home() {
                 </Link>
               </Button>
             </Box>
-            <Box maxW="555px" borderRadius="20px" overflow="hidden">
+            <Box
+              maxW="555px"
+              borderRadius="20px"
+              overflow="hidden"
+              boxShadow="0 4px 8px rgba(255, 255, 255, 1)"
+            >
               <Image
                 src="/image/image1.jpg"
                 width="100%"
@@ -272,7 +294,7 @@ export default function Home() {
           </Grid>
         </Flex>
       </Box>
-      <Box backgroundColor={BG_COLOR}>
+      {/* <Box backgroundColor={BG_COLOR}>
         <Flex
           direction="column"
           padding="70px"
@@ -318,8 +340,8 @@ export default function Home() {
             </Text>
           </Button>
         </Flex>
-      </Box>
-      <Box background="linear-gradient(rgb(0, 4, 40), rgb(136, 14, 79))">
+      </Box> */}
+      {/* <Box background="linear-gradient(rgb(0, 4, 40), rgb(136, 14, 79))">
         <Flex
           direction="column"
           padding="70px"
@@ -368,8 +390,8 @@ export default function Home() {
             </Text>
           </Button>
         </Flex>
-      </Box>
-      <Box padding="70px">
+      </Box> */}
+      <Box padding="70px" pt="0">
         <FormInput />
       </Box>
       <Box backgroundImage="url('/image/blog1.jpg')" bgSize="cover">

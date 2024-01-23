@@ -334,7 +334,7 @@ const Enterpise: React.FC<EnterpiseProps> = () => {
           </GridItem>
         </Grid>
       </Box> */}
-      <Box backgroundColor={BG_CARD_COLOR}>
+      {/* <Box backgroundColor={BG_CARD_COLOR}>
         <Text
           color="white"
           fontSize="30px"
@@ -344,7 +344,7 @@ const Enterpise: React.FC<EnterpiseProps> = () => {
         >
           Thành tích của học viên
         </Text>
-      </Box>
+      </Box> */}
       <Box mt="50px" mb="50px">
         <Flex
           maxW="1200px"
