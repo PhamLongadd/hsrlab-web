@@ -57,136 +57,6 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
             <HamburgerIcon fontSize="30px" />
           </Flex>
         </Button>
-
-        <Drawer isOpen={isOpen} placement="right" onClose={onToggle}>
-          <DrawerOverlay>
-            <DrawerContent>
-              <DrawerCloseButton fontSize="20px" />
-              <DrawerHeader>Menu</DrawerHeader>
-              <DrawerBody>
-                <Link href="/">
-                  <Text
-                    fontWeight="700"
-                    fontSize="20px"
-                    mb={4}
-                    onClick={onClose}
-                    cursor="pointer"
-                  >
-                    Trang chủ
-                  </Text>
-                </Link>
-                <Box marginBottom={4}>
-                  <Menu>
-                    <MenuButton fontWeight="700">
-                      <Flex alignItems="center" fontSize="20px">
-                        Giới thiệu
-                        <ChevronDownIcon fontSize="25px" />
-                      </Flex>
-                    </MenuButton>
-                    <MenuList>
-                      <Link href="/introduction/hsrLab">
-                        <MenuItem
-                          fontWeight="700"
-                          onClick={onClose}
-                          cursor="pointer"
-                        >
-                          Về HSR LAB
-                        </MenuItem>
-                      </Link>
-                      <Link href="/course">
-                        <MenuItem
-                          fontWeight="700"
-                          onClick={onClose}
-                          cursor="pointer"
-                        >
-                          Các khóa học
-                        </MenuItem>
-                      </Link>
-                      <Link href="/introduction/tools">
-                        <MenuItem
-                          fontWeight="700"
-                          onClick={onClose}
-                          cursor="pointer"
-                        >
-                          Bộ công cụ
-                        </MenuItem>
-                      </Link>
-                      <Link href="/introduction/enterpise">
-                        <MenuItem
-                          fontWeight="700"
-                          onClick={onClose}
-                          cursor="pointer"
-                        >
-                          Dành cho doanh nghiệp
-                        </MenuItem>
-                      </Link>
-                      <Link href="/introduction/students">
-                        <MenuItem
-                          fontWeight="700"
-                          onClick={onClose}
-                          cursor="pointer"
-                        >
-                          Học viên
-                        </MenuItem>
-                      </Link>
-                    </MenuList>
-                  </Menu>
-                </Box>
-                <Link href="/course">
-                  <Text
-                    fontWeight="700"
-                    fontSize="20px"
-                    mb={4}
-                    onClick={onClose}
-                    cursor="pointer"
-                  >
-                    Khóa học
-                  </Text>
-                </Link>
-                <Box marginBottom={4}>
-                  <Menu>
-                    <MenuButton fontWeight="700">
-                      <Flex alignItems="center" fontSize="20px">
-                        Tài liệu chuyên môn
-                        <ChevronDownIcon fontSize="25px" />
-                      </Flex>
-                    </MenuButton>
-                    <MenuList>
-                      <Link href="/blog">
-                        <MenuItem
-                          fontWeight="700"
-                          onClick={onClose}
-                          cursor="pointer"
-                        >
-                          Blog
-                        </MenuItem>
-                      </Link>
-                      <MenuItem
-                        fontWeight="700"
-                        onClick={onClose}
-                        cursor="pointer"
-                      >
-                        Video
-                      </MenuItem>
-                    </MenuList>
-                  </Menu>
-                </Box>
-                {/* <Link href="/recruitment">
-                  <Text
-                    fontWeight="700"
-                    fontSize="20px"
-                    mb={4}
-                    onClick={onClose}
-                    cursor="pointer"
-                  >
-                    Tuyển dụng
-                  </Text>
-                </Link> */}
-              </DrawerBody>
-            </DrawerContent>
-          </DrawerOverlay>
-        </Drawer>
-
         <Flex
           display={{ base: "none", md: "flex" }}
           w="1000px"
@@ -242,6 +112,16 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
               Khóa học
             </Text>
           </Link>
+          <Link href="/competition">
+            <Text
+              fontWeight="700"
+              fontSize="18px"
+              transition="transform 0.3s"
+              _hover={{ color: HOVER_TEXT_COLOR, transform: "scale(1.1)" }}
+            >
+              Cuộc thi
+            </Text>
+          </Link>
           <Box>
             <Menu>
               <MenuButton
@@ -274,6 +154,146 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
           </Link> */}
         </Flex>
       </Flex>
+
+      <Drawer isOpen={isOpen} placement="right" onClose={onToggle}>
+        <DrawerOverlay>
+          <DrawerContent>
+            <DrawerCloseButton fontSize="20px" />
+            <DrawerHeader>Menu</DrawerHeader>
+            <DrawerBody>
+              <Link href="/">
+                <Text
+                  fontWeight="700"
+                  fontSize="20px"
+                  mb={4}
+                  onClick={onClose}
+                  cursor="pointer"
+                >
+                  Trang chủ
+                </Text>
+              </Link>
+              <Box marginBottom={4}>
+                <Menu>
+                  <MenuButton fontWeight="700">
+                    <Flex alignItems="center" fontSize="20px">
+                      Giới thiệu
+                      <ChevronDownIcon fontSize="25px" />
+                    </Flex>
+                  </MenuButton>
+                  <MenuList>
+                    <Link href="/introduction/hsrLab">
+                      <MenuItem
+                        fontWeight="700"
+                        onClick={onClose}
+                        cursor="pointer"
+                      >
+                        Về HSR LAB
+                      </MenuItem>
+                    </Link>
+                    <Link href="/course">
+                      <MenuItem
+                        fontWeight="700"
+                        onClick={onClose}
+                        cursor="pointer"
+                      >
+                        Các khóa học
+                      </MenuItem>
+                    </Link>
+                    <Link href="/introduction/tools">
+                      <MenuItem
+                        fontWeight="700"
+                        onClick={onClose}
+                        cursor="pointer"
+                      >
+                        Bộ công cụ
+                      </MenuItem>
+                    </Link>
+                    <Link href="/introduction/enterpise">
+                      <MenuItem
+                        fontWeight="700"
+                        onClick={onClose}
+                        cursor="pointer"
+                      >
+                        Dành cho doanh nghiệp
+                      </MenuItem>
+                    </Link>
+                    <Link href="/introduction/students">
+                      <MenuItem
+                        fontWeight="700"
+                        onClick={onClose}
+                        cursor="pointer"
+                      >
+                        Học viên
+                      </MenuItem>
+                    </Link>
+                  </MenuList>
+                </Menu>
+              </Box>
+              <Link href="/course">
+                <Text
+                  fontWeight="700"
+                  fontSize="20px"
+                  mb={4}
+                  onClick={onClose}
+                  cursor="pointer"
+                >
+                  Khóa học
+                </Text>
+              </Link>
+              <Link href="/competition">
+                <Text
+                  fontWeight="700"
+                  fontSize="20px"
+                  mb={4}
+                  onClick={onClose}
+                  cursor="pointer"
+                >
+                  Cuộc thi
+                </Text>
+              </Link>
+              <Box marginBottom={4}>
+                <Menu>
+                  <MenuButton fontWeight="700">
+                    <Flex alignItems="center" fontSize="20px">
+                      Tài liệu chuyên môn
+                      <ChevronDownIcon fontSize="25px" />
+                    </Flex>
+                  </MenuButton>
+                  <MenuList>
+                    <Link href="/blog">
+                      <MenuItem
+                        fontWeight="700"
+                        onClick={onClose}
+                        cursor="pointer"
+                      >
+                        Blog
+                      </MenuItem>
+                    </Link>
+                    <MenuItem
+                      fontWeight="700"
+                      onClick={onClose}
+                      cursor="pointer"
+                    >
+                      Video
+                    </MenuItem>
+                  </MenuList>
+                </Menu>
+              </Box>
+              {/* <Link href="/recruitment">
+                  <Text
+                    fontWeight="700"
+                    fontSize="20px"
+                    mb={4}
+                    onClick={onClose}
+                    cursor="pointer"
+                  >
+                    Tuyển dụng
+                  </Text>
+                </Link> */}
+            </DrawerBody>
+          </DrawerContent>
+        </DrawerOverlay>
+      </Drawer>
     </Box>
   );
 };
