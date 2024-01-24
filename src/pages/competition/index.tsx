@@ -12,14 +12,10 @@ import Link from "next/link";
 
 import {
   TEXT_BOLD_COLOR,
-  BD_COLOR,
-  BG_BUTTON_COLOR,
-  TEXT_COLOR,
   BD_CARD_COLOR,
   HOVER_TEXT_COLOR,
   BG_COLOR,
 } from "@/components/styles/color";
-import EnterpiseFormInput from "@/components/formInput/enterpiseFormInput";
 import { NextPage } from "next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleDot } from "@fortawesome/free-solid-svg-icons";
@@ -90,7 +86,12 @@ const Competition: NextPage = () => {
             marginBottom="50px"
             gap="10px"
           >
-            <Image src="/image/WRO.png" />
+            <Image
+              src="/image/WRO.png"
+              borderRadius="20px"
+              boxShadow="0 2px 4px rgba(0, 0, 0, 0.5)"
+              padding="20px"
+            />
             <Flex direction="column" gap="10px" maxW="550px">
               <Text>
                 World Robot Olympiad (WRO) là một cuộc thi robot quốc tế lần đầu
@@ -145,7 +146,7 @@ const Competition: NextPage = () => {
                 contentStyle={{
                   background: "rgba(33, 150, 243, 0.3)",
                   color: "#000",
-                  boxShadow: "none",
+                  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
                 }}
                 contentArrowStyle={{
                   borderRight: "7px solid  rgba(33, 150, 243, 0.3)",
@@ -163,7 +164,7 @@ const Competition: NextPage = () => {
                 contentStyle={{
                   background: "rgba(33, 150, 243, 0.3)",
                   color: "#000",
-                  boxShadow: "none",
+                  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
                 }}
                 contentArrowStyle={{
                   borderRight: "7px solid  rgba(33, 150, 243, 0.3)",
@@ -181,7 +182,7 @@ const Competition: NextPage = () => {
                 contentStyle={{
                   background: "rgba(33, 150, 243, 0.3)",
                   color: "#000",
-                  boxShadow: "none",
+                  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
                 }}
                 contentArrowStyle={{
                   borderRight: "7px solid  rgba(33, 150, 243, 0.3)",
@@ -199,7 +200,7 @@ const Competition: NextPage = () => {
                 contentStyle={{
                   background: "rgba(33, 150, 243, 0.3)",
                   color: "#000",
-                  boxShadow: "none",
+                  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
                 }}
                 contentArrowStyle={{
                   borderRight: "7px solid  rgba(33, 150, 243, 0.3)",
@@ -241,7 +242,7 @@ const Competition: NextPage = () => {
                 contentStyle={{
                   background: "rgba(33, 150, 243, 0.3)",
                   color: "#000",
-                  boxShadow: "none",
+                  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
                 }}
                 contentArrowStyle={{
                   borderRight: "7px solid  rgba(33, 150, 243, 0.3)",
@@ -259,7 +260,7 @@ const Competition: NextPage = () => {
                 contentStyle={{
                   background: "rgba(33, 150, 243, 0.3)",
                   color: "#000",
-                  boxShadow: "none",
+                  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
                 }}
                 contentArrowStyle={{
                   borderRight: "7px solid  rgba(33, 150, 243, 0.3)",
@@ -277,7 +278,7 @@ const Competition: NextPage = () => {
                 contentStyle={{
                   background: "rgba(33, 150, 243, 0.3)",
                   color: "#000",
-                  boxShadow: "none",
+                  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
                 }}
                 contentArrowStyle={{
                   borderRight: "7px solid  rgba(33, 150, 243, 0.3)",
@@ -295,7 +296,7 @@ const Competition: NextPage = () => {
                 contentStyle={{
                   background: "rgba(33, 150, 243, 0.3)",
                   color: "#000",
-                  boxShadow: "none",
+                  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
                 }}
                 contentArrowStyle={{
                   borderRight: "7px solid  rgba(33, 150, 243, 0.3)",
@@ -383,7 +384,7 @@ const Competition: NextPage = () => {
                   contentStyle={{
                     background: "rgba(33, 150, 243, 0.3)",
                     color: "#000",
-                    boxShadow: "none",
+                    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
                   }}
                   contentArrowStyle={{
                     borderRight: "7px solid  rgba(33, 150, 243, 0.3)",
@@ -404,7 +405,7 @@ const Competition: NextPage = () => {
                   contentStyle={{
                     background: "rgba(33, 150, 243, 0.3)",
                     color: "#000",
-                    boxShadow: "none",
+                    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
                   }}
                   contentArrowStyle={{
                     borderRight: "7px solid  rgba(33, 150, 243, 0.3)",
@@ -467,7 +468,7 @@ const Competition: NextPage = () => {
                 contentStyle={{
                   background: "rgba(33, 150, 243, 0.3)",
                   color: "#000",
-                  boxShadow: "none",
+                  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
                 }}
                 contentArrowStyle={{
                   borderRight: "7px solid  rgba(33, 150, 243, 0.3)",
@@ -485,7 +486,7 @@ const Competition: NextPage = () => {
                 contentStyle={{
                   background: "rgba(33, 150, 243, 0.3)",
                   color: "#000",
-                  boxShadow: "none",
+                  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
                 }}
                 contentArrowStyle={{
                   borderRight: "7px solid  rgba(33, 150, 243, 0.3)",
@@ -501,7 +502,7 @@ const Competition: NextPage = () => {
                 contentStyle={{
                   background: "rgba(33, 150, 243, 0.3)",
                   color: "#000",
-                  boxShadow: "none",
+                  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
                 }}
                 contentArrowStyle={{
                   borderRight: "7px solid  rgba(33, 150, 243, 0.3)",
