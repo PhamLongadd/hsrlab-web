@@ -21,9 +21,9 @@ import Link from "next/link";
 import { HamburgerIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import React, { useState, useEffect } from "react";
 
-import { HOVER_TEXT_COLOR } from "@/components/styles/color";
+import { BG_COLOR, HOVER_TEXT_COLOR } from "@/components/styles/color";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartPlus, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useCartCount } from "@/components/cartCount";
 
 interface HeaderBarProps {}
@@ -150,16 +150,31 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
           </Flex>
           <Flex alignItems="center" gap="10px">
             <Link href="/cart" target="_blank">
-              <Button size="sm" position="relative">
+              <Box
+                display="flex"
+                position="relative"
+                alignItems="center"
+                justifyContent="space-between"
+                w="auto"
+                gap="5px"
+                backgroundColor="rgba(234, 242, 254)"
+                padding="5px 12px"
+                borderRadius="8px"
+                _hover={{
+                  background: BG_COLOR,
+                }}
+              >
+                <FontAwesomeIcon icon={faCartPlus} width="20px" />
                 <Flex gap="10px" alignItems="center">
-                  <FontAwesomeIcon icon={faCartShopping} />
-                  <Text>Giỏ hàng</Text>
+                  <Text fontWeight="600" fontSize="15px">
+                    Giỏ hàng
+                  </Text>
                   {currentCart.length > 0 && (
                     <Box
                       position="absolute"
                       backgroundColor="red"
                       color="#fff"
-                      padding={currentCart.length >= 10 ? "5px 8px" : "3px 8px"}
+                      padding={currentCart.length >= 10 ? "5px 8px" : "0px 9px"}
                       borderRadius="50%"
                       top="-10px"
                       right="-5px"
@@ -168,7 +183,7 @@ const HeaderBar: React.FC<HeaderBarProps> = () => {
                     </Box>
                   )}
                 </Flex>
-              </Button>
+              </Box>
             </Link>
             <Button
               display={{ base: "block", md: "none" }}
