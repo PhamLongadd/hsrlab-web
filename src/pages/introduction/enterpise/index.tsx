@@ -105,7 +105,7 @@ const Enterpise: React.FC<StudentsProps> = () => {
           >
             <GridItem>
               <Image
-                src="/image/LegoEducation.png"
+                src="/image/LEGOEDUCATION.png"
                 w="250px"
                 h="150px"
                 objectFit="contain"
@@ -146,6 +146,14 @@ const Enterpise: React.FC<StudentsProps> = () => {
             <GridItem>
               <Image
                 src="/image/NewtonGrammarSchool.png"
+                w="250px"
+                h="150px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem colSpan={3} justifySelf="center">
+              <Image
+                src="/image/NGOISAOHNOI.jpg"
                 w="250px"
                 h="150px"
                 objectFit="contain"

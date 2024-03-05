@@ -83,6 +83,7 @@ const CartFormInput: React.FC<CartFormInputProps> = ({ totalAmount }) => {
       };
       const resCreateLinkPayOS = await createLinkPayOS(createLinkPayOSBody);
       const urlPayOs = resCreateLinkPayOS.data.checkoutUrl;
+      localStorage.removeItem("cart");
       router.push(urlPayOs);
 
       reset();

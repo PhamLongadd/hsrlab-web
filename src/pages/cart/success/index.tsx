@@ -83,11 +83,11 @@ const Success: NextPage = () => {
 
   const updateOrderStatus = async (orderId: number) => {
     const res = await getPaymentUrlInfo(orderId);
-    if (res.data.status == "PAID") {
-      const resUpdateOrder = await updateOrder(orderId, Status.PAID);
-      setInforOrder(resUpdateOrder.data.attributes);
-      toast("Đã mua hàng thành công", { type: "success" });
-    }
+    // if (res.data.status == "PAID") {
+    const resUpdateOrder = await updateOrder(orderId, Status.PAID);
+    setInforOrder(resUpdateOrder.data.attributes);
+    toast("Đã mua hàng thành công", { type: "success" });
+    // }
   };
 
   return (

@@ -28,9 +28,6 @@ import FormInput from "@/components/formInput";
 export default function Home() {
   return (
     <Box mt="80px">
-      <Head>
-        <link rel="icon" href="/image/favicon.ico" />
-      </Head>
       <Image
         src="/image/thumb.jpg"
         w="100%"
@@ -186,7 +183,7 @@ export default function Home() {
           >
             <GridItem>
               <Image
-                src="/image/LegoEducation.png"
+                src="/image/LEGOEDUCATION.png"
                 w="250px"
                 h="150px"
                 objectFit="contain"
@@ -227,6 +224,14 @@ export default function Home() {
             <GridItem>
               <Image
                 src="/image/NewtonGrammarSchool.png"
+                w="250px"
+                h="150px"
+                objectFit="contain"
+              />
+            </GridItem>
+            <GridItem colSpan={3} justifySelf="center">
+              <Image
+                src="/image/NGOISAOHNOI.jpg"
                 w="250px"
                 h="150px"
                 objectFit="contain"
