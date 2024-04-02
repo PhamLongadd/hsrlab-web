@@ -393,10 +393,22 @@ const Competition: NextPage = () => {
                   icon={<FontAwesomeIcon icon={faCircleDot} />}
                 >
                   <h3 className="vertical-timeline-element-title">
-                    The Challange Solution Awardt: HSRL - Muối
+                    - GIẢI THƯỞNG ÁP PHÍCH NHÓM: Đội NSHM - Sao Hỏa, Đội EVEREST - 03.
                   </h3>
                   <h3 className="vertical-timeline-element-title">
-                    Team Poster Award: HSRL - Gừng
+                    - GIẢI THƯỞNG GIÁ TRỊ CỐT LÕI: Đội NSHM - Sao Kim, Đội EVEREST - 02, Đội HSRL-Tăm Kay, Đội EVEREST - 01, Đội EVEREST - 04, Đội EVEREST - 05.
+                  </h3>
+                  <h3 className="vertical-timeline-element-title">
+                    - GIẢI THƯỞNG ÁP PHÍCH NHÓM VÀ ROBOT GAME: Đội ĐTĐ HSRL 02.
+                  </h3>
+                  <h3 className="vertical-timeline-element-title">
+                    - GIẢI THƯỞNG GIẢI PHÁP CHO THỬ THÁCH VÀ ROBOT GAME: Đội HSRL – Sting, Đội ĐTĐ HSRL 01.
+                  </h3>
+                  <h3 className="vertical-timeline-element-title">
+                    - GIẢI THƯỞNG MÔ HÌNH NHÓM VÀ ROBOT GAME: Đội NSHM - Sao Thổ, Đội NSHM - Sao Thủy, Đội NSHM - Sao Mộc, Đội ĐTĐ HSRL 03.
+                  </h3>
+                  <h3 className="vertical-timeline-element-title">
+                    - NSHM - Sao Thủy: 1 trong 2 đội đại diện Việt Nam tham gia hệ thống giải đấu của FIRST® trên toàn cầu.
                   </h3>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
@@ -414,7 +426,10 @@ const Competition: NextPage = () => {
                   icon={<FontAwesomeIcon icon={faCircleDot} />}
                 >
                   <h3 className="vertical-timeline-element-title">
-                    Core Value Award: HSRL - US
+                    - GIẢI THƯỞNG THIẾT KẾ ROBOT: Đội HSRL-Muối
+                  </h3>
+                  <h3 className="vertical-timeline-element-title">
+                    - GIẢI THƯỞNG GIÁ TRỊ CỐT LÕI: Đội HSRL-Gừng+
                   </h3>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
