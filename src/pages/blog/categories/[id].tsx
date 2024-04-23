@@ -119,8 +119,7 @@ const BlogCategories = ({
               >
                 <Box overflow="hidden">
                   <Image
-                    // src={blog.attributes.thumnail.data.attributes.url}
-                    src="/image/card.png"
+                    src={`${process.env.NEXT_PUBLIC_API_ENDPOINT}${e.attributes.thumbail.data.attributes.url}`}
                     borderTopRightRadius="20px"
                     borderTopLeftRadius="20px"
                     transition="transform 0.3s"
