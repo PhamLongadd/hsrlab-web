@@ -75,7 +75,7 @@ export type Blog = {
     publishedAt: string;
     slug: string;
     updatedAt: string;
-    thumnail: {
+    thumbail: {
       data: {
         attributes: {
           url: string;

@@ -59,7 +59,7 @@ const BlogDetail = ({ blog }: { blog: Blog }) => {
             </Box>
             <Box padding="20px">
               <Image
-                src="/image/card.png"
+                src={`${process.env.NEXT_PUBLIC_API_ENDPOINT}${blog.attributes.thumbail.data.attributes.url}`}
                 w="1200px"
                 margin="auto"
                 h={["400px", "600px", "600px"]}
@@ -103,7 +103,7 @@ const BlogDetail = ({ blog }: { blog: Blog }) => {
                       borderColor="rgba(0,0,0,0.1)"
                     >
                       <Image
-                        src="/image/card.png"
+                        src={`${process.env.NEXT_PUBLIC_API_ENDPOINT}${e.attributes.thumbail.data.attributes.url}`}
                         w="60px"
                         margin="auto"
                         h="60px"
